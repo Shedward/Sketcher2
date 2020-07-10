@@ -7,23 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63BC981124B90C4900AE1B28 /* Sketcher_SUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FE24B90C4800AE1B28 /* Sketcher_SUIApp.swift */; };
-		63BC981224B90C4900AE1B28 /* Sketcher_SUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FE24B90C4800AE1B28 /* Sketcher_SUIApp.swift */; };
-		63BC981324B90C4900AE1B28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FF24B90C4800AE1B28 /* ContentView.swift */; };
-		63BC981424B90C4900AE1B28 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FF24B90C4800AE1B28 /* ContentView.swift */; };
+		63BC981124B90C4900AE1B28 /* Sketcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FE24B90C4800AE1B28 /* Sketcher.swift */; };
+		63BC981224B90C4900AE1B28 /* Sketcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FE24B90C4800AE1B28 /* Sketcher.swift */; };
+		63BC981324B90C4900AE1B28 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FF24B90C4800AE1B28 /* MainScreen.swift */; };
+		63BC981424B90C4900AE1B28 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FF24B90C4800AE1B28 /* MainScreen.swift */; };
 		63BC981524B90C4900AE1B28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63BC980024B90C4900AE1B28 /* Assets.xcassets */; };
 		63BC981624B90C4900AE1B28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63BC980024B90C4900AE1B28 /* Assets.xcassets */; };
+		63BC982724B90D7300AE1B28 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63BC982124B90D6500AE1B28 /* Montserrat-Medium.ttf */; };
+		63BC982824B90D7300AE1B28 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63BC982224B90D6500AE1B28 /* Montserrat-Bold.ttf */; };
+		63BC982924B90D7300AE1B28 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63BC982124B90D6500AE1B28 /* Montserrat-Medium.ttf */; };
+		63BC982A24B90D7300AE1B28 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63BC982224B90D6500AE1B28 /* Montserrat-Bold.ttf */; };
+		63BC982D24B91ED000AE1B28 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC982C24B91ED000AE1B28 /* Fonts.swift */; };
+		63BC982E24B91ED000AE1B28 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC982C24B91ED000AE1B28 /* Fonts.swift */; };
+		63BC983224B9227800AE1B28 /* ProgressHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983124B9227800AE1B28 /* ProgressHeader.swift */; };
+		63BC983324B9227800AE1B28 /* ProgressHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983124B9227800AE1B28 /* ProgressHeader.swift */; };
+		63BC983524B9244000AE1B28 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983424B9244000AE1B28 /* Colors.swift */; };
+		63BC983624B9244000AE1B28 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983424B9244000AE1B28 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63BC97FE24B90C4800AE1B28 /* Sketcher_SUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sketcher_SUIApp.swift; sourceTree = "<group>"; };
-		63BC97FF24B90C4800AE1B28 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		63BC97FE24B90C4800AE1B28 /* Sketcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sketcher.swift; sourceTree = "<group>"; };
+		63BC97FF24B90C4800AE1B28 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		63BC980024B90C4900AE1B28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63BC980524B90C4900AE1B28 /* Sketcher SUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sketcher SUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BC980824B90C4900AE1B28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63BC980D24B90C4900AE1B28 /* Sketcher SUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sketcher SUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63BC980F24B90C4900AE1B28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63BC981024B90C4900AE1B28 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		63BC982124B90D6500AE1B28 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		63BC982224B90D6500AE1B28 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		63BC982C24B91ED000AE1B28 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		63BC983124B9227800AE1B28 /* ProgressHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeader.swift; sourceTree = "<group>"; };
+		63BC983424B9244000AE1B28 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +72,10 @@
 		63BC97FD24B90C4800AE1B28 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				63BC97FE24B90C4800AE1B28 /* Sketcher_SUIApp.swift */,
-				63BC97FF24B90C4800AE1B28 /* ContentView.swift */,
-				63BC980024B90C4900AE1B28 /* Assets.xcassets */,
+				63BC97FE24B90C4800AE1B28 /* Sketcher.swift */,
+				63BC982F24B921E700AE1B28 /* MainScreen */,
+				63BC982B24B90E0000AE1B28 /* DesignSystem */,
+				63BC981F24B90D0C00AE1B28 /* Resources */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -88,6 +104,42 @@
 				63BC981024B90C4900AE1B28 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		63BC981F24B90D0C00AE1B28 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				63BC982024B90D1400AE1B28 /* Fonts */,
+				63BC980024B90C4900AE1B28 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		63BC982024B90D1400AE1B28 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				63BC982224B90D6500AE1B28 /* Montserrat-Bold.ttf */,
+				63BC982124B90D6500AE1B28 /* Montserrat-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		63BC982B24B90E0000AE1B28 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				63BC982C24B91ED000AE1B28 /* Fonts.swift */,
+				63BC983424B9244000AE1B28 /* Colors.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		63BC982F24B921E700AE1B28 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				63BC97FF24B90C4800AE1B28 /* MainScreen.swift */,
+				63BC983124B9227800AE1B28 /* ProgressHeader.swift */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +220,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63BC982724B90D7300AE1B28 /* Montserrat-Medium.ttf in Resources */,
 				63BC981524B90C4900AE1B28 /* Assets.xcassets in Resources */,
+				63BC982824B90D7300AE1B28 /* Montserrat-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +230,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63BC982924B90D7300AE1B28 /* Montserrat-Medium.ttf in Resources */,
 				63BC981624B90C4900AE1B28 /* Assets.xcassets in Resources */,
+				63BC982A24B90D7300AE1B28 /* Montserrat-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,8 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63BC981324B90C4900AE1B28 /* ContentView.swift in Sources */,
-				63BC981124B90C4900AE1B28 /* Sketcher_SUIApp.swift in Sources */,
+				63BC981324B90C4900AE1B28 /* MainScreen.swift in Sources */,
+				63BC983524B9244000AE1B28 /* Colors.swift in Sources */,
+				63BC983224B9227800AE1B28 /* ProgressHeader.swift in Sources */,
+				63BC982D24B91ED000AE1B28 /* Fonts.swift in Sources */,
+				63BC981124B90C4900AE1B28 /* Sketcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,8 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63BC981424B90C4900AE1B28 /* ContentView.swift in Sources */,
-				63BC981224B90C4900AE1B28 /* Sketcher_SUIApp.swift in Sources */,
+				63BC981424B90C4900AE1B28 /* MainScreen.swift in Sources */,
+				63BC983624B9244000AE1B28 /* Colors.swift in Sources */,
+				63BC983324B9227800AE1B28 /* ProgressHeader.swift in Sources */,
+				63BC982E24B91ED000AE1B28 /* Fonts.swift in Sources */,
+				63BC981224B90C4900AE1B28 /* Sketcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +386,6 @@
 				DEVELOPMENT_TEAM = SKRU67QKG5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -346,7 +407,6 @@
 				DEVELOPMENT_TEAM = SKRU67QKG5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

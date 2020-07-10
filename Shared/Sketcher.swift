@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct Sketcher_SUIApp: App {
+struct Sketcher: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainScreen()
         }
     }
 }

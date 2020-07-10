@@ -46,5 +46,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Montserrat-Medium.ttf</string>
+		<string>Montserrat-Bold.ttf</string>
+	</array>
 </dict>
 </plist>
