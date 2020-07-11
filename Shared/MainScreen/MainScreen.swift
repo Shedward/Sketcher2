@@ -9,17 +9,36 @@ import SwiftUI
 
 struct MainScreen: View {
     var body: some View {
-        HStack {
-            Image("progress1")
-                .padding(.bottom, 3)
-            Text("Hello, world!")
-                .font(Font.Design.h1)
+        VStack(spacing: Design.Space.level0) {
+            ProgressHeader(
+                title: "Начни рисовать регулярно",
+                subtitle: "Настрой прогресс и напоминания"
+            )
+            MainScreenSection(
+                title: "Рекомендуем",
+                accessory: {
+                    EmptyView()
+                },
+                content: {
+                    Rectangle()
+                        .foregroundColor(.blue)
+                }
+            )
+            Spacer()
         }
+            .padding(Design.Space.level0)
     }
 }
 
 struct MainScreen_Previews: PreviewProvider {
     static var previews: some View {
-        MainScreen()
+        Group {
+            MainScreen()
+                .previewLayout(.device)
+
+            MainScreen()
+                .preferredColorScheme(.dark)
+                .previewLayout(.device)
+        }
     }
 }

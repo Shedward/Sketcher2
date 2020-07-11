@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-extension Color {
-    enum Design {
-        static let background = Color("background")
-        static let content = Color("content")
-        static let group = Color("group")
-        static let accessory = Color("accessory")
-        static let accent = Color("accent")
-        static let secondaryAccent = Color("secondaryAccent")
-        static let overBackground = Color("overBackground")
-        static let overContent = Color("overContent")
-        static let overAccent = Color("overAccent")
+extension Design {
+    enum Color {
+        static let background = SwiftUI.Color("background")
+        static let content = SwiftUI.Color("content")
+        static let group = SwiftUI.Color("group")
+        static let accessory = SwiftUI.Color("accessory")
+        static let accent = SwiftUI.Color("accent")
+        static let secondaryAccent = SwiftUI.Color("secondaryAccent")
+        static let overBackground = SwiftUI.Color("overBackground")
+        static let overContent = SwiftUI.Color("overContent")
+        static let overAccent = SwiftUI.Color("overAccent")
     }
 }

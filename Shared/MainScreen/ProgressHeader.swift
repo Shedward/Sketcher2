@@ -12,28 +12,28 @@ struct ProgressHeader: View {
     let subtitle: String
 
     var body: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: Design.Space.level2) {
             Image("progress2")
-                .foregroundColor(Color.Design.content)
+                .foregroundColor(Design.Color.content)
 
             VStack(alignment: .leading) {
                 Text(title)
-                    .foregroundColor(Color.Design.content)
-                    .fixedSize()
-                    .font(Font.Design.h2)
+                    .foregroundColor(Design.Color.content)
+                    .lineLimit(1)
+                    .font(Design.Font.h3)
                 Text(subtitle)
-                    .foregroundColor(Color.Design.accessory)
-                    .fixedSize()
-                    .font(Font.Design.body3)
+                    .foregroundColor(Design.Color.accessory)
+                    .lineLimit(1)
+                    .font(Design.Font.caption)
             }
             Spacer()
             Image("bigChevron")
-                .foregroundColor(Color.Design.accessory)
-                .padding(.trailing, 6)
+                .foregroundColor(Design.Color.accessory)
+                .padding(.trailing, Design.Space.level3)
         }
-        .padding(.all, 12)
-        .background(Color.Design.group)
-        .cornerRadius(12)
+        .padding(.all, Design.Space.level2)
+        .background(Design.Color.group)
+        .cornerRadius(Design.Space.level2)
     }
 }
 

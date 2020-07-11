@@ -23,6 +23,12 @@
 		63BC983324B9227800AE1B28 /* ProgressHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983124B9227800AE1B28 /* ProgressHeader.swift */; };
 		63BC983524B9244000AE1B28 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983424B9244000AE1B28 /* Colors.swift */; };
 		63BC983624B9244000AE1B28 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983424B9244000AE1B28 /* Colors.swift */; };
+		63BC983824B939A500AE1B28 /* MainScreenSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983724B939A500AE1B28 /* MainScreenSection.swift */; };
+		63BC983924B939A500AE1B28 /* MainScreenSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983724B939A500AE1B28 /* MainScreenSection.swift */; };
+		63BC983B24B9DE0E00AE1B28 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983A24B9DE0E00AE1B28 /* Spacing.swift */; };
+		63BC983C24B9DE0E00AE1B28 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983A24B9DE0E00AE1B28 /* Spacing.swift */; };
+		63BC983E24B9DEEC00AE1B28 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983D24B9DEEC00AE1B28 /* Design.swift */; };
+		63BC983F24B9DEEC00AE1B28 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983D24B9DEEC00AE1B28 /* Design.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +45,9 @@
 		63BC982C24B91ED000AE1B28 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		63BC983124B9227800AE1B28 /* ProgressHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeader.swift; sourceTree = "<group>"; };
 		63BC983424B9244000AE1B28 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		63BC983724B939A500AE1B28 /* MainScreenSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenSection.swift; sourceTree = "<group>"; };
+		63BC983A24B9DE0E00AE1B28 /* Spacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spacing.swift; sourceTree = "<group>"; };
+		63BC983D24B9DEEC00AE1B28 /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +136,10 @@
 		63BC982B24B90E0000AE1B28 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				63BC983D24B9DEEC00AE1B28 /* Design.swift */,
 				63BC982C24B91ED000AE1B28 /* Fonts.swift */,
 				63BC983424B9244000AE1B28 /* Colors.swift */,
+				63BC983A24B9DE0E00AE1B28 /* Spacing.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 			children = (
 				63BC97FF24B90C4800AE1B28 /* MainScreen.swift */,
 				63BC983124B9227800AE1B28 /* ProgressHeader.swift */,
+				63BC983724B939A500AE1B28 /* MainScreenSection.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -243,11 +255,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63BC983B24B9DE0E00AE1B28 /* Spacing.swift in Sources */,
+				63BC983E24B9DEEC00AE1B28 /* Design.swift in Sources */,
 				63BC981324B90C4900AE1B28 /* MainScreen.swift in Sources */,
 				63BC983524B9244000AE1B28 /* Colors.swift in Sources */,
 				63BC983224B9227800AE1B28 /* ProgressHeader.swift in Sources */,
 				63BC982D24B91ED000AE1B28 /* Fonts.swift in Sources */,
 				63BC981124B90C4900AE1B28 /* Sketcher.swift in Sources */,
+				63BC983824B939A500AE1B28 /* MainScreenSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,11 +270,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63BC983C24B9DE0E00AE1B28 /* Spacing.swift in Sources */,
+				63BC983F24B9DEEC00AE1B28 /* Design.swift in Sources */,
 				63BC981424B90C4900AE1B28 /* MainScreen.swift in Sources */,
 				63BC983624B9244000AE1B28 /* Colors.swift in Sources */,
 				63BC983324B9227800AE1B28 /* ProgressHeader.swift in Sources */,
 				63BC982E24B91ED000AE1B28 /* Fonts.swift in Sources */,
 				63BC981224B90C4900AE1B28 /* Sketcher.swift in Sources */,
+				63BC983924B939A500AE1B28 /* MainScreenSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

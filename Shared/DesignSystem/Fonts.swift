@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-extension Font {
-    enum Design {
-        static func main(size: CGFloat) -> Font {
-            custom("Montserrat-Medium", size: size)
+extension Design {
+    enum Font {
+        private static func main(size: CGFloat) -> SwiftUI.Font {
+            SwiftUI.Font.custom("Montserrat-Medium", size: size)
         }
 
-        static func mainBold(size: CGFloat) -> Font {
-            custom("Montserrat-Bold", size: size)
+        private static func mainBold(size: CGFloat) -> SwiftUI.Font {
+            SwiftUI.Font.custom("Montserrat-Bold", size: size)
         }
 
         static let h1 = mainBold(size: 24)
