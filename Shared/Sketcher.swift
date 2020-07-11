@@ -11,7 +11,7 @@ import SwiftUI
 struct Sketcher: App {
     var body: some Scene {
         WindowGroup {
-            MainScreen()
+            MainScreen(spacingLevel: .level0)
         }
     }
 }

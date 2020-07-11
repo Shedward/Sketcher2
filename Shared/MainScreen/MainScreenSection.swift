@@ -11,20 +11,23 @@ struct MainScreenSection<Content: View, Accessory: View>: View {
     let title: String
     let content: () -> Content
     let accessory: () -> Accessory
+    let spacing: Design.SpacingLevel
 
     init(
         title: String,
+        spacing: Design.SpacingLevel,
         @ViewBuilder accessory: @escaping () -> Accessory,
         @ViewBuilder content: @escaping () -> Content
     ) {
         self.title = title
+        self.spacing = spacing
         self.content = content
         self.accessory = accessory
     }
 
     var body: some View {
-        VStack(spacing: Design.Space.level1) {
-            HStack(spacing: Design.Space.level1) {
+        VStack(spacing: spacing.value) {
+            HStack(spacing: spacing.value) {
                 Text(title)
                     .font(Design.Font.h1)
                     .layoutPriority(1)
@@ -51,6 +54,7 @@ struct MainScreenHeader_Previews: PreviewProvider {
     private static func section(title: String) -> some View {
         MainScreenSection(
             title: title,
+            spacing: .level1,
             accessory: { Rectangle().foregroundColor(.red) },
             content: { Rectangle().foregroundColor(.blue) }
         )

@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension Design {
-    
     struct SpacingLevel {
         static let step: CGFloat = 6
 
@@ -32,14 +31,14 @@ extension Design {
             return SpacingLevel(value:  nextValue)
         }
 
-        func next(by levels: UInt) -> SpacingLevel {
-            var levels = levels
-            var nextSpacing = self
+        func next(by levelsCount: UInt) -> SpacingLevel {
+            var levels = levelsCount
+            var nextSpacingLevel = self
             while levels > 0 {
-                nextSpacing = nextSpacing.next
+                nextSpacingLevel = nextSpacingLevel.next
                 levels -= 1
             }
-            return nextSpacing
+            return nextSpacingLevel
         }
 
         private init(value: CGFloat) {

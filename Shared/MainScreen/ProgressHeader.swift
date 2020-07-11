@@ -10,9 +10,10 @@ import SwiftUI
 struct ProgressHeader: View {
     let title: String
     let subtitle: String
+    let spacingLevel: Design.SpacingLevel
 
     var body: some View {
-        HStack(spacing: Design.Space.level2) {
+        HStack(spacing: spacingLevel.value) {
             Image("progress2")
                 .foregroundColor(Design.Color.content)
 
@@ -29,11 +30,11 @@ struct ProgressHeader: View {
             Spacer()
             Image("bigChevron")
                 .foregroundColor(Design.Color.accessory)
-                .padding(.trailing, Design.Space.level3)
+                .padding(.trailing, spacingLevel.next.value)
         }
-        .padding(.all, Design.Space.level2)
+        .padding(.all, spacingLevel.value)
         .background(Design.Color.group)
-        .cornerRadius(Design.Space.level2)
+        .cornerRadius(spacingLevel.value)
     }
 }
 
@@ -42,14 +43,16 @@ struct ProgressHeader_Previews: PreviewProvider {
         Group {
             ProgressHeader(
                 title: "Начни рисовать регулярно",
-                subtitle: "Настрой прогресс и напоминания"
+                subtitle: "Настрой прогресс и напоминания",
+                spacingLevel: .level3
             )
                 .padding(.all, 10)
                 .previewLayout(.sizeThatFits)
 
             ProgressHeader(
                 title: "Начни рисовать регулярно",
-                subtitle: "Настрой прогресс и напоминания"
+                subtitle: "Настрой прогресс и напоминания",
+                spacingLevel: .level3
             )
                 .preferredColorScheme(.dark)
                 .padding(.all, 10)
