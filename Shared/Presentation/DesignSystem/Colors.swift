@@ -12,6 +12,7 @@ extension Design {
         static let background = SwiftUI.Color("background")
         static let content = SwiftUI.Color("content")
         static let group = SwiftUI.Color("group")
+        static let shadow = SwiftUI.Color("shadow")
         static let accessory = SwiftUI.Color("accessory")
         static let accent = SwiftUI.Color("accent")
         static let secondaryAccent = SwiftUI.Color("secondaryAccent")
