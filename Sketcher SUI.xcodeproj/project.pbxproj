@@ -45,6 +45,10 @@
 		63DBFF9924BA509C000E1FD5 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBFF9724BA509C000E1FD5 /* Mocks.swift */; };
 		63DBFF9B24BA50C6000E1FD5 /* Recomendations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBFF9A24BA50C6000E1FD5 /* Recomendations.swift */; };
 		63DBFF9C24BA50C6000E1FD5 /* Recomendations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBFF9A24BA50C6000E1FD5 /* Recomendations.swift */; };
+		63DBFF9F24BA60E7000E1FD5 /* VisualEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBFF9E24BA60E7000E1FD5 /* VisualEffect.swift */; };
+		63DBFFA024BA60E7000E1FD5 /* VisualEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBFF9E24BA60E7000E1FD5 /* VisualEffect.swift */; };
+		63DBFFA224BA6B5A000E1FD5 /* BottomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBFFA124BA6B5A000E1FD5 /* BottomToolbar.swift */; };
+		63DBFFA324BA6B5A000E1FD5 /* BottomToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBFFA124BA6B5A000E1FD5 /* BottomToolbar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +77,8 @@
 		63DBFF9424BA508B000E1FD5 /* Sessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sessions.swift; sourceTree = "<group>"; };
 		63DBFF9724BA509C000E1FD5 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		63DBFF9A24BA50C6000E1FD5 /* Recomendations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recomendations.swift; sourceTree = "<group>"; };
+		63DBFF9E24BA60E7000E1FD5 /* VisualEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffect.swift; sourceTree = "<group>"; };
+		63DBFFA124BA6B5A000E1FD5 /* BottomToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToolbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				63BC97FE24B90C4800AE1B28 /* Sketcher.swift */,
+				63DBFF9D24BA54C0000E1FD5 /* Common */,
 				63BC982F24B921E700AE1B28 /* MainScreen */,
 				63BC982B24B90E0000AE1B28 /* DesignSystem */,
 			);
@@ -210,6 +217,15 @@
 				63DBFF9A24BA50C6000E1FD5 /* Recomendations.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		63DBFF9D24BA54C0000E1FD5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				63DBFF9E24BA60E7000E1FD5 /* VisualEffect.swift */,
+				63DBFFA124BA6B5A000E1FD5 /* BottomToolbar.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,9 +329,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DBFF9F24BA60E7000E1FD5 /* VisualEffect.swift in Sources */,
 				63BC983B24B9DE0E00AE1B28 /* SpacingLevel.swift in Sources */,
 				63BC983E24B9DEEC00AE1B28 /* Design.swift in Sources */,
 				63DBFF9524BA508B000E1FD5 /* Sessions.swift in Sources */,
+				63DBFFA224BA6B5A000E1FD5 /* BottomToolbar.swift in Sources */,
 				63BC981324B90C4900AE1B28 /* MainScreen.swift in Sources */,
 				63BC983524B9244000AE1B28 /* Colors.swift in Sources */,
 				63DBFF8E24BA3201000E1FD5 /* RecomendedSession.swift in Sources */,
@@ -336,9 +354,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63DBFFA024BA60E7000E1FD5 /* VisualEffect.swift in Sources */,
 				63BC983C24B9DE0E00AE1B28 /* SpacingLevel.swift in Sources */,
 				63BC983F24B9DEEC00AE1B28 /* Design.swift in Sources */,
 				63DBFF9624BA508B000E1FD5 /* Sessions.swift in Sources */,
+				63DBFFA324BA6B5A000E1FD5 /* BottomToolbar.swift in Sources */,
 				63BC981424B90C4900AE1B28 /* MainScreen.swift in Sources */,
 				63BC983624B9244000AE1B28 /* Colors.swift in Sources */,
 				63DBFF8F24BA3201000E1FD5 /* RecomendedSession.swift in Sources */,

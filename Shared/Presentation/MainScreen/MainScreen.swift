@@ -13,47 +13,49 @@ struct MainScreen: View {
     let spacingLevel: Design.SpacingLevel
 
     var body: some View {
-        ScrollView {
-            VStack(spacing: spacingLevel.value) {
-                ProgressHeader(
-                    title: "Начни рисовать регулярно",
-                    subtitle: "Настрой прогресс и напоминания",
-                    spacingLevel: spacingLevel.next(by: 2)
-                )
-                if !recomendations.isEmpty {
-                    MainScreenSection(
-                        title: "Рекомендуем",
-                        spacing: spacingLevel.next,
-                        accessory: {
-                            EmptyView()
-                        },
-                        content: {
-                            RecomendedSessions(
-                                recomendations: recomendations,
-                                spacingLevel: spacingLevel
-                            )
-                        }
+        NavigationView {
+            ScrollView {
+                VStack(spacing: spacingLevel.value) {
+                    ProgressHeader(
+                        title: "Начни рисовать регулярно",
+                        subtitle: "Настрой прогресс и напоминания",
+                        spacingLevel: spacingLevel.next(by: 2)
                     )
+                    if !recomendations.isEmpty {
+                        MainScreenSection(
+                            title: "Рекомендуем",
+                            spacing: spacingLevel.next,
+                            accessory: {
+                                EmptyView()
+                            },
+                            content: {
+                                RecomendedSessions(
+                                    recomendations: recomendations,
+                                    spacingLevel: spacingLevel
+                                )
+                            }
+                        )
+                    }
+                    if !sessions.isEmpty {
+                        MainScreenSection(
+                            title: "Сессии",
+                            spacing: spacingLevel.next,
+                            accessory: {
+                                Text("Изменить")
+                                    .font(Design.Font.caption)
+                                    .foregroundColor(Design.Color.content)
+                            },
+                            content: {
+                                UserSessions(
+                                    sessions: sessions,
+                                    spacingLevel: spacingLevel
+                                )
+                            }
+                        )
+                    }
                 }
-                if !sessions.isEmpty {
-                    MainScreenSection(
-                        title: "Сессии",
-                        spacing: spacingLevel.next,
-                        accessory: {
-                            Text("Изменить")
-                                .font(Design.Font.caption)
-                                .foregroundColor(Design.Color.content)
-                        },
-                        content: {
-                            UserSessions(
-                                sessions: sessions,
-                                spacingLevel: spacingLevel
-                            )
-                        }
-                    )
-                }
+                .padding(spacingLevel.value)
             }
-            .padding(spacingLevel.value)
         }
     }
 }

@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct MainScreenSection<Content: View, Accessory: View>: View {
-    let title: String
-    let content: () -> Content
-    let accessory: () -> Accessory
-    let spacing: Design.SpacingLevel
+    private let title: String
+    private let content: () -> Content
+    private let accessory: () -> Accessory
+    private let spacing: Design.SpacingLevel
 
     init(
         title: String,
