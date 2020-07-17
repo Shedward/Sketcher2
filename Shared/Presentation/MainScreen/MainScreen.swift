@@ -14,49 +14,29 @@ struct MainScreen: View {
 
     var body: some View {
         NavigationView {
-            ScrollView {
-                VStack(spacing: spacingLevel.value) {
-                    ProgressHeader(
-                        title: "Начни рисовать регулярно",
-                        subtitle: "Настрой прогресс и напоминания",
-                        spacingLevel: spacingLevel.next(by: 2)
-                    )
-                    if !recomendations.isEmpty {
-                        MainScreenSection(
-                            title: "Рекомендуем",
-                            spacing: spacingLevel.next,
-                            accessory: {
-                                EmptyView()
-                            },
-                            content: {
-                                RecomendedSessions(
-                                    recomendations: recomendations,
-                                    spacingLevel: spacingLevel
-                                )
-                            }
-                        )
-                    }
-                    if !sessions.isEmpty {
-                        MainScreenSection(
-                            title: "Сессии",
-                            spacing: spacingLevel.next,
-                            accessory: {
-                                Text("Изменить")
-                                    .font(Design.Font.caption)
-                                    .foregroundColor(Design.Color.content)
-                            },
-                            content: {
-                                UserSessions(
-                                    sessions: sessions,
-                                    spacingLevel: spacingLevel
-                                )
-                            }
-                        )
-                    }
-                }
-                .padding(spacingLevel.value)
-            }
-        }
+			VStack {
+				MainScreenContent(
+					recomendations: recomendations,
+					sessions: sessions,
+					spacingLevel: spacingLevel
+				)
+				.navigationBarHidden(true)
+				HStack {
+					Image("settings")
+					Spacer()
+					Image("add")
+				}
+				.padding(
+					EdgeInsets(
+						top: spacingLevel.next.value,
+						leading: spacingLevel.value,
+						bottom: spacingLevel.value,
+						trailing: spacingLevel.value
+					)
+				)
+			}
+		}
+		.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -68,13 +48,13 @@ struct MainScreen_Previews: PreviewProvider {
             MainScreen(
                 recomendations: Mocks.recomendations,
                 sessions: Mocks.sessions,
-                spacingLevel: .level0
+				spacingLevel: .level00
             )
 
             MainScreen(
                 recomendations: Mocks.recomendations,
                 sessions: Mocks.sessions,
-                spacingLevel: .level0
+				spacingLevel: .level00
             )
                 .preferredColorScheme(.dark)
         }

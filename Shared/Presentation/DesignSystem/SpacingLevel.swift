@@ -11,6 +11,7 @@ extension Design {
     struct SpacingLevel {
         static let step: CGFloat = 6
 
+		static let level00 = SpacingLevel(value: step * 5)
         static let level0 = SpacingLevel(value: step * 4)
         static let level1 = SpacingLevel(value: step * 3)
         static let level2 = SpacingLevel(value: step * 2)
@@ -41,14 +42,8 @@ extension Design {
             return nextSpacingLevel
         }
 
-        private init(value: CGFloat) {
+		init(value: CGFloat) {
             self.value = value
         }
-    }
-}
-
-struct SpacingLevel_Previews: PreviewProvider {
-    static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
