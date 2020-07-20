@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainScreenContent: View {
+	let progress: [ProgressItem]?
 	let recomendations: [RecomendedSession]
 	let sessions: [Session]
 
@@ -16,11 +17,27 @@ struct MainScreenContent: View {
     var body: some View {
 		ScrollView {
 			VStack(spacing: spacingLevel.value) {
-				ProgressHeader(
-					title: "Начни рисовать регулярно",
-					subtitle: "Настрой прогресс и напоминания",
-					spacingLevel: spacingLevel.next(by: 2)
-				)
+				if let progress = progress, !progress.isEmpty {
+					MainScreenSection(
+						title: "Прогресс",
+						spacing: spacingLevel.next,
+						accessory: {
+							EmptyView()
+						},
+						content: {
+							ProgressHeader(
+								progressItems: progress,
+								spacingLevel: spacingLevel.next(by: 2)
+							)
+						}
+					)
+				} else {
+					SetupProgressHeader(
+						title: "Начни рисовать регулярно",
+						subtitle: "Настрой прогресс и напоминания",
+						spacingLevel: spacingLevel.next(by: 2)
+					)
+				}
 				if !recomendations.isEmpty {
 					MainScreenSection(
 						title: "Рекомендуем",
@@ -62,9 +79,10 @@ struct MainScreenContent: View {
 struct MainScreenContent_Previews: PreviewProvider {
     static var previews: some View {
 		MainScreenContent(
+			progress: Mocks.progressItems,
 			recomendations: Mocks.recomendations,
 			sessions: Mocks.sessions,
-			spacingLevel: .level1
+			spacingLevel: .level0
 		)
     }
 }

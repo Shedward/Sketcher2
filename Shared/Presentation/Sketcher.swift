@@ -12,7 +12,8 @@ struct Sketcher: App {
     var body: some Scene {
         WindowGroup {
             MainScreen(
-                recomendations: Mocks.recomendations,
+				progress: Mocks.progressItems,
+				recomendations: Mocks.recomendations,
                 sessions: Mocks.sessions,
                 spacingLevel: .level0
             )

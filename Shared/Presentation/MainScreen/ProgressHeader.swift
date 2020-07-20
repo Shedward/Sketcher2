@@ -2,61 +2,70 @@
 //  ProgressHeader.swift
 //  Sketcher SUI
 //
-//  Created by Vlad Maltsev on 11.07.2020.
+//  Created by Vlad Maltsev on 17.07.2020.
 //
 
 import SwiftUI
 
 struct ProgressHeader: View {
-    let title: String
-    let subtitle: String
-    let spacingLevel: Design.SpacingLevel
+
+	struct Element: View {
+		let item: ProgressItem
+		let spacingLevel: Design.SpacingLevel
+
+		var body: some View {
+			VStack(alignment: .center, spacing: 0) {
+				icon(for: item)
+				Text(day(for: item))
+					.font(Design.Font.caption)
+			}
+		}
+
+		private func icon(for item: ProgressItem) -> Image {
+			switch item.level {
+			case .none:
+				return Image("progress0")
+			case .normal:
+				return Image("progress1")
+			case .hight:
+				return Image("progress2")
+			}
+		}
+
+		private func day(for item: ProgressItem) -> String {
+			let dayNumber = Calendar.current.component(.day, from: item.date)
+			return "\(dayNumber)"
+		}
+	}
+
+	let progressItems: [ProgressItem]
+	let spacingLevel: Design.SpacingLevel
 
     var body: some View {
-        HStack(spacing: spacingLevel.value) {
-            Image("progress2")
-                .foregroundColor(Design.Color.content)
-
-            VStack(alignment: .leading) {
-                Text(title)
-                    .foregroundColor(Design.Color.content)
-                    .lineLimit(1)
-                    .font(Design.Font.h3)
-                Text(subtitle)
-                    .foregroundColor(Design.Color.accessory)
-                    .lineLimit(1)
-                    .font(Design.Font.caption)
-            }
-            Spacer()
-            Image("bigChevron")
-                .foregroundColor(Design.Color.accessory)
-                .padding(.trailing, spacingLevel.next.value)
-        }
-        .padding(.all, spacingLevel.value)
-        .background(Design.Color.group)
-        .cornerRadius(spacingLevel.value)
+		HStack(spacing: spacingLevel.value) {
+			Spacer()
+			ForEach(progressItems, id: \.date) { progressItem in
+				Element(
+					item: progressItem,
+					spacingLevel: spacingLevel.next
+				)
+			}
+			Spacer()
+		}
+		.padding(spacingLevel.value)
+		.background(Design.Color.group)
+		.cornerRadius(spacingLevel.value)
     }
 }
 
 struct ProgressHeader_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ProgressHeader(
-                title: "Начни рисовать регулярно",
-                subtitle: "Настрой прогресс и напоминания",
-                spacingLevel: .level3
-            )
-                .padding(.all, 10)
-                .previewLayout(.sizeThatFits)
-
-            ProgressHeader(
-                title: "Начни рисовать регулярно",
-                subtitle: "Настрой прогресс и напоминания",
-                spacingLevel: .level3
-            )
-                .preferredColorScheme(.dark)
-                .padding(.all, 10)
-                .previewLayout(.sizeThatFits)
-        }
+		HStack {
+			ProgressHeader(
+				progressItems: Mocks.progressItems,
+				spacingLevel: .level2
+			)
+		}
+		.padding(Design.SpacingLevel.level1.value)
     }
 }
