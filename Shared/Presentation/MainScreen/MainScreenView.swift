@@ -16,7 +16,7 @@ struct MainScreenView: View {
     var body: some View {
         NavigationView {
 			VStack {
-				MainScreenContent(
+				MainScreenContentView(
 					progress: progress,
 					recomendations: recomendations,
 					sessions: sessions,

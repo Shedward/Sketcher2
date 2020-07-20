@@ -17,6 +17,10 @@
 		6329EC6024C1F5F700DA831E /* ProgressItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329EC5E24C1F5F700DA831E /* ProgressItems.swift */; };
 		63963E4724C51F9300AE93D5 /* NewSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63963E4624C51F9300AE93D5 /* NewSessionView.swift */; };
 		63963E4A24C521BD00AE93D5 /* SessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63963E4924C521BD00AE93D5 /* SessionView.swift */; };
+		63963E4C24C52B1A00AE93D5 /* SessionGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63963E4B24C52B1A00AE93D5 /* SessionGalleryView.swift */; };
+		63963E4E24C5BA1400AE93D5 /* FormSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63963E4D24C5BA1400AE93D5 /* FormSection.swift */; };
+		63963E5024C5BD6B00AE93D5 /* FormFieldsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63963E4F24C5BD6B00AE93D5 /* FormFieldsGroup.swift */; };
+		63963E5224C61CB100AE93D5 /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63963E5124C61CB100AE93D5 /* CornerRadiusStyle.swift */; };
 		63BC981124B90C4900AE1B28 /* Sketcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FE24B90C4800AE1B28 /* Sketcher.swift */; };
 		63BC981224B90C4900AE1B28 /* Sketcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FE24B90C4800AE1B28 /* Sketcher.swift */; };
 		63BC981324B90C4900AE1B28 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FF24B90C4800AE1B28 /* MainScreenView.swift */; };
@@ -66,6 +70,10 @@
 		6329EC5E24C1F5F700DA831E /* ProgressItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressItems.swift; sourceTree = "<group>"; };
 		63963E4624C51F9300AE93D5 /* NewSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessionView.swift; sourceTree = "<group>"; };
 		63963E4924C521BD00AE93D5 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
+		63963E4B24C52B1A00AE93D5 /* SessionGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionGalleryView.swift; sourceTree = "<group>"; };
+		63963E4D24C5BA1400AE93D5 /* FormSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSection.swift; sourceTree = "<group>"; };
+		63963E4F24C5BD6B00AE93D5 /* FormFieldsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldsGroup.swift; sourceTree = "<group>"; };
+		63963E5124C61CB100AE93D5 /* CornerRadiusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusStyle.swift; sourceTree = "<group>"; };
 		63BC97FE24B90C4800AE1B28 /* Sketcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sketcher.swift; sourceTree = "<group>"; };
 		63BC97FF24B90C4800AE1B28 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		63BC980024B90C4900AE1B28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -116,6 +124,9 @@
 			isa = PBXGroup;
 			children = (
 				63963E4624C51F9300AE93D5 /* NewSessionView.swift */,
+				63963E4B24C52B1A00AE93D5 /* SessionGalleryView.swift */,
+				63963E4D24C5BA1400AE93D5 /* FormSection.swift */,
+				63963E4F24C5BD6B00AE93D5 /* FormFieldsGroup.swift */,
 			);
 			path = NewSession;
 			sourceTree = "<group>";
@@ -258,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				63DBFF9E24BA60E7000E1FD5 /* VisualEffectView.swift */,
+				63963E5124C61CB100AE93D5 /* CornerRadiusStyle.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -365,20 +377,24 @@
 			files = (
 				63DBFF9F24BA60E7000E1FD5 /* VisualEffectView.swift in Sources */,
 				63963E4A24C521BD00AE93D5 /* SessionView.swift in Sources */,
+				63963E4C24C52B1A00AE93D5 /* SessionGalleryView.swift in Sources */,
 				63BC983B24B9DE0E00AE1B28 /* SpacingLevel.swift in Sources */,
 				63BC983E24B9DEEC00AE1B28 /* Design.swift in Sources */,
 				63DBFF9524BA508B000E1FD5 /* Sessions.swift in Sources */,
 				63BC981324B90C4900AE1B28 /* MainScreenView.swift in Sources */,
 				6329EC5C24C1F53500DA831E /* ProgressItem.swift in Sources */,
+				63963E5224C61CB100AE93D5 /* CornerRadiusStyle.swift in Sources */,
 				63BC983524B9244000AE1B28 /* Colors.swift in Sources */,
 				6329EC5924C1F38D00DA831E /* ProgressHeaderView.swift in Sources */,
 				63DBFF8E24BA3201000E1FD5 /* RecomendedSession.swift in Sources */,
+				63963E4E24C5BA1400AE93D5 /* FormSection.swift in Sources */,
 				63BC983224B9227800AE1B28 /* SetupProgressHeaderView.swift in Sources */,
 				63DBFF9124BA4EBE000E1FD5 /* UserSessionsView.swift in Sources */,
 				63BC984224B9F3CF00AE1B28 /* SessionCell.swift in Sources */,
 				6304A3B524C103660093DF70 /* MainScreenContentView.swift in Sources */,
 				63DBFF8624BA300C000E1FD5 /* RecomendedSessionsView.swift in Sources */,
 				63DBFF9B24BA50C6000E1FD5 /* Recomendations.swift in Sources */,
+				63963E5024C5BD6B00AE93D5 /* FormFieldsGroup.swift in Sources */,
 				6329EC5F24C1F5F700DA831E /* ProgressItems.swift in Sources */,
 				63DBFF8B24BA3039000E1FD5 /* Session.swift in Sources */,
 				63BC982D24B91ED000AE1B28 /* Fonts.swift in Sources */,

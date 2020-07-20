@@ -25,7 +25,7 @@ struct SetupProgressHeaderView: View {
                 Text(subtitle)
                     .foregroundColor(Design.Color.accessory)
                     .lineLimit(1)
-                    .font(Design.Font.caption)
+                    .font(Design.Font.body3)
             }
             Spacer()
             Image("bigChevron")

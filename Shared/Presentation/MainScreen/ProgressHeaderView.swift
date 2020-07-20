@@ -17,7 +17,7 @@ struct ProgressHeaderView: View {
 			VStack(alignment: .center, spacing: 0) {
 				icon(for: item)
 				Text(day(for: item))
-					.font(Design.Font.caption)
+					.font(Design.Font.body3)
 			}
 		}
 

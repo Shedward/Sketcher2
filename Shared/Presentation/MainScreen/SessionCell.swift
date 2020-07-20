@@ -26,7 +26,7 @@ struct SessionCell: View {
                     .foregroundColor(Design.Color.content)
                 if let subtitle = subtitle {
                     Text(subtitle)
-                        .font(Design.Font.caption)
+                        .font(Design.Font.body3)
                         .foregroundColor(Design.Color.accessory)
                 }
             }

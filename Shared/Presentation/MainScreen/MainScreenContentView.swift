@@ -59,7 +59,7 @@ struct MainScreenContentView: View {
 						spacing: spacingLevel.next,
 						accessory: {
 							Text("Изменить")
-								.font(Design.Font.caption)
+								.font(Design.Font.body3)
 								.foregroundColor(Design.Color.content)
 						},
 						content: {

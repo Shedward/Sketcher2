@@ -20,10 +20,11 @@ extension Design {
         static let h1 = mainBold(size: 24)
         static let h2 = mainBold(size: 18)
         static let h3 = mainBold(size: 15)
+		static let h4 = mainBold(size: 12)
 
-        static let body = main(size: 18)
-        static let body3 = main(size: 15)
-
-        static let caption = main(size: 12)
+        static let body1 = main(size: 18)
+        static let body2 = main(size: 15)
+        static let body3 = main(size: 12)
+		static let body4 = main(size: 9)
     }
 }
