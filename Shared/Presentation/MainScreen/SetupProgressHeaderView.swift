@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SetupProgressHeader: View {
+struct SetupProgressHeaderView: View {
     let title: String
     let subtitle: String
     let spacingLevel: Design.SpacingLevel
@@ -41,7 +41,7 @@ struct SetupProgressHeader: View {
 struct SetupProgressHeader_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            SetupProgressHeader(
+            SetupProgressHeaderView(
                 title: "Начни рисовать регулярно",
                 subtitle: "Настрой прогресс и напоминания",
                 spacingLevel: .level3
@@ -49,7 +49,7 @@ struct SetupProgressHeader_Previews: PreviewProvider {
                 .padding(.all, 10)
                 .previewLayout(.sizeThatFits)
 
-            SetupProgressHeader(
+            SetupProgressHeaderView(
                 title: "Начни рисовать регулярно",
                 subtitle: "Настрой прогресс и напоминания",
                 spacingLevel: .level3

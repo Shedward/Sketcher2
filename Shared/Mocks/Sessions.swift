@@ -8,6 +8,9 @@
 import UIKit
 
 extension Mocks {
+
+	static let session = Session(name: "Группы людей", preview: UIImage())
+
     static let sessions: [Session] = [
         Session(name: "Группы людей", preview: UIImage()),
         Session(name: "Интерьеры", preview: UIImage()),

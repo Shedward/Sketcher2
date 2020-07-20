@@ -1,5 +1,5 @@
 //
-//  RecomendedSessions.swift
+//  RecomendedSessionsView.swift
 //  Sketcher SUI
 //
 //  Created by Vlad Maltsev on 11.07.2020.
@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct RecomendedSessions: View {
+struct RecomendedSessionsView: View {
     let recomendations: [RecomendedSession]
     let spacingLevel: Design.SpacingLevel
+
+	@State
+	private var openSession: Session?
 
     var body: some View {
         LazyVGrid(
@@ -26,15 +29,21 @@ struct RecomendedSessions: View {
                     subtitle: recomendation.reason,
                     spacingLevel: spacingLevel.next(by: 2)
                 )
+				.onTapGesture {
+					openSession = recomendation.session
+				}
             }
         }
+		.sheet(item: $openSession) { session in
+			SessionView(session: session)
+		}
     }
 }
 
 struct RecomendedSessions_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
-            RecomendedSessions(
+            RecomendedSessionsView(
                 recomendations: Mocks.recomendations,
                 spacingLevel: .level0
             )

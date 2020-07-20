@@ -1,5 +1,5 @@
 //
-//  MainScreenSection.swift
+//  MainScreenSectionView.swift
 //  Sketcher SUI
 //
 //  Created by Vlad Maltsev on 11.07.2020.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainScreenSection<Content: View, Accessory: View>: View {
+struct MainScreenSectionView<Content: View, Accessory: View>: View {
     private let title: String
     private let content: () -> Content
     private let accessory: () -> Accessory
@@ -52,7 +52,7 @@ struct MainScreenHeader_Previews: PreviewProvider {
     }
 
     private static func section(title: String) -> some View {
-        MainScreenSection(
+        MainScreenSectionView(
             title: title,
             spacing: .level1,
             accessory: { Rectangle().foregroundColor(.red) },

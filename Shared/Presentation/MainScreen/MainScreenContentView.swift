@@ -18,35 +18,35 @@ struct MainScreenContentView: View {
 		ScrollView {
 			VStack(spacing: spacingLevel.value) {
 				if let progress = progress, !progress.isEmpty {
-					MainScreenSection(
+					MainScreenSectionView(
 						title: "Прогресс",
 						spacing: spacingLevel.next,
 						accessory: {
 							EmptyView()
 						},
 						content: {
-							ProgressHeader(
+							ProgressHeaderView(
 								progressItems: progress,
 								spacingLevel: spacingLevel.next(by: 2)
 							)
 						}
 					)
 				} else {
-					SetupProgressHeader(
+					SetupProgressHeaderView(
 						title: "Начни рисовать регулярно",
 						subtitle: "Настрой прогресс и напоминания",
 						spacingLevel: spacingLevel.next(by: 2)
 					)
 				}
 				if !recomendations.isEmpty {
-					MainScreenSection(
+					MainScreenSectionView(
 						title: "Рекомендуем",
 						spacing: spacingLevel.next,
 						accessory: {
 							EmptyView()
 						},
 						content: {
-							RecomendedSessions(
+							RecomendedSessionsView(
 								recomendations: recomendations,
 								spacingLevel: spacingLevel
 							)
@@ -54,7 +54,7 @@ struct MainScreenContentView: View {
 					)
 				}
 				if !sessions.isEmpty {
-					MainScreenSection(
+					MainScreenSectionView(
 						title: "Сессии",
 						spacing: spacingLevel.next,
 						accessory: {
@@ -63,7 +63,7 @@ struct MainScreenContentView: View {
 								.foregroundColor(Design.Color.content)
 						},
 						content: {
-							UserSessions(
+							UserSessionsView(
 								sessions: sessions,
 								spacingLevel: spacingLevel
 							)

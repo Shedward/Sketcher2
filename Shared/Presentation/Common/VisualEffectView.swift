@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-struct VisualEffect: UIViewRepresentable {
+struct VisualEffectView: UIViewRepresentable {
     let effect: UIVisualEffect
 
     func makeUIView(context: Context) -> UIVisualEffectView {

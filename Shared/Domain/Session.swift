@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Session {
+struct Session: Identifiable {
     let id = UUID()
     let name: String
     let preview: UIImage
