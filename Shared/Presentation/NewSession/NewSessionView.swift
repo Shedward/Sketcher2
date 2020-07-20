@@ -23,8 +23,8 @@ struct NewSessionView: View {
 				}
 				FormSection {
 					FormFieldsGroup {
-						Text("Источники")
-						Text("Порядок")
+						FormValueFieldView(title: "Источники", value: "8")
+						FormValueFieldView(title: "Порядок", value: "Случайный")
 					}
 				}
 				FormSection(title: "Эффекты") {

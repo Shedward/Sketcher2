@@ -16,7 +16,7 @@ struct FormFieldBuilder {
 
 	static func buildBlock<V1>(_ v1: V1) -> some View
 	where V1: View {
-		FormField(position: .topAndBotom) {
+		FormFieldContainer(position: .topAndBottom) {
 			v1
 		}
 	}
@@ -24,30 +24,30 @@ struct FormFieldBuilder {
 	static func buildBlock<V1, V2>(_ v1: V1, _ v2: V2) -> some View
 	where V1: View, V2: View {
 		VStack(alignment: .leading, spacing: 1.0) {
-			FormField(position: .top) { v1 }
-			FormField(position: .bottom) { v2 }
+			FormFieldContainer(position: .top) { v1 }
+			FormFieldContainer(position: .bottom) { v2 }
 		}
 	}
 
 	static func buildBlock<V1, V2, V3>(_ v1: V1, _ v2: V2, _ v3: V3) -> some View
 	where V1: View, V2: View, V3: View {
 		VStack(alignment: .leading, spacing: 1.0) {
-			FormField(position: .top) { v1 }
-			FormField(position: .middle) { v2 }
-			FormField(position: .bottom) { v3 }
+			FormFieldContainer(position: .top) { v1 }
+			FormFieldContainer(position: .middle) { v2 }
+			FormFieldContainer(position: .bottom) { v3 }
 		}
 	}
 }
 
 enum FormFieldPosition {
-	case topAndBotom
+	case topAndBottom
 	case top
 	case middle
 	case bottom
 
 	var roundedCorners: UIRectCorner {
 		switch self {
-		case .topAndBotom:
+		case .topAndBottom:
 			return .allCorners
 		case .top:
 			return [.topLeft, .topRight]
@@ -59,7 +59,7 @@ enum FormFieldPosition {
 	}
 }
 
-struct FormField<Content: View>: View {
+struct FormFieldContainer<Content: View>: View {
 	let position: FormFieldPosition
 	let spacingLevel = Design.SpacingLevel.level1
 	let content: () -> Content
