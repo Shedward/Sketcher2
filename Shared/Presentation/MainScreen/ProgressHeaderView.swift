@@ -42,7 +42,7 @@ struct ProgressHeaderView: View {
 	let spacingLevel: Design.SpacingLevel
 
     var body: some View {
-		HStack(spacing: spacingLevel.value) {
+		HStack(spacing: 2.0 * spacingLevel.value) {
 			Spacer()
 			ForEach(progressItems, id: \.date) { progressItem in
 				Element(

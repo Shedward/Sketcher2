@@ -16,6 +16,7 @@ struct NewSessionView: View {
 				Text("Новая сессия")
 					.font(Design.Font.h1)
 				SessionGalleryView(images: newSession.preview)
+					.layoutPriority(1)
 				FormSection(title: "Название") {
 					FormFieldsGroup {
 						FormTextFieldView()

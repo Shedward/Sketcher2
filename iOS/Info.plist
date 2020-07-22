@@ -48,6 +48,7 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Montserrat-SemiBold.ttf</string>
 		<string>Montserrat-Medium.ttf</string>
 		<string>Montserrat-Bold.ttf</string>
 	</array>

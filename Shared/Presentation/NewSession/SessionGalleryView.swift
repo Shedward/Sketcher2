@@ -31,6 +31,7 @@ struct SessionGalleryView_Previews: PreviewProvider {
 		SessionGalleryView(
 			images: [UIImage(), UIImage(), UIImage()]
 		)
+		.previewLayout(.fixed(width: 300, height: 80))
 		.padding(Design.SpacingLevel.level0.value)
     }
 }
