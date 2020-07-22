@@ -46,6 +46,11 @@
 		63BC984224B9F3CF00AE1B28 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC984124B9F3CF00AE1B28 /* SessionCell.swift */; };
 		63BC984324B9F3CF00AE1B28 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC984124B9F3CF00AE1B28 /* SessionCell.swift */; };
 		63D9686B24C65FA700DA4B7A /* FormValueFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9686A24C65FA700DA4B7A /* FormValueFieldView.swift */; };
+		63D9686D24C71B7700DA4B7A /* FormButtonFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9686C24C71B7700DA4B7A /* FormButtonFieldView.swift */; };
+		63D9686F24C71D8B00DA4B7A /* FormTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9686E24C71D8B00DA4B7A /* FormTextFieldView.swift */; };
+		63D9687124C72D8C00DA4B7A /* NewSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9687024C72D8C00DA4B7A /* NewSession.swift */; };
+		63D9687324C72F8A00DA4B7A /* NewSessions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9687224C72F8A00DA4B7A /* NewSessions.swift */; };
+		63D9687524C8444400DA4B7A /* TagsEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9687424C8444400DA4B7A /* TagsEditorView.swift */; };
 		63DBFF8624BA300C000E1FD5 /* RecomendedSessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBFF8524BA300C000E1FD5 /* RecomendedSessionsView.swift */; };
 		63DBFF8724BA300C000E1FD5 /* RecomendedSessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBFF8524BA300C000E1FD5 /* RecomendedSessionsView.swift */; };
 		63DBFF8B24BA3039000E1FD5 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DBFF8A24BA3039000E1FD5 /* Session.swift */; };
@@ -94,6 +99,11 @@
 		63BC984124B9F3CF00AE1B28 /* SessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
 		63BC984424B9F9ED00AE1B28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		63D9686A24C65FA700DA4B7A /* FormValueFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValueFieldView.swift; sourceTree = "<group>"; };
+		63D9686C24C71B7700DA4B7A /* FormButtonFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButtonFieldView.swift; sourceTree = "<group>"; };
+		63D9686E24C71D8B00DA4B7A /* FormTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextFieldView.swift; sourceTree = "<group>"; };
+		63D9687024C72D8C00DA4B7A /* NewSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSession.swift; sourceTree = "<group>"; };
+		63D9687224C72F8A00DA4B7A /* NewSessions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessions.swift; sourceTree = "<group>"; };
+		63D9687424C8444400DA4B7A /* TagsEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsEditorView.swift; sourceTree = "<group>"; };
 		63DBFF8524BA300C000E1FD5 /* RecomendedSessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendedSessionsView.swift; sourceTree = "<group>"; };
 		63DBFF8A24BA3039000E1FD5 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		63DBFF8D24BA3201000E1FD5 /* RecomendedSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendedSession.swift; sourceTree = "<group>"; };
@@ -130,6 +140,9 @@
 				63963E4D24C5BA1400AE93D5 /* FormSection.swift */,
 				63963E4F24C5BD6B00AE93D5 /* FormFieldsGroup.swift */,
 				63D9686A24C65FA700DA4B7A /* FormValueFieldView.swift */,
+				63D9686C24C71B7700DA4B7A /* FormButtonFieldView.swift */,
+				63D9686E24C71D8B00DA4B7A /* FormTextFieldView.swift */,
+				63D9687424C8444400DA4B7A /* TagsEditorView.swift */,
 			);
 			path = NewSession;
 			sourceTree = "<group>";
@@ -253,6 +266,7 @@
 				63DBFF8A24BA3039000E1FD5 /* Session.swift */,
 				63DBFF8D24BA3201000E1FD5 /* RecomendedSession.swift */,
 				6329EC5B24C1F53500DA831E /* ProgressItem.swift */,
+				63D9687024C72D8C00DA4B7A /* NewSession.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -264,6 +278,7 @@
 				63DBFF9424BA508B000E1FD5 /* Sessions.swift */,
 				63DBFF9A24BA50C6000E1FD5 /* Recomendations.swift */,
 				6329EC5E24C1F5F700DA831E /* ProgressItems.swift */,
+				63D9687224C72F8A00DA4B7A /* NewSessions.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -382,14 +397,17 @@
 				63963E4A24C521BD00AE93D5 /* SessionView.swift in Sources */,
 				63963E4C24C52B1A00AE93D5 /* SessionGalleryView.swift in Sources */,
 				63BC983B24B9DE0E00AE1B28 /* SpacingLevel.swift in Sources */,
+				63D9686F24C71D8B00DA4B7A /* FormTextFieldView.swift in Sources */,
 				63BC983E24B9DEEC00AE1B28 /* Design.swift in Sources */,
 				63DBFF9524BA508B000E1FD5 /* Sessions.swift in Sources */,
+				63D9687524C8444400DA4B7A /* TagsEditorView.swift in Sources */,
 				63BC981324B90C4900AE1B28 /* MainScreenView.swift in Sources */,
 				6329EC5C24C1F53500DA831E /* ProgressItem.swift in Sources */,
 				63963E5224C61CB100AE93D5 /* CornerRadiusStyle.swift in Sources */,
 				63BC983524B9244000AE1B28 /* Colors.swift in Sources */,
 				6329EC5924C1F38D00DA831E /* ProgressHeaderView.swift in Sources */,
 				63DBFF8E24BA3201000E1FD5 /* RecomendedSession.swift in Sources */,
+				63D9687324C72F8A00DA4B7A /* NewSessions.swift in Sources */,
 				63963E4E24C5BA1400AE93D5 /* FormSection.swift in Sources */,
 				63BC983224B9227800AE1B28 /* SetupProgressHeaderView.swift in Sources */,
 				63D9686B24C65FA700DA4B7A /* FormValueFieldView.swift in Sources */,
@@ -398,12 +416,14 @@
 				6304A3B524C103660093DF70 /* MainScreenContentView.swift in Sources */,
 				63DBFF8624BA300C000E1FD5 /* RecomendedSessionsView.swift in Sources */,
 				63DBFF9B24BA50C6000E1FD5 /* Recomendations.swift in Sources */,
+				63D9687124C72D8C00DA4B7A /* NewSession.swift in Sources */,
 				63963E5024C5BD6B00AE93D5 /* FormFieldsGroup.swift in Sources */,
 				6329EC5F24C1F5F700DA831E /* ProgressItems.swift in Sources */,
 				63DBFF8B24BA3039000E1FD5 /* Session.swift in Sources */,
 				63BC982D24B91ED000AE1B28 /* Fonts.swift in Sources */,
 				63BC981124B90C4900AE1B28 /* Sketcher.swift in Sources */,
 				63BC983824B939A500AE1B28 /* MainScreenSectionView.swift in Sources */,
+				63D9686D24C71B7700DA4B7A /* FormButtonFieldView.swift in Sources */,
 				63DBFF9824BA509C000E1FD5 /* Mocks.swift in Sources */,
 				63963E4724C51F9300AE93D5 /* NewSessionView.swift in Sources */,
 			);

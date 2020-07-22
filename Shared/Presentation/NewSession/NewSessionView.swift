@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct NewSessionView: View {
-	let preview: [UIImage]
+	let newSession: NewSession
 
     var body: some View {
 		ScrollView {
 			VStack(alignment: .leading, spacing: Design.SpacingLevel.level1.value) {
 				Text("Новая сессия")
 					.font(Design.Font.h1)
-				SessionGalleryView(images: preview)
+				SessionGalleryView(images: newSession.preview)
 				FormSection(title: "Название") {
 					FormFieldsGroup {
-						Text("Название")
+						FormTextFieldView()
 					}
 				}
 				FormSection {
@@ -29,27 +29,28 @@ struct NewSessionView: View {
 				}
 				FormSection(title: "Эффекты") {
 					FormFieldsGroup {
-						Text("Добавить...")
+						FormButtonFieldView(title: "Добавить...")
 					}
 				}
 				FormSection {
 					FormFieldsGroup {
-						Text("Время на картинку")
-						Text("Время сессии")
-						Text("Переход")
+						FormValueFieldView(title: "Время на картинку", value: "1 мин")
+						FormValueFieldView(title: "Время сессии", value: "∞")
+						FormValueFieldView(title: "Переход", value: "Плавный")
 					}
 				}
 				FormSection(title: "Теги") {
-					EmptyView()
+					TagsEditorView(tags: newSession.tags)
 				}
 			}
+			.padding(Design.SpacingLevel.level0.value)
 		}
-		.padding(Design.SpacingLevel.level0.value)
+		.background(Design.Color.background)
     }
 }
 
 struct NewSession_Previews: PreviewProvider {
     static var previews: some View {
-        NewSessionView(preview: [UIImage(), UIImage(), UIImage()])
+		NewSessionView(newSession: Mocks.newSession)
     }
 }

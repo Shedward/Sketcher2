@@ -13,6 +13,9 @@ struct MainScreenView: View {
     let sessions: [Session]
     let spacingLevel: Design.SpacingLevel
 
+	@State
+	private var showCreateSession: Bool = false
+
     var body: some View {
         NavigationView {
 			VStack {
@@ -27,6 +30,9 @@ struct MainScreenView: View {
 					Image("settings")
 					Spacer()
 					Image("add")
+						.onTapGesture {
+							showCreateSession = true
+						}
 				}
 				.padding(
 					EdgeInsets(
@@ -39,6 +45,9 @@ struct MainScreenView: View {
 			}
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
+		.sheet(isPresented: $showCreateSession) {
+			NewSessionView(newSession: Mocks.newSession)
+		}
     }
 }
 
