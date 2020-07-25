@@ -56,7 +56,7 @@ struct TagsEditorView: View {
 						}
 					}
 				}
-			}
+			}.fixedSize()
 		}
     }
 

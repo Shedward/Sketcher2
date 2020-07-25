@@ -12,18 +12,17 @@ struct SessionGalleryView: View {
 	let spacingLevel = Design.SpacingLevel.level0
 
     var body: some View {
-		ScrollView {
-			HStack(spacing: spacingLevel.next.value) {
-				ForEach(images, id: \.self) { image in
-					Image(uiImage: image)
-						.resizable()
-						.aspectRatio(CGSize(width: 90, height: 120), contentMode: .fill)
-						.background(Design.Color.group)
-						.cornerRadius(spacingLevel.next.value)
-				}
+		HStack(alignment: .center, spacing: spacingLevel.next.value) {
+			ForEach(images, id: \.self) { image in
+				Image(uiImage: image)
+					.resizable()
+					.aspectRatio(3.0/4.0 ,contentMode: .fit)
+					.background(Design.Color.group)
+					.cornerRadius(spacingLevel.next.value)
 			}
 		}
-    }
+		.fixedSize(horizontal: false, vertical: true)
+	}
 }
 
 struct SessionGalleryView_Previews: PreviewProvider {
@@ -31,7 +30,7 @@ struct SessionGalleryView_Previews: PreviewProvider {
 		SessionGalleryView(
 			images: [UIImage(), UIImage(), UIImage()]
 		)
-		.previewLayout(.fixed(width: 300, height: 80))
 		.padding(Design.SpacingLevel.level0.value)
+		.previewLayout(.sizeThatFits)
     }
 }
