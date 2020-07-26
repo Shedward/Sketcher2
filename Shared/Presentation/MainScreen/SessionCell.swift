@@ -33,7 +33,7 @@ struct SessionCell: View {
                 }
             }
         }
-        .frame(maxWidth: 260)
+		.clipped()
     }
 }
 

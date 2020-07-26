@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Concept" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-175.000000, -557.000000)" filter="url(#filter-1)">
+            <g transform="translate(171.000000, 557.000000)">
+                <g id="icons8-image" transform="translate(4.000000, 0.000000)" fill="#000000" fill-rule="nonzero">
+                    <path d="M4,4 C2.9069372,4 2,4.9069372 2,6 L2,18 C2,19.093063 2.9069372,20 4,20 L20,20 C21.093063,20 22,19.093063 22,18 L22,6 C22,4.9069372 21.093063,4 20,4 L4,4 Z M4,6 L20,6 L20,18 L4,18 L4,6 Z M10,8 C9.44771525,8 9,8.44771525 9,9 C9,9.55228475 9.44771525,10 10,10 C10.5522847,10 11,9.55228475 11,9 C11,8.44771525 10.5522847,8 10,8 Z M14.5,11 L11,15 L8.5,12.5 L5.7773438,16 L18.25,16 L14.5,11 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

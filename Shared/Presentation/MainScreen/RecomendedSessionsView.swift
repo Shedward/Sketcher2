@@ -35,7 +35,7 @@ struct RecomendedSessionsView: View {
             }
         }
 		.sheet(item: $openSession) { session in
-			SessionView(session: session)
+			SessionStartView(session: session)
 		}
     }
 }

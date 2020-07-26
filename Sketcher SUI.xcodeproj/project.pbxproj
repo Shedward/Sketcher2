@@ -15,6 +15,9 @@
 		6329EC5D24C1F53500DA831E /* ProgressItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329EC5B24C1F53500DA831E /* ProgressItem.swift */; };
 		6329EC5F24C1F5F700DA831E /* ProgressItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329EC5E24C1F5F700DA831E /* ProgressItems.swift */; };
 		6329EC6024C1F5F700DA831E /* ProgressItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329EC5E24C1F5F700DA831E /* ProgressItems.swift */; };
+		633EADF824CE0024007D63AE /* SessionPropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633EADF724CE0024007D63AE /* SessionPropertyView.swift */; };
+		633EADFA24CE0157007D63AE /* SessionProperites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633EADF924CE0157007D63AE /* SessionProperites.swift */; };
+		633EADFD24CE0445007D63AE /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633EADFC24CE0445007D63AE /* Localized.swift */; };
 		638DD09A24C9923900630DAB /* FixedSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DD09924C9923900630DAB /* FixedSpacer.swift */; };
 		638DD09B24C9923900630DAB /* FixedSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638DD09924C9923900630DAB /* FixedSpacer.swift */; };
 		63963E4724C51F9300AE93D5 /* NewSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63963E4624C51F9300AE93D5 /* NewSessionView.swift */; };
@@ -25,7 +28,7 @@
 		63963E5224C61CB100AE93D5 /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63963E5124C61CB100AE93D5 /* CornerRadiusStyle.swift */; };
 		639B71C424CDB80D00FA5141 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B71C324CDB80D00FA5141 /* Images.swift */; };
 		639B71C524CDC07800FA5141 /* MockAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63BC984424B9F9ED00AE1B28 /* MockAssets.xcassets */; };
-		639B71C924CDCA6000FA5141 /* SessionStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B71C824CDCA6000FA5141 /* SessionStart.swift */; };
+		639B71C924CDCA6000FA5141 /* SessionStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639B71C824CDCA6000FA5141 /* SessionStartView.swift */; };
 		63BC981124B90C4900AE1B28 /* Sketcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FE24B90C4800AE1B28 /* Sketcher.swift */; };
 		63BC981224B90C4900AE1B28 /* Sketcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FE24B90C4800AE1B28 /* Sketcher.swift */; };
 		63BC981324B90C4900AE1B28 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC97FF24B90C4800AE1B28 /* MainScreenView.swift */; };
@@ -85,6 +88,9 @@
 		6329EC5824C1F38D00DA831E /* ProgressHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderView.swift; sourceTree = "<group>"; };
 		6329EC5B24C1F53500DA831E /* ProgressItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressItem.swift; sourceTree = "<group>"; };
 		6329EC5E24C1F5F700DA831E /* ProgressItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressItems.swift; sourceTree = "<group>"; };
+		633EADF724CE0024007D63AE /* SessionPropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPropertyView.swift; sourceTree = "<group>"; };
+		633EADF924CE0157007D63AE /* SessionProperites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProperites.swift; sourceTree = "<group>"; };
+		633EADFC24CE0445007D63AE /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		638DD09924C9923900630DAB /* FixedSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedSpacer.swift; sourceTree = "<group>"; };
 		63963E4624C51F9300AE93D5 /* NewSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSessionView.swift; sourceTree = "<group>"; };
 		63963E4924C521BD00AE93D5 /* SessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionView.swift; sourceTree = "<group>"; };
@@ -93,7 +99,7 @@
 		63963E4F24C5BD6B00AE93D5 /* FormFieldsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormFieldsGroup.swift; sourceTree = "<group>"; };
 		63963E5124C61CB100AE93D5 /* CornerRadiusStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadiusStyle.swift; sourceTree = "<group>"; };
 		639B71C324CDB80D00FA5141 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
-		639B71C824CDCA6000FA5141 /* SessionStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStart.swift; sourceTree = "<group>"; };
+		639B71C824CDCA6000FA5141 /* SessionStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStartView.swift; sourceTree = "<group>"; };
 		63BC97FE24B90C4800AE1B28 /* Sketcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sketcher.swift; sourceTree = "<group>"; };
 		63BC97FF24B90C4800AE1B28 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		63BC980024B90C4900AE1B28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -149,6 +155,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		633EADFB24CE0439007D63AE /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				633EADFC24CE0445007D63AE /* Localized.swift */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		63963E4524C51F5600AE93D5 /* NewSession */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +189,9 @@
 		639B71C224CDB6E400FA5141 /* SessionStart */ = {
 			isa = PBXGroup;
 			children = (
-				639B71C824CDCA6000FA5141 /* SessionStart.swift */,
+				639B71C824CDCA6000FA5141 /* SessionStartView.swift */,
+				633EADF724CE0024007D63AE /* SessionPropertyView.swift */,
+				633EADF924CE0157007D63AE /* SessionProperites.swift */,
 			);
 			path = SessionStart;
 			sourceTree = "<group>";
@@ -313,6 +329,7 @@
 		63DBFF9D24BA54C0000E1FD5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				633EADFB24CE0439007D63AE /* Localization */,
 				63BC982B24B90E0000AE1B28 /* DesignSystem */,
 				63DBFF9E24BA60E7000E1FD5 /* VisualEffectView.swift */,
 				63963E5124C61CB100AE93D5 /* CornerRadiusStyle.swift */,
@@ -439,10 +456,11 @@
 				63BC981324B90C4900AE1B28 /* MainScreenView.swift in Sources */,
 				6329EC5C24C1F53500DA831E /* ProgressItem.swift in Sources */,
 				63963E5224C61CB100AE93D5 /* CornerRadiusStyle.swift in Sources */,
+				633EADFD24CE0445007D63AE /* Localized.swift in Sources */,
 				63BC983524B9244000AE1B28 /* Colors.swift in Sources */,
 				639B71C424CDB80D00FA5141 /* Images.swift in Sources */,
 				6329EC5924C1F38D00DA831E /* ProgressHeaderView.swift in Sources */,
-				639B71C924CDCA6000FA5141 /* SessionStart.swift in Sources */,
+				639B71C924CDCA6000FA5141 /* SessionStartView.swift in Sources */,
 				63DBFF8E24BA3201000E1FD5 /* RecomendedSession.swift in Sources */,
 				63D9687324C72F8A00DA4B7A /* NewSessions.swift in Sources */,
 				638DD09A24C9923900630DAB /* FixedSpacer.swift in Sources */,
@@ -450,6 +468,7 @@
 				63CA615724CCA2D8008D5A00 /* FixedSizeGeometryReader.swift in Sources */,
 				63BC983224B9227800AE1B28 /* SetupProgressHeaderView.swift in Sources */,
 				63D9686B24C65FA700DA4B7A /* FormValueFieldView.swift in Sources */,
+				633EADFA24CE0157007D63AE /* SessionProperites.swift in Sources */,
 				63DBFF9124BA4EBE000E1FD5 /* UserSessionsView.swift in Sources */,
 				63BC984224B9F3CF00AE1B28 /* SessionCell.swift in Sources */,
 				6304A3B524C103660093DF70 /* MainScreenContentView.swift in Sources */,
@@ -460,6 +479,7 @@
 				6329EC5F24C1F5F700DA831E /* ProgressItems.swift in Sources */,
 				63DBFF8B24BA3039000E1FD5 /* Session.swift in Sources */,
 				63BC982D24B91ED000AE1B28 /* Fonts.swift in Sources */,
+				633EADF824CE0024007D63AE /* SessionPropertyView.swift in Sources */,
 				63BC981124B90C4900AE1B28 /* Sketcher.swift in Sources */,
 				63BC983824B939A500AE1B28 /* MainScreenSectionView.swift in Sources */,
 				63D9686D24C71B7700DA4B7A /* FormButtonFieldView.swift in Sources */,

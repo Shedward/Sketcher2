@@ -60,7 +60,7 @@ struct MainScreen_Previews: PreviewProvider {
 				progress: Mocks.progressItems,
 				recomendations: Mocks.recomendations,
                 sessions: Mocks.sessions,
-				spacingLevel: .level1
+				spacingLevel: .level0
             )
 
             MainScreenView(

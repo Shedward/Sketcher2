@@ -11,4 +11,7 @@ struct Session: Identifiable {
     let id = UUID()
     let name: String
     let preview: UIImage
+	let imageCount: Int?
+	let imageTime: TimeInterval
+	let lastPractice: Date?
 }
