@@ -40,16 +40,6 @@ struct NewSessionView: View {
 							FormValueFieldView(title: "Переход", value: "Плавный")
 						}
 					}
-					FormSection {
-						FormFieldsGroup {
-							FormValueFieldView(title: "Время на картинку", value: "1 мин")
-							FormValueFieldView(title: "Время сессии", value: "∞")
-							FormValueFieldView(title: "Переход", value: "Плавный")
-						}
-					}
-					FormSection(title: "Теги") {
-						TagsEditorView(tags: newSession.tags)
-					}
 					FormSection(title: "Теги") {
 						TagsEditorView(tags: newSession.tags)
 					}

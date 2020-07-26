@@ -47,6 +47,8 @@
 		63BC983F24B9DEEC00AE1B28 /* Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC983D24B9DEEC00AE1B28 /* Design.swift */; };
 		63BC984224B9F3CF00AE1B28 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC984124B9F3CF00AE1B28 /* SessionCell.swift */; };
 		63BC984324B9F3CF00AE1B28 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BC984124B9F3CF00AE1B28 /* SessionCell.swift */; };
+		63CA615724CCA2D8008D5A00 /* FixedSizeGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA615624CCA2D8008D5A00 /* FixedSizeGeometryReader.swift */; };
+		63CA615824CCA2D8008D5A00 /* FixedSizeGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA615624CCA2D8008D5A00 /* FixedSizeGeometryReader.swift */; };
 		63D9686B24C65FA700DA4B7A /* FormValueFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9686A24C65FA700DA4B7A /* FormValueFieldView.swift */; };
 		63D9686D24C71B7700DA4B7A /* FormButtonFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9686C24C71B7700DA4B7A /* FormButtonFieldView.swift */; };
 		63D9686F24C71D8B00DA4B7A /* FormTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D9686E24C71D8B00DA4B7A /* FormTextFieldView.swift */; };
@@ -105,6 +107,7 @@
 		63BC983D24B9DEEC00AE1B28 /* Design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Design.swift; sourceTree = "<group>"; };
 		63BC984124B9F3CF00AE1B28 /* SessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
 		63BC984424B9F9ED00AE1B28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		63CA615624CCA2D8008D5A00 /* FixedSizeGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedSizeGeometryReader.swift; sourceTree = "<group>"; };
 		63D9686A24C65FA700DA4B7A /* FormValueFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValueFieldView.swift; sourceTree = "<group>"; };
 		63D9686C24C71B7700DA4B7A /* FormButtonFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButtonFieldView.swift; sourceTree = "<group>"; };
 		63D9686E24C71D8B00DA4B7A /* FormTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextFieldView.swift; sourceTree = "<group>"; };
@@ -300,6 +303,7 @@
 				63963E5124C61CB100AE93D5 /* CornerRadiusStyle.swift */,
 				63D9687924C8BC7400DA4B7A /* ActionButton.swift */,
 				638DD09924C9923900630DAB /* FixedSpacer.swift */,
+				63CA615624CCA2D8008D5A00 /* FixedSizeGeometryReader.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -425,6 +429,7 @@
 				63D9687324C72F8A00DA4B7A /* NewSessions.swift in Sources */,
 				638DD09A24C9923900630DAB /* FixedSpacer.swift in Sources */,
 				63963E4E24C5BA1400AE93D5 /* FormSection.swift in Sources */,
+				63CA615724CCA2D8008D5A00 /* FixedSizeGeometryReader.swift in Sources */,
 				63BC983224B9227800AE1B28 /* SetupProgressHeaderView.swift in Sources */,
 				63D9686B24C65FA700DA4B7A /* FormValueFieldView.swift in Sources */,
 				63DBFF9124BA4EBE000E1FD5 /* UserSessionsView.swift in Sources */,
@@ -467,6 +472,7 @@
 				63DBFF8724BA300C000E1FD5 /* RecomendedSessionsView.swift in Sources */,
 				63DBFF9C24BA50C6000E1FD5 /* Recomendations.swift in Sources */,
 				6329EC6024C1F5F700DA831E /* ProgressItems.swift in Sources */,
+				63CA615824CCA2D8008D5A00 /* FixedSizeGeometryReader.swift in Sources */,
 				63DBFF8C24BA3039000E1FD5 /* Session.swift in Sources */,
 				63BC982E24B91ED000AE1B28 /* Fonts.swift in Sources */,
 				63BC981224B90C4900AE1B28 /* Sketcher.swift in Sources */,

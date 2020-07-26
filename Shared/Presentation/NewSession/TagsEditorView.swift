@@ -9,6 +9,14 @@ import SwiftUI
 
 struct TagsEditorView: View {
 
+	struct SizePreferenceKey: PreferenceKey {
+		static var defaultValue: CGSize = .zero
+
+		static func reduce(value: inout CGSize, nextValue: () -> CGSize) {
+			value = nextValue()
+		}
+	}
+
 	struct TagView: View {
 		private static let padding = Design.SpacingLevel.level3.value
 
@@ -42,8 +50,8 @@ struct TagsEditorView: View {
 	@State var tags: [String]
 
     var body: some View {
-		GeometryReader { geometry in
-			let layoutedTags = layout(
+		FixedSizeGeometryReader { geometry in
+			let (layoutedTags, finalSize) = layout(
 				tags: tags,
 				in: geometry.frame(in: .local).size
 			)
@@ -56,26 +64,34 @@ struct TagsEditorView: View {
 						}
 					}
 				}
-			}.fixedSize()
+			}
+			.preference(
+				key: ContentSizePreferenceKey.self,
+				value: .init(height: finalSize.height)
+			)
 		}
     }
 
-	private func layout(tags: [String], in size: CGSize) -> [[String]] {
+	private func layout(tags: [String], in size: CGSize) -> ([[String]], CGSize) {
 		var items: [[String]] = []
+		var finalSize = CGSize(width: size.width, height: 0)
 
 		var currentRow: [String] = []
-		var leftSpace: CGFloat = size.width
+		var leftSpace: CGFloat = 0
 
 		for tag in tags {
-			let width = TagView.size(for: tag).width
+			let tagSize = TagView.size(for: tag)
 
-			if leftSpace > width {
+			if leftSpace > tagSize.width {
 				currentRow.append(tag)
-				leftSpace -= width
+				leftSpace -= tagSize.width
 			} else {
-				items.append(currentRow)
+				if !currentRow.isEmpty {
+					items.append(currentRow)
+				}
 				currentRow = [tag]
-				leftSpace = size.width - width
+				finalSize.height += tagSize.height
+				leftSpace = size.width - tagSize.width
 			}
 		}
 
@@ -83,7 +99,9 @@ struct TagsEditorView: View {
 			items.append(currentRow)
 		}
 
-		return items
+		finalSize.height += Self.insets * CGFloat(items.count - 1)
+
+		return (items, finalSize)
 	}
 }
 
@@ -102,6 +120,7 @@ struct TagsEditorView_Previews: PreviewProvider {
 				"वर्णन संस्थान निर्माता प्रव्रुति भाति चुनने"
 			]
 		)
+		.previewLayout(.sizeThatFits)
 		.padding(Design.SpacingLevel.level0.value)
     }
 }
