@@ -10,7 +10,7 @@ import UIKit
 extension Mocks {
 	static let newSession = NewSession(
 		title: "Руки и кисти",
-		preview: [UIImage(), UIImage(), UIImage()],
+		preview: [Images.session1, Images.session2, Images.session3],
 		tags: ["человек", "цвет_и_свет", "руки", "фотографии"]
 	)
 }

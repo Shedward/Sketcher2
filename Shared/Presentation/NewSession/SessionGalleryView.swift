@@ -14,10 +14,15 @@ struct SessionGalleryView: View {
     var body: some View {
 		HStack(alignment: .center, spacing: spacingLevel.next.value) {
 			ForEach(images, id: \.self) { image in
-				Image(uiImage: image)
-					.resizable()
+				Rectangle()
 					.aspectRatio(3.0/4.0 ,contentMode: .fit)
-					.background(Design.Color.group)
+					.foregroundColor(.clear)
+					.background(
+						Image(uiImage: image)
+							.resizable()
+							.background(Design.Color.group)
+							.scaledToFill()
+					)
 					.cornerRadius(spacingLevel.next.value)
 			}
 		}
