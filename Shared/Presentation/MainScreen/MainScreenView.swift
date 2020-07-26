@@ -69,7 +69,7 @@ struct MainScreen_Previews: PreviewProvider {
                 sessions: Mocks.sessions,
 				spacingLevel: .level0
             )
-                .preferredColorScheme(.dark)
+			.preferredColorScheme(.dark)
         }
     }
 }

@@ -9,14 +9,14 @@ import UIKit
 
 extension Mocks {
 
-	static let session = Session(name: "Группы людей", preview: UIImage())
+	static let session = Session(name: "Группы людей", preview: Images.session1)
 
     static let sessions: [Session] = [
-        Session(name: "Группы людей", preview: UIImage()),
-        Session(name: "Интерьеры", preview: UIImage()),
-        Session(name: "Пейзажи и вода 2", preview: UIImage()),
-        Session(name: "Архитектура", preview: UIImage()),
-        Session(name: "Цвет и свет", preview: UIImage()),
-        Session(name: "Композиция", preview: UIImage())
+        Session(name: "Группы людей", preview: Images.session2),
+        Session(name: "Интерьеры", preview: Images.session3),
+        Session(name: "Пейзажи и вода 2", preview: Images.session4),
+        Session(name: "Архитектура", preview: Images.session5),
+        Session(name: "Цвет и свет", preview: Images.session6),
+        Session(name: "Композиция", preview: Images.session7)
     ]
 }

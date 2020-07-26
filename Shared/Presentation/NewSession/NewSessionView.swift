@@ -49,7 +49,7 @@ struct NewSessionView: View {
 			}
 			.background(Design.Color.background)
 
-			ActionButton(title: "Сохранить")
+			ActionButton(title: "Сохранить", style: .normal)
 				.padding(.bottom, Design.SpacingLevel.level0.value)
 		}
     }

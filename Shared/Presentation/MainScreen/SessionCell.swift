@@ -15,7 +15,9 @@ struct SessionCell: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: spacingLevel.next.value) {
-            Rectangle()
+			Image(uiImage: image ?? UIImage())
+				.resizable()
+				.aspectRatio(contentMode: .fill)
                 .frame(height: 90)
                 .foregroundColor(Design.Color.group)
                 .cornerRadius(spacingLevel.value)
