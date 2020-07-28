@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct SessionStartView: View {
-	@Environment(\.colorScheme) var colorScheme
-
 	let session: Session
 	let spacingLevel: Design.SpacingLevel = .level0
+
+	@State private var openSession: Session? = nil
 
     var body: some View {
 		ZStack(alignment: .bottom) {
@@ -20,10 +20,6 @@ struct SessionStartView: View {
 				.aspectRatio(contentMode: .fill)
 				.edgesIgnoringSafeArea(.all)
 				.layoutPriority(-1)
-			let blurStyle: UIBlurEffect.Style = colorScheme == .light
-				? .systemUltraThinMaterialDark
-				: .systemUltraThinMaterialLight
-
 			VStack {
 				Spacer()
 				VStack(spacing: 0) {
@@ -41,18 +37,20 @@ struct SessionStartView: View {
 					}
 					FixedSpacer(height: 2.0 * spacingLevel.value)
 					ActionButton(title: "Начать", style: .overlay)
+						.onTapGesture {
+							self.openSession = self.session
+						}
 					ActionButton(title: "Настроить", style: .overlaySecondary)
 				}
 				.padding(spacingLevel.value)
 				.frame(maxWidth: .infinity)
-				.background(
-					VisualEffectView(
-						effect: UIBlurEffect(style: blurStyle)
-					)
-				)
+				.background(BluredMaterial())
 				.cornerRadius(spacingLevel.value)
 			}
 			.padding(spacingLevel.value)
+		}
+		.fullScreenCover(item: $openSession) { session in
+			SessionView(session: session)
 		}
     }
 }

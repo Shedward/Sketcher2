@@ -14,4 +14,5 @@ struct Session: Identifiable {
 	let imageCount: Int?
 	let imageTime: TimeInterval
 	let lastPractice: Date?
+	let author: String?
 }

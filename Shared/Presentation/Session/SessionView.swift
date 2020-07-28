@@ -11,7 +11,27 @@ struct SessionView: View {
 	let session: Session
 
     var body: some View {
-		Text(session.name)
+		ZStack {
+			Image(uiImage: session.preview)
+				.resizable()
+				.aspectRatio(contentMode: .fit)
+			VStack {
+				HStack {
+					if let imageCount = session.imageCount {
+						BadgeView(text: Localized.number(imageCount))
+					}
+					Spacer()
+					if let author = session.author {
+						BadgeView(text: author)
+					}
+				}
+				Spacer()
+				SessionProgressView(progress: 0.6)
+			}
+			.padding(Design.SpacingLevel.level0.value)
+		}
+		.edgesIgnoringSafeArea(.all)
+		.background(Design.Color.background)
     }
 }
 
