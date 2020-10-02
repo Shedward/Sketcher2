@@ -9,5 +9,5 @@ import UIKit
 
 struct NewSource {
 	let title: String
-	let preview: [UIImage]
+	let preview: [AsyncImage]
 }

@@ -11,9 +11,9 @@ extension Mocks {
 	static let newSource = NewSource(
 		title: "Руки и кисти",
 		preview: [
-			Images.session3,
-			Images.session4,
-			Images.session5
+			AsyncImages.Mock(image: Images.session3, timeout: 1.0),
+			AsyncImages.Mock(image: Images.session4, timeout: 1.0),
+			AsyncImages.Mock(image: Images.session5, timeout: 1.0)
 		]
 	)
 }

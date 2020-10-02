@@ -9,6 +9,6 @@ import UIKit
 
 struct NewSession {
 	let title: String
-	let preview: [UIImage]
+	let preview: [AsyncImage]
 	let tags: [String]
 }

@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct SessionGalleryView: View {
-	let images: [UIImage]
+	let images: [AsyncImage]
 	let spacingLevel = Design.SpacingLevel.level0
 
     var body: some View {
 		HStack(alignment: .center, spacing: spacingLevel.next.value) {
-			ForEach(images, id: \.self) { image in
+			let anyImages = images.map { AnyAsyncImage(asyncImage: $0) }
+			ForEach(anyImages, id: \.self) { image in
 				Rectangle()
 					.aspectRatio(3.0/4.0 ,contentMode: .fit)
 					.foregroundColor(.clear)
 					.background(
-						Image(uiImage: image)
-							.resizable()
+						LoadingImage(asyncImage: image)
 							.background(Design.Color.group)
 							.scaledToFill()
 					)
@@ -33,7 +33,7 @@ struct SessionGalleryView: View {
 struct SessionGalleryView_Previews: PreviewProvider {
     static var previews: some View {
 		SessionGalleryView(
-			images: [UIImage(), UIImage(), UIImage()]
+			images: Mocks.newSource.preview
 		)
 		.padding(Design.SpacingLevel.level0.value)
 		.previewLayout(.sizeThatFits)
