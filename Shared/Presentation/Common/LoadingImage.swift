@@ -22,9 +22,9 @@ struct LoadingImage: View {
 			if let image = viewModel.image {
 				Image(uiImage: image)
 					.resizable()
-					.transition(.opacity)
 			}
 		}
+		.animation(.default)
 		.onAppear {
 			viewModel.load()
 		}
