@@ -9,15 +9,26 @@ import SwiftUI
 
 struct FormValueFieldView: View {
 	let title: String
-	let value: String
+	let value: String?
+	let expanding: Bool
+
+	init(title: String, value: String? = nil, expanding: Bool = true) {
+		self.title = title
+		self.value = value
+		self.expanding = expanding
+	}
 
     var body: some View {
 		HStack(spacing: 0) {
 			Text(title).font(Design.Font.body1)
 			Spacer()
-			Text(value).font(Design.Font.body2)
-			FixedSpacer(width: Design.SpacingLevel.level1.value)
-			Image("chevron")
+			if let value = value {
+				Text(value).font(Design.Font.body2)
+			}
+			if expanding {
+				FixedSpacer(width: Design.SpacingLevel.level1.value)
+				Image("chevron")
+			}
 		}
     }
 }

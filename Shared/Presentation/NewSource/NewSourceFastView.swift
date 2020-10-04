@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewSourceView: View {
+struct NewSourceFastView: View {
 	let newSource: NewSource
 	let spacingLevel: Design.SpacingLevel = .level0
 
@@ -34,9 +34,9 @@ struct NewSourceView: View {
     }
 }
 
-struct NewSourceView_Previews: PreviewProvider {
+struct NewSourceFastView_Previews: PreviewProvider {
     static var previews: some View {
-		NewSourceView(newSource: Mocks.newSource)
+		NewSourceFastView(newSource: Mocks.newSource)
 			.background(Color.gray)
     }
 }

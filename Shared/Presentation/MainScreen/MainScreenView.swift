@@ -13,8 +13,17 @@ struct MainScreenView: View {
     let sessions: [Session]
     let spacingLevel: Design.SpacingLevel
 
+	private enum Route: Equatable, Identifiable {
+		var id: Route {
+			self
+		}
+
+		case settings
+		case newSession
+	}
+
 	@State
-	private var showCreateSession: Bool = false
+	private var openRoute: Route? = nil
 
     var body: some View {
         NavigationView {
@@ -28,10 +37,13 @@ struct MainScreenView: View {
 				.navigationBarHidden(true)
 				HStack {
 					Image("settings")
+						.onTapGesture {
+							openRoute = .settings
+						}
 					Spacer()
 					Image("add")
 						.onTapGesture {
-							showCreateSession = true
+							openRoute = .newSession
 						}
 				}
 				.padding(
@@ -45,8 +57,13 @@ struct MainScreenView: View {
 			}
 		}
 		.navigationViewStyle(StackNavigationViewStyle())
-		.sheet(isPresented: $showCreateSession) {
-			NewSessionView(newSession: Mocks.newSession)
+		.sheet(item: $openRoute) { route in
+			switch route {
+			case .settings:
+				AnyView(SettingsView())
+			case .newSession:
+				AnyView(NewSessionView(newSession: Mocks.newSession))
+			}
 		}
     }
 }
