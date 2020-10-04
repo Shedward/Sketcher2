@@ -42,7 +42,8 @@ struct SettingsView: View {
 				}
 			}
 			.padding(spacing.value)
-		}.navigationTitle("Настройки")
+		}
+		.navigationBarTitleDisplayMode(.inline)
 	}
 }
 

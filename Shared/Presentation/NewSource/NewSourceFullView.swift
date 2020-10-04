@@ -14,8 +14,6 @@ struct NewSourceFullView: View {
 		VStack(alignment: .leading, spacing: spacingLevel.value) {
 			Text("Тип источника")
 				.font(Design.Font.h1)
-			FormSection(title: "Test") {
-			}
 		}
 	}
 }
