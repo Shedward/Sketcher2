@@ -42,8 +42,8 @@ struct SettingsView: View {
 				}
 			}
 			.padding(spacing.value)
+			.navigationBarRemoved()
 		}
-		.navigationBarTitleDisplayMode(.inline)
 	}
 }
 
