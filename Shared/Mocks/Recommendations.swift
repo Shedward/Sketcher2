@@ -1,5 +1,5 @@
 //
-//  Recomendations.swift
+//  Recommendations.swift
 //  Sketcher SUI
 //
 //  Created by Vlad Maltsev on 11.07.2020.
@@ -8,8 +8,8 @@
 import UIKit
 
 extension Mocks {
-    static let recomendations: [RecomendedSession] = [
-        RecomendedSession(
+    static let recommendations: [RecommendedSession] = [
+        RecommendedSession(
 			session: Session(
 				name: "Лица",
 				preview: Images.session10,
@@ -20,7 +20,7 @@ extension Mocks {
 			),
             reason: "Выбор редакции"
         ),
-        RecomendedSession(
+        RecommendedSession(
             session: Session(
 				name: "Позы",
 				preview: Images.session8,
@@ -31,7 +31,7 @@ extension Mocks {
 			),
             reason: "Выбор редакции"
         ),
-        RecomendedSession(
+        RecommendedSession(
             session: Session(
 				name: "Пейзажи",
 				preview: Images.session9,
@@ -42,7 +42,7 @@ extension Mocks {
 			),
             reason: "Выбор редакции"
         ),
-        RecomendedSession(
+        RecommendedSession(
             session: Session(
 				name: "Натюрморты",
 				preview: Images.session5,

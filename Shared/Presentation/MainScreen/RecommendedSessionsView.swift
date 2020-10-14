@@ -1,5 +1,5 @@
 //
-//  RecomendedSessionsView.swift
+//  RecommendedSessionsView.swift
 //  Sketcher SUI
 //
 //  Created by Vlad Maltsev on 11.07.2020.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct RecomendedSessionsView: View {
-    let recomendations: [RecomendedSession]
+struct RecommendedSessionsView: View {
+    let recommendations: [RecommendedSession]
     let spacingLevel: Design.SpacingLevel
 
 	@State
@@ -22,15 +22,15 @@ struct RecomendedSessionsView: View {
             alignment: .center,
             spacing: spacingLevel.next.value
         ){
-            ForEach(recomendations, id: \.session.id) { recomendation in
+            ForEach(recommendations, id: \.session.id) { recommendation in
                 SessionCell(
-                    image: recomendation.session.preview,
-                    title: recomendation.session.name,
-                    subtitle: recomendation.reason,
+                    image: recommendation.session.preview,
+                    title: recommendation.session.name,
+                    subtitle: recommendation.reason,
                     spacingLevel: spacingLevel.next(by: 2)
                 )
 				.onTapGesture {
-					openSession = recomendation.session
+					openSession = recommendation.session
 				}
             }
         }
@@ -40,11 +40,11 @@ struct RecomendedSessionsView: View {
     }
 }
 
-struct RecomendedSessions_Previews: PreviewProvider {
+struct RecommendedSessions_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
-            RecomendedSessionsView(
-                recomendations: Mocks.recomendations,
+            RecommendedSessionsView(
+                recommendations: Mocks.recommendations,
                 spacingLevel: .level0
             )
         }

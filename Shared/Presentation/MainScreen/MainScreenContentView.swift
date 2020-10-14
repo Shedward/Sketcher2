@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainScreenContentView: View {
 	let progress: [ProgressItem]?
-	let recomendations: [RecomendedSession]
+	let recommendations: [RecommendedSession]
 	let sessions: [Session]
 
 	let spacingLevel: Design.SpacingLevel
@@ -38,7 +38,7 @@ struct MainScreenContentView: View {
 						spacingLevel: spacingLevel.next(by: 2)
 					)
 				}
-				if !recomendations.isEmpty {
+				if !recommendations.isEmpty {
 					MainScreenSectionView(
 						title: "Рекомендуем",
 						spacing: spacingLevel.next,
@@ -46,8 +46,8 @@ struct MainScreenContentView: View {
 							EmptyView()
 						},
 						content: {
-							RecomendedSessionsView(
-								recomendations: recomendations,
+							RecommendedSessionsView(
+								recommendations: recommendations,
 								spacingLevel: spacingLevel
 							)
 						}
@@ -80,7 +80,7 @@ struct MainScreenContent_Previews: PreviewProvider {
     static var previews: some View {
 		MainScreenContentView(
 			progress: Mocks.progressItems,
-			recomendations: Mocks.recomendations,
+			recommendations: Mocks.recommendations,
 			sessions: Mocks.sessions,
 			spacingLevel: .level0
 		)

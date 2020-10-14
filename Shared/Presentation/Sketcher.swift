@@ -13,7 +13,7 @@ struct Sketcher: App {
         WindowGroup {
             MainScreenView(
 				progress: Mocks.progressItems,
-				recomendations: Mocks.recomendations,
+				recommendations: Mocks.recommendations,
                 sessions: Mocks.sessions,
                 spacingLevel: .level0
             )

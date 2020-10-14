@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainScreenView: View {
 	let progress: [ProgressItem]
-    let recomendations: [RecomendedSession]
+    let recommendations: [RecommendedSession]
     let sessions: [Session]
     let spacingLevel: Design.SpacingLevel
 
@@ -30,7 +30,7 @@ struct MainScreenView: View {
 			VStack {
 				MainScreenContentView(
 					progress: progress,
-					recomendations: recomendations,
+					recommendations: recommendations,
 					sessions: sessions,
 					spacingLevel: spacingLevel
 				)
@@ -75,14 +75,14 @@ struct MainScreen_Previews: PreviewProvider {
         Group {
             MainScreenView(
 				progress: Mocks.progressItems,
-				recomendations: Mocks.recomendations,
+				recommendations: Mocks.recommendations,
                 sessions: Mocks.sessions,
 				spacingLevel: .level0
             )
 
             MainScreenView(
 				progress: Mocks.progressItems,
-				recomendations: Mocks.recomendations,
+				recommendations: Mocks.recommendations,
                 sessions: Mocks.sessions,
 				spacingLevel: .level0
             )
