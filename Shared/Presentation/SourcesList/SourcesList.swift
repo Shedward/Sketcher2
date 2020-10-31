@@ -23,11 +23,12 @@ struct SourcesList: View {
 	@Environment(\.presentationMode)
 	var presentationMode: Binding<PresentationMode>
 
-	let spacing = Design.SpacingLevel.level0
+	let sources: [Source]
+	let spacingLevel = Design.SpacingLevel.level0
 
 	var body: some View {
 		VStack(alignment: .leading) {
-			HStack(alignment: .center, spacing: spacing.next.value) {
+			HStack(alignment: .center, spacing: spacingLevel.next.value) {
 				Image("back")
 					.onTapGesture {
 						presentationMode.wrappedValue.dismiss()
@@ -35,23 +36,18 @@ struct SourcesList: View {
 				Text("Источники")
 					.font(Design.Font.h1)
 				Spacer()
-				Image("add")
-					.padding(
-						EdgeInsets(
-							top: spacing.next(by: 4).value,
-							leading: 0,
-							bottom: 0,
-							trailing: 0
-						)
-					)
-					.onTapGesture {
-						openRoute = .newSource
-					}
-
+				Text("Изменить")
+					.font(Design.Font.body3)
 			}
-			Spacer()
+			ScrollView {
+				LazyVStack(spacing: spacingLevel.next.value) {
+					ForEach(sources, id: \.id) { source in
+						SourceCell(source: source)
+					}
+				}
+			}
 		}
-		.padding(spacing.value)
+		.padding(spacingLevel.value)
 		.navigationBarRemoved()
 		.sheet(item: $openRoute) { route -> AnyView in
 			switch route {
@@ -64,6 +60,6 @@ struct SourcesList: View {
 
 struct SourcesList_Previews: PreviewProvider {
 	static var previews: some View {
-		SourcesList()
+		SourcesList(sources: Mocks.sourcesList)
 	}
 }

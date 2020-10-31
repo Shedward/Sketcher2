@@ -61,7 +61,7 @@ enum FormFieldPosition {
 
 struct FormFieldContainer<Content: View>: View {
 	let position: FormFieldPosition
-	let spacingLevel = Design.SpacingLevel.level1
+	let spacingLevel = Design.SpacingLevel.level2
 	let content: () -> Content
 
 	var body: some View {

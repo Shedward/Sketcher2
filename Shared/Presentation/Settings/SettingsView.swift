@@ -18,7 +18,7 @@ struct SettingsView: View {
 						.font(Design.Font.h1)
 					FormSection {
 						FormFieldsGroup {
-							NavigationLink(destination: SourcesList()) {
+							NavigationLink(destination: SourcesList(sources: Mocks.sourcesList)) {
 								FormValueFieldView(title: "Источники")
 							}
 							.buttonStyle(PlainButtonStyle())
