@@ -20,25 +20,12 @@ struct SourcesList: View {
 	@State
 	private var openRoute: Route? = nil
 
-	@Environment(\.presentationMode)
-	var presentationMode: Binding<PresentationMode>
-
 	let sources: [Source]
 	let spacingLevel = Design.SpacingLevel.level0
 
 	var body: some View {
 		VStack(alignment: .leading) {
-			HStack(alignment: .center, spacing: spacingLevel.next.value) {
-				Image("back")
-					.onTapGesture {
-						presentationMode.wrappedValue.dismiss()
-					}
-				Text("Источники")
-					.font(Design.Font.h1)
-				Spacer()
-				Text("Изменить")
-					.font(Design.Font.body3)
-			}
+			NavigationBar(title: "Источники", showBackButton: true)
 			ScrollView {
 				LazyVStack(spacing: spacingLevel.next.value) {
 					ForEach(sources, id: \.id) { source in
@@ -49,6 +36,9 @@ struct SourcesList: View {
 			HStack {
 				Spacer()
 				Image("add")
+					.onTapGesture {
+						self.openRoute = .newSource
+					}
 			}
 			.padding(
 				EdgeInsets(
@@ -64,7 +54,7 @@ struct SourcesList: View {
 		.sheet(item: $openRoute) { route -> AnyView in
 			switch route {
 			case .newSource:
-				AnyView(NewSourceFullView())
+				AnyView(SourceTypeSelectorView(sections: []))
 			}
 		}
 	}

@@ -13,7 +13,7 @@ struct NewSourceFastView: View {
 
     var body: some View {
 		VStack(alignment: .leading, spacing: spacingLevel.next.value) {
-			Text("Новый источник")
+			NavigationBar(title: "Новый источник")
 				.font(Design.Font.h1)
 			SessionGalleryView(images: newSource.preview)
 			FormSection(title: "Название") {

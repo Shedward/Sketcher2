@@ -14,7 +14,7 @@ struct NewSessionView: View {
 		ZStack(alignment: .bottom) {
 			ScrollView(.vertical) {
 				VStack(alignment: .leading, spacing: Design.SpacingLevel.level1.value) {
-					Text("Новая сессия")
+					NavigationBar(title: "Новая сессия")
 						.font(Design.Font.h1)
 					SessionGalleryView(images: newSession.preview)
 					FormSection(title: "Название") {

@@ -14,7 +14,7 @@ struct SettingsView: View {
 		NavigationView {
 			ScrollView {
 				VStack(alignment: .leading, spacing: spacing.value) {
-					Text("Настройки")
+					NavigationBar(title: "Настройки")
 						.font(Design.Font.h1)
 					FormSection {
 						FormFieldsGroup {
