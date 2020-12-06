@@ -46,6 +46,18 @@ struct SourcesList: View {
 					}
 				}
 			}
+			HStack {
+				Spacer()
+				Image("add")
+			}
+			.padding(
+				EdgeInsets(
+					top: spacingLevel.next.value,
+					leading: spacingLevel.value,
+					bottom: 0,
+					trailing: 0
+				)
+			)
 		}
 		.padding(spacingLevel.value)
 		.navigationBarRemoved()
