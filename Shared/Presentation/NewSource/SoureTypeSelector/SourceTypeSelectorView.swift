@@ -13,7 +13,7 @@ struct SourceTypeSelectorView: View {
 
 	var body: some View {
 		VStack(alignment: .leading, spacing: spacingLevel.value) {
-			NavigationBar(title: "Тип источника")
+			NavigationBar(title: "Тип источника", showBackButton: true)
 			Spacer()
 		}
 		.padding(spacingLevel.value)

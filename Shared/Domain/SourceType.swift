@@ -17,10 +17,17 @@ enum SourceType {
 		}
 	}
 
-	var icon: UIImage? {
+	var smallIcon: UIImage? {
 		switch self {
 			case .debug:
-				return UIImage(named: "sourceType.debug")
+				return UIImage(named: "sourceType.debug.small")
+		}
+	}
+
+	var bigIcon: UIImage? {
+		switch self {
+			case .debug:
+				return UIImage(named: "sourceType.debug.big")
 		}
 	}
 }

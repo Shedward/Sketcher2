@@ -45,8 +45,7 @@ struct SourceTypeSectionView_Previews: PreviewProvider {
 			section: .init(
 				title: "Title",
 				sourceTypes: [
-					.debug, .debug, .debug,
-					.debug, .debug
+					.debug
 				]
 			),
 			spacingLevel: .level1
