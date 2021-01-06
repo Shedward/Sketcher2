@@ -10,6 +10,9 @@ import SwiftUI
 struct SettingsView: View {
 	let spacing = Design.SpacingLevel.level0
 
+	@Environment(\.viewFactory)
+	private var viewFactory: ViewFactory
+
 	var body: some View {
 		NavigationView {
 			ScrollView {
@@ -18,7 +21,7 @@ struct SettingsView: View {
 						.font(Design.Font.h1)
 					FormSection {
 						FormFieldsGroup {
-							NavigationLink(destination: SourcesListView(sources: Mocks.sourcesList)) {
+							NavigationLink(destination: viewFactory.sourcesList()) {
 								FormValueFieldView(title: "Источники")
 							}
 							.buttonStyle(PlainButtonStyle())

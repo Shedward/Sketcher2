@@ -13,6 +13,8 @@ struct MainScreenView: View {
     let sessions: [Session]
 	let spacingLevel = Design.SpacingLevel.level0
 
+	@Environment(\.viewFactory) var viewFactory
+
 	private enum Route: Equatable, Identifiable {
 		var id: Route {
 			self
@@ -60,9 +62,9 @@ struct MainScreenView: View {
 		.sheet(item: $openRoute) { route in
 			switch route {
 			case .settings:
-				AnyView(SettingsView())
+				viewFactory.settings()
 			case .newSession:
-				AnyView(NewSessionView(newSession: Mocks.newSession))
+				viewFactory.newSession()
 			}
 		}
     }

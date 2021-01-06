@@ -17,6 +17,9 @@ struct SourcesListView: View {
 		case newSource
 	}
 
+	@Environment(\.viewFactory)
+	private var viewFactory: ViewFactory
+
 	@State
 	private var openRoute: Route? = nil
 
@@ -54,7 +57,7 @@ struct SourcesListView: View {
 		.sheet(item: $openRoute) { route -> AnyView in
 			switch route {
 			case .newSource:
-				AnyView(SourceTypeSelectorView(sections: []))
+				viewFactory.sourceTypeSelector()
 			}
 		}
 	}

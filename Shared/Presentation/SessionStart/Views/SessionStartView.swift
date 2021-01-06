@@ -11,7 +11,11 @@ struct SessionStartView: View {
 	let session: Session
 	let spacingLevel: Design.SpacingLevel = .level0
 
-	@State private var openSession: Session? = nil
+	@Environment(\.viewFactory)
+	private var viewFactory: ViewFactory
+
+	@State
+	private var openSession: Session? = nil
 
     var body: some View {
 		ZStack(alignment: .bottom) {
@@ -50,7 +54,7 @@ struct SessionStartView: View {
 			.padding(spacingLevel.value)
 		}
 		.fullScreenCover(item: $openSession) { session in
-			SessionView(session: session)
+			viewFactory.session(session)
 		}
     }
 }

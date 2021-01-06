@@ -11,6 +11,9 @@ struct UserSessionsView: View {
     let sessions: [Session]
     let spacingLevel: Design.SpacingLevel
 
+	@Environment(\.viewFactory)
+	private var viewFactory: ViewFactory
+
 	@State
 	private var openSession: Session? = nil
 
@@ -35,7 +38,7 @@ struct UserSessionsView: View {
             }
 		}
 		.sheet(item: $openSession) { session in
-			SessionStartView(session: session)
+			viewFactory.sessionStart(session)
 		}
     }
 }
@@ -44,7 +47,7 @@ struct UserSessions_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
             UserSessionsView(
-                sessions: Mocks.sessions,
+				sessions: Mocks.sessions,
                 spacingLevel: .level0
             )
         }
