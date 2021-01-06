@@ -1,5 +1,5 @@
 //
-//  SourcesList.swift
+//  SourcesListView.swift
 //  iOS
 //
 //  Created by Vlad Maltsev on 14.10.2020.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SourcesList: View {
+struct SourcesListView: View {
 
 	private enum Route: Equatable, Identifiable {
 		var id: Route {
@@ -62,6 +62,6 @@ struct SourcesList: View {
 
 struct SourcesList_Previews: PreviewProvider {
 	static var previews: some View {
-		SourcesList(sources: Mocks.sourcesList)
+		SourcesListView(sources: Mocks.sourcesList)
 	}
 }

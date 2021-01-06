@@ -9,14 +9,11 @@ import SwiftUI
 
 @main
 struct Sketcher: App {
+	let viewFactory = ViewFactory()
+
     var body: some Scene {
         WindowGroup {
-            MainScreenView(
-				progress: Mocks.progressItems,
-				recommendations: Mocks.recommendations,
-                sessions: Mocks.sessions,
-                spacingLevel: .level0
-            )
+			viewFactory.mainScreen()
         }
     }
 }

@@ -11,7 +11,7 @@ struct MainScreenView: View {
 	let progress: [ProgressItem]
     let recommendations: [RecommendedSession]
     let sessions: [Session]
-    let spacingLevel: Design.SpacingLevel
+	let spacingLevel = Design.SpacingLevel.level0
 
 	private enum Route: Equatable, Identifiable {
 		var id: Route {
@@ -69,22 +69,18 @@ struct MainScreenView: View {
 }
 
 struct MainScreen_Previews: PreviewProvider {
-
-
     static var previews: some View {
         Group {
             MainScreenView(
 				progress: Mocks.progressItems,
 				recommendations: Mocks.recommendations,
-                sessions: Mocks.sessions,
-				spacingLevel: .level0
+                sessions: Mocks.sessions
             )
 
             MainScreenView(
 				progress: Mocks.progressItems,
 				recommendations: Mocks.recommendations,
-                sessions: Mocks.sessions,
-				spacingLevel: .level0
+                sessions: Mocks.sessions
             )
 			.preferredColorScheme(.dark)
         }
