@@ -11,6 +11,9 @@ struct RecommendedSessionsView: View {
     let recommendations: [RecommendedSession]
     let spacingLevel: Design.SpacingLevel
 
+	@Environment(\.viewFactory)
+	private var viewFactory: ViewFactory
+
 	@State
 	private var openSession: Session?
 
@@ -35,7 +38,7 @@ struct RecommendedSessionsView: View {
             }
         }
 		.sheet(item: $openSession) { session in
-			SessionStartView(session: session)
+			viewFactory.sessionStart(session)
 		}
     }
 }
