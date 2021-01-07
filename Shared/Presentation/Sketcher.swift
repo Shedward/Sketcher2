@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct Sketcher: App {
-	let viewFactory = ViewFactory()
+	let viewFactory = ViewFactory.mock
 
     var body: some Scene {
         WindowGroup {

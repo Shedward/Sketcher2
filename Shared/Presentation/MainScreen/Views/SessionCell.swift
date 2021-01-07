@@ -48,6 +48,7 @@ struct SessionCell_Previews: PreviewProvider {
             )
             .previewLayout(.sizeThatFits)
             .padding(Design.SpacingLevel.level2.value)
+
             SessionCell(
                 image: UIImage(named: "session1"),
                 title: "Лица",

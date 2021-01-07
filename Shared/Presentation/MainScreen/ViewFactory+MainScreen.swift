@@ -9,12 +9,7 @@ import SwiftUI
 
 extension ViewFactory {
 	func mainScreen() -> AnyView {
-		let view = MainScreenView(
-			progress: [],
-			recommendations: [],
-			sessions: []
-		)
-
+		let view = MainScreenView()
 		return AnyView(view)
 	}
 }

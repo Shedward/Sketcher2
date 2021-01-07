@@ -8,21 +8,17 @@
 import SwiftUI
 
 struct MainScreenView: View {
-	let progress: [ProgressItem]
-    let recommendations: [RecommendedSession]
-    let sessions: [Session]
-	let spacingLevel = Design.SpacingLevel.level0
-
-	@Environment(\.viewFactory) var viewFactory
-
 	private enum Route: Equatable, Identifiable {
-		var id: Route {
-			self
-		}
+		var id: Route { self }
 
 		case settings
 		case newSession
 	}
+
+	let spacingLevel = Design.SpacingLevel.level0
+
+	@Environment(\.viewFactory)
+	var viewFactory: ViewFactory
 
 	@State
 	private var openRoute: Route? = nil
@@ -30,13 +26,8 @@ struct MainScreenView: View {
     var body: some View {
         NavigationView {
 			VStack {
-				MainScreenContentView(
-					progress: progress,
-					recommendations: recommendations,
-					sessions: sessions,
-					spacingLevel: spacingLevel
-				)
-				.navigationBarHidden(true)
+				viewFactory.mainScreenContent(spacingLevel: spacingLevel)
+					.navigationBarHidden(true)
 				HStack {
 					Image("settings")
 						.onTapGesture {
@@ -73,18 +64,8 @@ struct MainScreenView: View {
 struct MainScreen_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            MainScreenView(
-				progress: Mocks.progressItems,
-				recommendations: Mocks.recommendations,
-                sessions: Mocks.sessions
-            )
-
-            MainScreenView(
-				progress: Mocks.progressItems,
-				recommendations: Mocks.recommendations,
-                sessions: Mocks.sessions
-            )
-			.preferredColorScheme(.dark)
+            MainScreenView()
+            MainScreenView().preferredColorScheme(.dark)
         }
     }
 }

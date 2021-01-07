@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ViewFactory {
+	typealias Dependencies = RepositoriesDependencies
 
-	static let mock = ViewFactory()
+	let dependencies: Dependencies
+
+	static let mock = ViewFactory(dependencies: MockDependencies())
 }
