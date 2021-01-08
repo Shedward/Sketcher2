@@ -8,36 +8,35 @@
 import SwiftUI
 
 struct UserSessionsView: View {
-    let sessions: [Session]
-    let spacingLevel: Design.SpacingLevel
-
 	@Environment(\.viewFactory)
 	private var viewFactory: ViewFactory
 
-	@State
-	private var openSession: Session? = nil
+	@ObservedObject
+	var viewModel: ViewModel
+
+	let spacingLevel: Design.SpacingLevel
 
     var body: some View {
         LazyVGrid(
             columns: [
-                GridItem(.adaptive(minimum: 150), spacing: spacingLevel.value)
+				GridItem(.adaptive(minimum: SessionCell.minimumWidth), spacing: spacingLevel.value)
             ],
             alignment: .center,
             spacing: spacingLevel.next.value
         ){
-            ForEach(sessions, id: \.id) { session in
+			ForEach(viewModel.sessions, id: \.id) { session in
                 SessionCell(
                     image: session.preview,
                     title: session.name,
                     subtitle: nil,
-                    spacingLevel: spacingLevel.next(by: 2)
+                    spacingLevel: spacingLevel.next
                 )
 				.onTapGesture {
-					openSession = session
+					viewModel.openSession(session)
 				}
             }
 		}
-		.sheet(item: $openSession) { session in
+		.sheet(item: $viewModel.openedSession) { session in
 			viewFactory.sessionStart(session)
 		}
     }
@@ -47,8 +46,8 @@ struct UserSessions_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
             UserSessionsView(
-				sessions: Mocks.sessions,
-                spacingLevel: .level0
+				viewModel: .init(dependencies: MockDependencies()),
+                spacingLevel: .level1
             )
         }
         .padding(Design.SpacingLevel.level0.value)

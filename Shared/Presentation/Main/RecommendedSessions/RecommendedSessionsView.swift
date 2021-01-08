@@ -19,7 +19,7 @@ struct RecommendedSessionsView: View {
     var body: some View {
         LazyVGrid(
             columns: [
-                GridItem(.adaptive(minimum: 150), spacing: spacingLevel.value)
+				GridItem(.adaptive(minimum: SessionCell.minimumWidth), spacing: spacingLevel.value)
             ],
             alignment: .center,
             spacing: spacingLevel.next.value

@@ -8,6 +8,10 @@
 final class InMemorySourcesRepository: SourcesRepository {
 	private var sourcesStorage: [Source] = []
 
+	init(initialSources: [Source]) {
+		sourcesStorage = initialSources
+	}
+
 	func add(source: Source) {
 		sourcesStorage.append(source)
 	}

@@ -6,7 +6,7 @@
 //
 
 struct MockDependencies: AllDependencies {
-	let sessionsRepository: SessionsRepository = InMemorySessionsRepository()
-	let sourcesRepository: SourcesRepository = InMemorySourcesRepository()
+	let sessionsRepository: SessionsRepository = InMemorySessionsRepository(initialSessions: Mocks.sessions)
+	let sourcesRepository: SourcesRepository = InMemorySourcesRepository(initialSources: Mocks.sourcesList)
 	let progressRepository: ProgressRepository = MockProgressRepository()
 }

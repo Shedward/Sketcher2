@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SessionCell: View {
+
+	static let minimumWidth: CGFloat = 150
+
     let image: UIImage?
     let title: String
     let subtitle: String?

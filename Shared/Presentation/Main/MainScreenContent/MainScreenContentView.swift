@@ -48,7 +48,7 @@ struct MainScreenContentView: View {
 							EmptyView()
 						},
 						content: {
-							viewFactory.recommendedSessions(spacingLevel: spacingLevel.next)
+							viewFactory.recommendedSessions(spacingLevel: spacingLevel)
 						}
 					)
 				}
@@ -62,7 +62,7 @@ struct MainScreenContentView: View {
 								.foregroundColor(Design.Color.content)
 						},
 						content: {
-							UserSessionsView(sessions: [], spacingLevel: spacingLevel)
+							viewFactory.userSessions(spacingLevel: spacingLevel)
 						}
 					)
 				}

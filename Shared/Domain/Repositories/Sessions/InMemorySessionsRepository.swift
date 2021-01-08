@@ -6,7 +6,11 @@
 //
 
 final class InMemorySessionsRepository: SessionsRepository {
-	private var sessionsStorage: [Session] = []
+	private var sessionsStorage: [Session]
+
+	init(initialSessions: [Session]) {
+		sessionsStorage = initialSessions
+	}
 
 	func add(session: Session) {
 		sessionsStorage.append(session)
