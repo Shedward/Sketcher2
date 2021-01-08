@@ -26,7 +26,7 @@ struct MainScreenView: View {
     var body: some View {
         NavigationView {
 			VStack {
-				viewFactory.mainScreenContent(spacingLevel: spacingLevel)
+				viewFactory.mainScreenContent(spacingLevel: spacingLevel.next)
 					.navigationBarHidden(true)
 				HStack {
 					Image("settings")

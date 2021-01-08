@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct RecommendedSessionsView: View {
-    let recommendations: [RecommendedSession]
-    let spacingLevel: Design.SpacingLevel
-
 	@Environment(\.viewFactory)
 	private var viewFactory: ViewFactory
 
-	@State
-	private var openSession: Session?
+	@ObservedObject
+	var viewModel: ViewModel
+
+	let spacingLevel: Design.SpacingLevel
 
     var body: some View {
         LazyVGrid(
@@ -25,7 +24,7 @@ struct RecommendedSessionsView: View {
             alignment: .center,
             spacing: spacingLevel.next.value
         ){
-            ForEach(recommendations, id: \.session.id) { recommendation in
+			ForEach(viewModel.recommendations, id: \.session.id) { recommendation in
                 SessionCell(
                     image: recommendation.session.preview,
                     title: recommendation.session.name,
@@ -33,12 +32,12 @@ struct RecommendedSessionsView: View {
                     spacingLevel: spacingLevel.next(by: 2)
                 )
 				.onTapGesture {
-					openSession = recommendation.session
+					viewModel.openRecommendation(recommendation)
 				}
             }
         }
-		.sheet(item: $openSession) { session in
-			viewFactory.sessionStart(session)
+		.sheet(item: $viewModel.openedRecommendation) { recommendation in
+			viewFactory.sessionStart(recommendation.session)
 		}
     }
 }
@@ -47,7 +46,7 @@ struct RecommendedSessions_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
             RecommendedSessionsView(
-                recommendations: Mocks.recommendations,
+				viewModel: .init(dependencies: MockDependencies()),
                 spacingLevel: .level0
             )
         }

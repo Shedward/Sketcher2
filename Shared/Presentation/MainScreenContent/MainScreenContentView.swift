@@ -48,7 +48,7 @@ struct MainScreenContentView: View {
 							EmptyView()
 						},
 						content: {
-							RecommendedSessionsView(recommendations: [], spacingLevel: spacingLevel)
+							viewFactory.recommendedSessions(spacingLevel: spacingLevel.next)
 						}
 					)
 				}
