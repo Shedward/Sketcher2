@@ -23,7 +23,7 @@ struct BadgeView: View {
 					trailing: spacingLevel.value
 				)
 			)
-			.background(BluredMaterial())
+			.background(BlurredMaterial())
 			.cornerRadius(spacingLevel.value)
 	}
 }

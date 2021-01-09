@@ -13,7 +13,7 @@ struct SessionProgressView: View {
 
 	var body: some View {
 		ZStack {
-			BluredMaterial()
+			BlurredMaterial()
 			GeometryReader { geometry in
 				let totalWidth = geometry.frame(in: .local).width
 				let width = totalWidth * CGFloat(self.progress)

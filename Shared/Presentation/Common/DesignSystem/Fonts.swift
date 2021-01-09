@@ -61,7 +61,6 @@ struct Fonts_Previews: PreviewProvider {
 	}
 }
 
-/*
 struct AllFonts_Previews: PreviewProvider {
 	static var previews: some View {
 		ScrollView {
@@ -79,4 +78,3 @@ struct AllFonts_Previews: PreviewProvider {
 		}
 	}
 }
-*/

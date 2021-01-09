@@ -18,7 +18,7 @@ struct SessionView: View {
 			VStack {
 				HStack {
 					if let imageCount = session.imageCount {
-						BadgeView(text: Localized.number(imageCount))
+						BadgeView(text: Localised.number(imageCount))
 					}
 					Spacer()
 					if let author = session.author {

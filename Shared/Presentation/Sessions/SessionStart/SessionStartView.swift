@@ -48,7 +48,7 @@ struct SessionStartView: View {
 				}
 				.padding(spacingLevel.value)
 				.frame(maxWidth: .infinity)
-				.background(BluredMaterial())
+				.background(BlurredMaterial())
 				.cornerRadius(spacingLevel.value)
 			}
 			.padding(spacingLevel.value)

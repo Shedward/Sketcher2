@@ -1,5 +1,5 @@
 //
-//  BluredMaterial.swift
+//  BlurredMaterial.swift
 //  Sketcher SUI
 //
 //  Created by Vlad Maltsev on 29.07.2020.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BluredMaterial: View {
+struct BlurredMaterial: View {
 	@Environment(\.colorScheme) var colorScheme
 
 	var body: some View {

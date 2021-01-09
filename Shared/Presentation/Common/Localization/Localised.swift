@@ -1,5 +1,5 @@
 //
-//  Localized.swift
+//  Localised.swift
 //  iOS
 //
 //  Created by Vlad Maltsev on 26.07.2020.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Localized {
+enum Localised {
 	static func string(_ key: String) -> String {
 		key
 	}

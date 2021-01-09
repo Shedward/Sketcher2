@@ -28,7 +28,7 @@ struct SessionProperties {
 		let formatter = DateComponentsFormatter()
 		formatter.unitsStyle = .abbreviated
 		formatter.allowedUnits = [.second, .minute, .hour]
-		let description = formatter.string(from: session.imageTime) ?? Localized.string("-")
+		let description = formatter.string(from: session.imageTime) ?? Localised.string("-")
 
 		return SessionProperty(
 			iconName: "time",
@@ -39,7 +39,7 @@ struct SessionProperties {
 	private static func imageCount(for session: Session) -> SessionProperty {
 		SessionProperty(
 			iconName: "images",
-			value: session.imageCount.map { Localized.number($0) } ?? Localized.string("∞")
+			value: session.imageCount.map { Localised.number($0) } ?? Localised.string("∞")
 		)
 	}
 
@@ -57,9 +57,9 @@ struct SessionProperties {
 			formatter.unitsStyle = .abbreviated
 			formatter.allowedUnits = [.day]
 
-			value = formatter.string(from: difference) ?? Localized.string("-")
+			value = formatter.string(from: difference) ?? Localised.string("-")
 		} else {
-			value = Localized.string("-")
+			value = Localised.string("-")
 		}
 
 		return SessionProperty(iconName: "progress2", value: value)
