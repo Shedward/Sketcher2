@@ -29,7 +29,7 @@ struct SourceTypeSectionView: View {
 					)
 				],
 				spacing: spacingLevel.next.value
-			){
+			) {
 				ForEach(section.sourceTypes, id: \.self) { sourceType in
 					Text(sourceType.title)
 				}

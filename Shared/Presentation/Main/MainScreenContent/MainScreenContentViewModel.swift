@@ -12,7 +12,6 @@ extension MainScreenContentView {
 		typealias Dependencies = ProgressRepositoryDependency
 			& SessionsRepositoryDependency
 
-
 		enum ProgressState {
 			case notConfigured
 			case progress

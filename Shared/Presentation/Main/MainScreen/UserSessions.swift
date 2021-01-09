@@ -12,7 +12,7 @@ struct UserSessionsView: View {
     let spacingLevel: Design.SpacingLevel
 
 	@State
-	private var openSession: Session? = nil
+	private var openSession: Session?
 
     var body: some View {
         LazyVGrid(
@@ -21,7 +21,7 @@ struct UserSessionsView: View {
             ],
             alignment: .center,
             spacing: spacingLevel.next.value
-        ){
+        ) {
             ForEach(sessions, id: \.id) { session in
                 SessionCell(
                     image: session.preview,

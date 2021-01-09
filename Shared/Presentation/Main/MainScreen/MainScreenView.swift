@@ -21,7 +21,7 @@ struct MainScreenView: View {
 	var viewFactory: ViewFactory
 
 	@State
-	private var openRoute: Route? = nil
+	private var openRoute: Route?
 
     var body: some View {
         NavigationView {

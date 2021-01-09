@@ -23,7 +23,7 @@ struct RecommendedSessionsView: View {
             ],
             alignment: .center,
             spacing: spacingLevel.next.value
-        ){
+        ) {
 			ForEach(viewModel.recommendations, id: \.session.id) { recommendation in
                 SessionCell(
                     image: recommendation.session.preview,

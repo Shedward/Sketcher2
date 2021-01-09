@@ -16,7 +16,7 @@ struct SessionGalleryView: View {
 			let anyImages = images.map { AnyAsyncImage(asyncImage: $0) }
 			ForEach(anyImages, id: \.self) { image in
 				Rectangle()
-					.aspectRatio(3.0/4.0 ,contentMode: .fit)
+					.aspectRatio(3.0/4.0, contentMode: .fit)
 					.foregroundColor(.clear)
 					.background(
 						LoadingImage(asyncImage: image)

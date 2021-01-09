@@ -43,8 +43,6 @@ struct MainScreenView: View {
 }
 
 struct MainScreen_Previews: PreviewProvider {
-
-
     static var previews: some View {
         Group {
             MainScreenView(

@@ -15,7 +15,7 @@ struct SessionStartView: View {
 	private var viewFactory: ViewFactory
 
 	@State
-	private var openSession: Session? = nil
+	private var openSession: Session?
 
     var body: some View {
 		ZStack(alignment: .bottom) {

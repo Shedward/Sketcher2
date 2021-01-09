@@ -15,7 +15,6 @@ protocol AsyncImage {
 
 enum AsyncImages {}
 
-
 struct AnyAsyncImage: AsyncImage, Hashable {
 	private let asyncImage: AsyncImage
 

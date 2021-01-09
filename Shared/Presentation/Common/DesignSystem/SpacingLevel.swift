@@ -29,7 +29,7 @@ extension Design {
                 nextValue -= 0.5 * SpacingLevel.step
             }
 
-            return SpacingLevel(value:  nextValue)
+            return SpacingLevel(value: nextValue)
         }
 
         func next(by levelsCount: UInt) -> SpacingLevel {

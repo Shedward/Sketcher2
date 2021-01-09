@@ -21,7 +21,7 @@ struct SourcesListView: View {
 	private var viewFactory: ViewFactory
 
 	@State
-	private var openRoute: Route? = nil
+	private var openRoute: Route?
 
 	let sources: [Source]
 	let spacingLevel = Design.SpacingLevel.level0
