@@ -11,47 +11,47 @@ extension Mocks {
     static let recommendations: [RecommendedSession] = [
         RecommendedSession(
 			session: Session(
-				name: "Лица",
+				name: string("Лица"),
 				preview: Images.session10,
 				imageCount: 20,
 				imageTime: 30,
 				lastPractice: nil,
 				author: nil
 			),
-            reason: "Выбор редакции"
+            reason: string("Выбор редакции")
         ),
         RecommendedSession(
             session: Session(
-				name: "Позы",
+				name: string("Позы"),
 				preview: Images.session8,
 				imageCount: 40,
 				imageTime: 60,
 				lastPractice: nil,
-				author: "@some_author"
+				author: string("@some_author")
 			),
-            reason: "Выбор редакции"
+            reason: string("Выбор редакции")
         ),
         RecommendedSession(
             session: Session(
-				name: "Пейзажи",
+				name: string("Пейзажи"),
 				preview: Images.session9,
 				imageCount: 8,
 				imageTime: 300,
 				lastPractice: nil,
-				author: "@me"
+				author: string("@me")
 			),
-            reason: "Выбор редакции"
+            reason: string("Выбор редакции")
         ),
         RecommendedSession(
             session: Session(
-				name: "Натюрморты",
+				name: string("Натюрморты"),
 				preview: Images.session5,
 				imageCount: 20,
 				imageTime: 300,
 				lastPractice: nil,
 				author: nil
 			),
-            reason: "Выбор редакции"
+            reason: string("Выбор редакции")
         )
     ]
 }

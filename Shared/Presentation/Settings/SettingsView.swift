@@ -17,27 +17,27 @@ struct SettingsView: View {
 		NavigationView {
 			ScrollView {
 				VStack(alignment: .leading, spacing: spacing.value) {
-					NavigationBar(title: "Настройки")
+					NavigationBar(title: Localised.string("Настройки"))
 						.font(Design.Font.h1)
 					FormSection {
 						FormFieldsGroup {
 							NavigationLink(destination: viewFactory.sourcesList()) {
-								FormValueFieldView(title: "Источники")
+								FormValueFieldView(title: Localised.string("Источники"))
 							}
 							.buttonStyle(PlainButtonStyle())
 						}
 					}
 					FixedSpacer(height: spacing.next.value)
-					FormSection(title: "О приложении") {
+					FormSection(title: Localised.string("О приложении")) {
 						FormFieldsGroup {
 							FormValueFieldView(
-								title: "Версия",
-								value: "1.0 (15)",
+								title: Localised.string("Версия"),
+								value: Mocks.string("1.0 (15)"),
 								expanding: false
 							)
 							FormValueFieldView(
-								title: "Автор",
-								value: "@shedward",
+								title: Localised.string("Автор"),
+								value: Mocks.string("@shedward"),
 								expanding: false
 							)
 						}

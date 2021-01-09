@@ -10,8 +10,8 @@ import Foundation
 extension Mocks {
 	static let source = Source(
 		id: UUID(),
-		title: "Рисунки жуков",
-		author: .init(type: .debug, name: "Debug"),
+		title: string("Рисунки жуков"),
+		author: .init(type: .debug, name: string("Debug")),
 		preview: [
 			AsyncImages.Mock(image: Images.session3, timeout: 1.0),
 			AsyncImages.Mock(image: Images.session4, timeout: 1.0),
@@ -22,8 +22,8 @@ extension Mocks {
 	static let sourcesList: [Source] = [
 		Source(
 			id: UUID(),
-			title: "Люди и лица",
-			author: .init(type: .debug, name: "Debug"),
+			title: string("Люди и лица"),
+			author: .init(type: .debug, name: string("Debug")),
 			preview: [
 				AsyncImages.Mock(image: Images.session1),
 				AsyncImages.Mock(image: Images.session2),
@@ -32,8 +32,8 @@ extension Mocks {
 		),
 		Source(
 			id: UUID(),
-			title: "Руки",
-			author: .init(type: .debug, name: "Debug"),
+			title: string("Руки"),
+			author: .init(type: .debug, name: string("Debug")),
 			preview: [
 				AsyncImages.Mock(image: Images.session2),
 				AsyncImages.Mock(image: Images.session3),
@@ -42,8 +42,8 @@ extension Mocks {
 		),
 		Source(
 			id: UUID(),
-			title: "Жесты и цвет. Референсы паттернов и прочее для композиции",
-			author: .init(type: .debug, name: "Debug"),
+			title: string("Жесты и цвет. Референсы паттернов и прочее для композиции"),
+			author: .init(type: .debug, name: string("Debug")),
 			preview: [
 				AsyncImages.Mock(image: Images.session5),
 				AsyncImages.Mock(image: Images.session6),
@@ -52,8 +52,8 @@ extension Mocks {
 		),
 		Source(
 			id: UUID(),
-			title: "Скетчи",
-			author: .init(type: .debug, name: "Debug"),
+			title: string("Скетчи"),
+			author: .init(type: .debug, name: string("Debug")),
 			preview: [
 				AsyncImages.Mock(image: Images.session8),
 				AsyncImages.Mock(image: Images.session9),
@@ -62,8 +62,8 @@ extension Mocks {
 		),
 		Source(
 			id: UUID(),
-			title: "Пейзажи норвегии",
-			author: .init(type: .debug, name: "Debug"),
+			title: string("Пейзажи Норвегии"),
+			author: .init(type: .debug, name: string("Debug")),
 			preview: [
 				AsyncImages.Mock(image: Images.session5),
 				AsyncImages.Mock(image: Images.session8),

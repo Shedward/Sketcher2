@@ -40,11 +40,11 @@ struct SessionStartView: View {
 						}
 					}
 					FixedSpacer(height: 2.0 * spacingLevel.value)
-					ActionButton(title: "Начать", style: .overlay)
+					ActionButton(title: Localised.string("Начать"), style: .overlay)
 						.onTapGesture {
 							self.openSession = self.session
 						}
-					ActionButton(title: "Настроить", style: .overlaySecondary)
+					ActionButton(title: Localised.string("Настроить"), style: .overlaySecondary)
 				}
 				.padding(spacingLevel.value)
 				.frame(maxWidth: .infinity)

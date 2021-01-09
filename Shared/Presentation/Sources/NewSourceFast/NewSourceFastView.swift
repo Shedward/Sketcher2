@@ -13,17 +13,17 @@ struct NewSourceFastView: View {
 
     var body: some View {
 		VStack(alignment: .leading, spacing: spacingLevel.next.value) {
-			NavigationBar(title: "Новый источник")
+			NavigationBar(title: Localised.string("Новый источник"))
 				.font(Design.Font.h1)
 			SessionGalleryView(images: newSource.preview)
-			FormSection(title: "Название") {
+			FormSection(title: Localised.string("Название")) {
 				FormFieldsGroup {
 					FormTextFieldView(text: newSource.title)
 				}
 			}
 			VStack(alignment: .center, spacing: 0) {
-				ActionButton(title: "Сохранить", style: .normal)
-				ActionButton(title: "Закрыть", style: .normalSecondary)
+				ActionButton(title: Localised.string("Сохранить"), style: .normal)
+				ActionButton(title: Localised.string("Закрыть"), style: .normalSecondary)
 			}
 			.frame(maxWidth: .infinity, alignment: .center)
 		}

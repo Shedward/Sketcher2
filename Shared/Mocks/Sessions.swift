@@ -10,17 +10,17 @@ import UIKit
 extension Mocks {
 
 	static let session = Session(
-		name: "Группы людей",
+		name: string("Группы людей"),
 		preview: Images.session1,
 		imageCount: 18,
 		imageTime: 120,
 		lastPractice: Date(timeIntervalSinceNow: -2 * 24 * 60 * 60),
-		author: "@Elise"
+		author: string("@Elise")
 	)
 
     static let sessions: [Session] = [
 		Session(
-			name: "Группы людей",
+			name: string("Группы людей"),
 			preview: Images.session8,
 			imageCount: 20,
 			imageTime: 30,
@@ -28,15 +28,15 @@ extension Mocks {
 			author: nil
 		),
         Session(
-			name: "Интерьеры",
+			name: string("Интерьеры"),
 			preview: Images.session7,
 			imageCount: 20,
 			imageTime: 30,
 			lastPractice: nil,
-			author: "emilie"
+			author: string("emilie")
 		),
         Session(
-			name: "Животные",
+			name: string("Животные"),
 			preview: Images.session4,
 			imageCount: 180,
 			imageTime: 30,
@@ -44,7 +44,7 @@ extension Mocks {
 			author: nil
 		),
         Session(
-			name: "Архитектура",
+			name: string("Архитектура"),
 			preview: Images.session5,
 			imageCount: nil,
 			imageTime: 30,
@@ -52,7 +52,7 @@ extension Mocks {
 			author: nil
 		),
         Session(
-			name: "Цвет и свет",
+			name: string("Цвет и свет"),
 			preview: Images.session6,
 			imageCount: nil,
 			imageTime: 30,
@@ -60,7 +60,7 @@ extension Mocks {
 			author: nil
 		),
         Session(
-			name: "Композиция",
+			name: string("Композиция"),
 			preview: Images.session7,
 			imageCount: 8000,
 			imageTime: 600,

@@ -28,7 +28,7 @@ struct SourcesListView: View {
 
 	var body: some View {
 		VStack(alignment: .leading) {
-			NavigationBar(title: "Источники", showBackButton: true)
+			NavigationBar(title: Localised.string("Источники"), showBackButton: true)
 			ScrollView {
 				LazyVStack(spacing: spacingLevel.next.value) {
 					ForEach(sources, id: \.id) { source in

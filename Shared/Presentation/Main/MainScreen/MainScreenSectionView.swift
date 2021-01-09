@@ -43,8 +43,8 @@ struct MainScreenSectionView<Content: View, Accessory: View>: View {
 struct MainScreenHeader_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 24) {
-            section(title: "Рекомендуем")
-            section(title: "Сессии")
+			section(title: Localised.string("Рекомендуем"))
+            section(title: Localised.string("Сессии"))
             Spacer()
                 .layoutPriority(1)
         }

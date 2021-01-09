@@ -23,7 +23,7 @@ struct MainScreenContentView: View {
 				switch viewModel.progressState {
 				case .progress:
 					MainScreenSectionView(
-						title: "Прогресс",
+						title: Localised.string("Прогресс"),
 						spacing: spacingLevel.next,
 						accessory: {
 							EmptyView()
@@ -34,15 +34,15 @@ struct MainScreenContentView: View {
 					)
 				case .notConfigured:
 					SetupProgressHeaderView(
-						title: "Начни рисовать регулярно",
-						subtitle: "Настрой прогресс и напоминания",
+						title: Localised.string("Начни рисовать регулярно"),
+						subtitle: Localised.string("Настрой прогресс и напоминания"),
 						spacingLevel: spacingLevel.next(by: 2)
 					)
 				}
 
 				if viewModel.showRecommendations {
 					MainScreenSectionView(
-						title: "Рекомендуем",
+						title: Localised.string("Рекомендуем"),
 						spacing: spacingLevel.next,
 						accessory: {
 							EmptyView()
@@ -54,10 +54,10 @@ struct MainScreenContentView: View {
 				}
 				if viewModel.showUserSessions {
 					MainScreenSectionView(
-						title: "Сессии",
+						title: Localised.string("Сессии"),
 						spacing: spacingLevel.next,
 						accessory: {
-							Text("Изменить")
+							Text(Localised.string("Изменить"))
 								.font(Design.Font.body3)
 								.foregroundColor(Design.Color.content)
 						},

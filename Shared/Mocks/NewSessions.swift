@@ -9,12 +9,12 @@ import UIKit
 
 extension Mocks {
 	static let newSession = NewSession(
-		title: "Руки и кисти",
+		title: string("Руки и кисти"),
 		preview: [
 			AsyncImages.Mock(image: Images.session1, timeout: 1.0),
 			AsyncImages.Mock(image: Images.session2, timeout: 1.0),
 			AsyncImages.Mock(image: Images.session3, timeout: 1.0)
 		],
-		tags: ["человек", "цвет_и_свет", "руки", "фотографии"]
+		tags: [string("человек"), string("цвет_и_свет"), string("руки"), string("фотографии")]
 	)
 }

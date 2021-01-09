@@ -23,7 +23,7 @@ struct TagsEditorView: View {
 		let tag: String
 
 		var body: some View {
-			Text("#\(tag)")
+			Text(Localised.string("#%@", arguments: tag))
 				.font(Design.Font.body1)
 				.padding(Self.padding)
 				.background(Design.Color.group)
@@ -32,7 +32,7 @@ struct TagsEditorView: View {
 
 		static func size(for tag: String) -> CGSize {
 			let textSize = NSAttributedString(
-				string: "#\(tag)",
+				string: Localised.string("#%@", arguments: tag),
 				attributes: [
 					.font: Design.UIFont.body1
 				]

@@ -32,6 +32,6 @@ struct ProgressItemView: View {
 
 	private func day(for item: ProgressItem) -> String {
 		let dayNumber = Calendar.current.component(.day, from: item.date)
-		return "\(dayNumber)"
+		return Localised.number(dayNumber)
 	}
 }

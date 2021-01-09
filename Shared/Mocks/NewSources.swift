@@ -9,7 +9,7 @@ import UIKit
 
 extension Mocks {
 	static let newSource = NewSource(
-		title: "Руки и кисти",
+		title: string("Руки и кисти"),
 		preview: [
 			AsyncImages.Mock(image: Images.session3, timeout: 1.0),
 			AsyncImages.Mock(image: Images.session4, timeout: 1.0),
