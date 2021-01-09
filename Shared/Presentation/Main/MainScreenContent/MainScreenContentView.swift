@@ -29,7 +29,7 @@ struct MainScreenContentView: View {
 							EmptyView()
 						},
 						content: {
-							viewFactory.progressHeader(spacingLevel: spacingLevel.next)
+							viewFactory.progressHeader(spacingLevel: spacingLevel.next(by: 2))
 						}
 					)
 				case .notConfigured:

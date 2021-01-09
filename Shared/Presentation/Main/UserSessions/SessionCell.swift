@@ -23,8 +23,8 @@ struct SessionCell: View {
 				.aspectRatio(contentMode: .fill)
                 .frame(height: 90)
                 .foregroundColor(Design.Color.group)
-                .cornerRadius(spacingLevel.value)
-                .shadow(color: Design.Color.shadow, radius: 1)
+				.cornerRadius(spacingLevel.value)
+				.shadow(color: Design.Color.shadow, radius: 1)
             VStack(alignment: .leading, spacing: spacingLevel.next(by: 2).value) {
                 Text(title)
                     .font(Design.Font.h3)
@@ -36,7 +36,7 @@ struct SessionCell: View {
                 }
             }
         }
-		.clipped()
+		.contentShape(Rectangle())
     }
 }
 
@@ -47,7 +47,7 @@ struct SessionCell_Previews: PreviewProvider {
                 image: UIImage(named: "session1"),
                 title: "Лица",
                 subtitle: "Выбор редакции",
-                spacingLevel: .level3
+                spacingLevel: .level2
             )
             .previewLayout(.sizeThatFits)
             .padding(Design.SpacingLevel.level2.value)
@@ -56,11 +56,11 @@ struct SessionCell_Previews: PreviewProvider {
                 image: UIImage(named: "session1"),
                 title: "Лица",
                 subtitle: "Выбор редакции",
-                spacingLevel: .level3
+                spacingLevel: .level2
             )
             .preferredColorScheme(.dark)
             .previewLayout(.sizeThatFits)
-            .padding(Design.SpacingLevel.level2.value)
+            .padding(Design.SpacingLevel.level1.value)
         }
     }
 }
