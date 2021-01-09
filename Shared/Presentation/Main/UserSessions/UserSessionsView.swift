@@ -23,13 +23,13 @@ struct UserSessionsView: View {
             ],
             alignment: .center,
             spacing: spacingLevel.next.value
-        ){
+        ) {
 			ForEach(viewModel.sessions, id: \.id) { session in
                 SessionCell(
                     image: session.preview,
                     title: session.name,
                     subtitle: nil,
-                    spacingLevel: spacingLevel.next
+                    spacingLevel: spacingLevel.next(by: 2)
                 )
 				.onTapGesture {
 					viewModel.openSession(session)
@@ -47,7 +47,7 @@ struct UserSessions_Previews: PreviewProvider {
         ScrollView {
             UserSessionsView(
 				viewModel: .init(dependencies: MockDependencies()),
-                spacingLevel: .level1
+                spacingLevel: .level0
             )
         }
         .padding(Design.SpacingLevel.level0.value)

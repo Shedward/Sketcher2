@@ -17,7 +17,7 @@ struct SessionCell: View {
     let spacingLevel: Design.SpacingLevel
 
     var body: some View {
-        VStack(alignment: .leading, spacing: spacingLevel.next.value) {
+		VStack(alignment: .leading, spacing: spacingLevel.next.value) {
 			Image(uiImage: image ?? UIImage())
 				.resizable()
 				.aspectRatio(contentMode: .fill)
@@ -25,7 +25,7 @@ struct SessionCell: View {
                 .foregroundColor(Design.Color.group)
 				.cornerRadius(spacingLevel.value)
 				.shadow(color: Design.Color.shadow, radius: 1)
-            VStack(alignment: .leading, spacing: spacingLevel.next(by: 2).value) {
+			VStack(alignment: .leading, spacing: spacingLevel.next(by: 2).value) {
                 Text(title)
                     .font(Design.Font.h3)
                     .foregroundColor(Design.Color.content)
@@ -50,7 +50,7 @@ struct SessionCell_Previews: PreviewProvider {
                 spacingLevel: .level2
             )
             .previewLayout(.sizeThatFits)
-            .padding(Design.SpacingLevel.level2.value)
+            .padding(Design.SpacingLevel.level1.value)
 
             SessionCell(
                 image: UIImage(named: "session1"),
