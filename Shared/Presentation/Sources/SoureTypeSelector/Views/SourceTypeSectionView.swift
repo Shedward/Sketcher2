@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct SourceTypeSection {
+struct SourceTypeSection: Identifiable {
+	let id = UUID()
 	let title: String
 	let sourceTypes: [SourceType]
 }
@@ -17,7 +18,7 @@ struct SourceTypeSectionView: View {
 	let spacingLevel: Design.SpacingLevel
 
 	var body: some View {
-		VStack(alignment: .leading, spacing: spacingLevel.next.value) {
+		VStack(alignment: .leading, spacing: spacingLevel.value) {
 			Text(section.title)
 				.font(Design.Font.h2)
 				.foregroundColor(Design.Color.content)
@@ -31,7 +32,7 @@ struct SourceTypeSectionView: View {
 				spacing: spacingLevel.next.value
 			) {
 				ForEach(section.sourceTypes, id: \.self) { sourceType in
-					Text(sourceType.title)
+					SourceTypeCell(spacing: spacingLevel.next, sourceType: sourceType)
 				}
 			}
 		}
@@ -43,7 +44,7 @@ struct SourceTypeSectionView_Previews: PreviewProvider {
 	static var previews: some View {
 		SourceTypeSectionView(
 			section: .init(
-				title: "Title",
+				title: "Generating",
 				sourceTypes: [
 					.debug
 				]

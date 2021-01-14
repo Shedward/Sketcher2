@@ -8,22 +8,29 @@
 import SwiftUI
 
 struct SourceTypeCell: View {
+	let spacing: Design.SpacingLevel
 	let sourceType: SourceType
 
     var body: some View {
-		VStack {
-			if let icon = sourceType.bigIcon {
-				Image(uiImage: icon)
-			} else {
+		VStack(alignment: .leading, spacing: spacing.next.value) {
+			ZStack {
 				Rectangle()
+					.fill(Design.Color.group)
+					.frame(width: 96, height: 56)
+					.cornerRadius(spacing.next.value)
+					.shadow(color: Design.Color.shadow, radius: 1)
+				if let icon = sourceType.bigIcon {
+					Image(uiImage: icon)
+				}
 			}
 			Text(sourceType.title)
+				.font(Design.Font.h3)
 		}
     }
 }
 
 struct SourceTypeCell_Previews: PreviewProvider {
     static var previews: some View {
-		SourceTypeCell(sourceType: .debug)
+		SourceTypeCell(spacing: .level2, sourceType: .debug)
     }
 }
