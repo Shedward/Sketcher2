@@ -23,7 +23,9 @@ struct SourcesListView: View {
 	@State
 	private var openRoute: Route?
 
-	let sources: [Source]
+    @ObservedObject
+    var viewModel: ViewModel
+
 	let spacingLevel = Design.SpacingLevel.level0
 
 	var body: some View {
@@ -31,7 +33,7 @@ struct SourcesListView: View {
 			NavigationBar(title: Localised.string("Источники"), showBackButton: true)
 			ScrollView {
 				LazyVStack(spacing: spacingLevel.next.value) {
-					ForEach(sources, id: \.id) { source in
+                    ForEach(viewModel.sources, id: \.id) { source in
 						SourceCell(source: source)
 					}
 				}
@@ -65,6 +67,6 @@ struct SourcesListView: View {
 
 struct SourcesList_Previews: PreviewProvider {
 	static var previews: some View {
-		SourcesListView(sources: Mocks.sourcesList)
+        SourcesListView(viewModel: .init(dependencies: MockDependencies()))
 	}
 }
