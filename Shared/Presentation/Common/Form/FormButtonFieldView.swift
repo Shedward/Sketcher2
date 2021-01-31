@@ -16,6 +16,7 @@ struct FormButtonFieldView: View {
 				.font(Design.Font.body1)
 			Spacer()
 		}
+		.contentShape(Rectangle())
     }
 }
 

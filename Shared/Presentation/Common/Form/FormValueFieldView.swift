@@ -30,6 +30,7 @@ struct FormValueFieldView: View {
 				Image("chevron")
 			}
 		}
+		.contentShape(Rectangle())
     }
 }
 
