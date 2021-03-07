@@ -9,10 +9,14 @@ import SwiftUI
 
 struct SourceCell: View {
 	let source: Source
+	var icon: UIImage?
 	let spacingLevel = Design.SpacingLevel.level2
 
     var body: some View {
 		HStack(spacing: spacingLevel.value) {
+			if let icon = icon {
+				Image(uiImage: icon)
+			}
 			VStack(alignment: .leading, spacing: 0) {
 				Text(source.title)
 					.font(Design.Font.body1)

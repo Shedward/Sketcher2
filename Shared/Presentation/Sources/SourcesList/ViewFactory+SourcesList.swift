@@ -9,8 +9,8 @@ import SwiftUI
 
 extension ViewFactory {
 	func sourcesList() -> AnyView {
-        let viewModel = SourcesListView.ViewModel(dependencies: dependencies)
-		let view = SourcesListView(viewModel: viewModel)
+		let viewModel = SourceListView.ViewModel(dependencies: dependencies)
+		let view = SourceListView(viewModel: viewModel)
 		return AnyView(view)
 	}
 }

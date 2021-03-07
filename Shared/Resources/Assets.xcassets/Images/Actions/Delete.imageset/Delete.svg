@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/Delete</title>
+    <g id="Icons/Delete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10,2 L9,3 L3,3 L3,5 L4.109375,5 L5.8925781,20.255859 L5.8925781,20.263672 C6.023602,21.250335 6.8803207,22 7.875,22 L16.123047,22 C17.117726,22 17.974445,21.250322 18.105469,20.263672 L18.107422,20.255859 L19.890625,5 L21,5 L21,3 L15,3 L14,2 L10,2 Z M6,5 L18,5 L16.2107714,20 L7.78723404,20 L6,5 Z" id="Shape" fill="#000000"></path>
+    </g>
+</svg>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/Remove</title>
+    <g id="Icons/Remove" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icons8-cancel" transform="translate(2.000000, 2.000000)" fill="#000000">
+            <path d="M10,0 C4.4889971,0 0,4.4889971 0,10 C0,15.511003 4.4889971,20 10,20 C15.511003,20 20,15.511003 20,10 C20,4.4889971 15.511003,0 10,0 Z M10,2 C14.430123,2 18,5.5698774 18,10 C18,14.430123 14.430123,18 10,18 C5.5698774,18 2,14.430123 2,10 C2,5.5698774 5.5698774,2 10,2 Z M6.50207463,5 L5,6.50207463 L8.4979259,10 L5,13.4979258 L6.50207463,15 L10,11.5020743 L13.4979258,15 L15,13.4979258 L11.5020743,10 L15,6.50207463 L13.4979258,5 L10,8.4979259 L6.50207463,5 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

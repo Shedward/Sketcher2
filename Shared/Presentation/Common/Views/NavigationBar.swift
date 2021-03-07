@@ -10,11 +10,13 @@ import SwiftUI
 struct NavigationBar: View {
 	let title: String
 	let showBackButton: Bool
+	let customAction: ActionItem?
 	let spacingLevel: Design.SpacingLevel = .level1
 
-	init(title: String, showBackButton: Bool = false) {
+	init(title: String, showBackButton: Bool = false, customAction: ActionItem? = nil) {
 		self.title = title
 		self.showBackButton = showBackButton
+		self.customAction = customAction
 	}
 
 	@Environment(\.presentationMode)
@@ -31,6 +33,11 @@ struct NavigationBar: View {
 			Text(title)
 				.font(Design.Font.h1)
 			Spacer()
+			if let rightAction = customAction, let title = rightAction.title {
+				Text(title)
+					.font(Design.Font.body2)
+					.onTapGesture(perform: rightAction.action)
+			}
 		}
 	}
 }
