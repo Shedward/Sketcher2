@@ -416,6 +416,7 @@
 		6322205A25A66C48005C8C8E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				63DBFF9324BA5081000E1FD5 /* Mocks */,
 				6355514224F9A64D00157FD5 /* AsyncImage */,
 				63DBFF8A24BA3039000E1FD5 /* Session.swift */,
 				63DBFF8D24BA3201000E1FD5 /* RecommendedSession.swift */,
@@ -628,6 +629,15 @@
 			path = SessionStart;
 			sourceTree = "<group>";
 		};
+		63AE15C625FD698100048407 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				6322208025A67282005C8C8E /* Dependencies */,
+				639AF34824FBE5200020A26F /* Helpers */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		63BC97F824B90C4800AE1B28 = {
 			isa = PBXGroup;
 			children = (
@@ -641,7 +651,7 @@
 		63BC97FD24B90C4800AE1B28 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				63DBFF9324BA5081000E1FD5 /* Mocks */,
+				63AE15C625FD698100048407 /* Infrastructure */,
 				63DBFF8924BA3027000E1FD5 /* Domain */,
 				63DBFF8824BA301B000E1FD5 /* Presentation */,
 				63BC981F24B90D0C00AE1B28 /* Resources */,
@@ -732,10 +742,8 @@
 		63DBFF8924BA3027000E1FD5 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				6322208025A67282005C8C8E /* Dependencies */,
 				6322205D25A66C88005C8C8E /* Repositories */,
 				6322205A25A66C48005C8C8E /* Models */,
-				639AF34824FBE5200020A26F /* Helpers */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
