@@ -51,10 +51,10 @@ struct SourceListView: View {
 	private func contentView() -> some View {
 		ScrollView {
 			VStack(spacing: spacingLevel.value) {
-				if !viewModel.selectedSources.isEmpty {
+				if !viewModel.topDrawerSources.isEmpty {
 					VStack(spacing: spacingLevel.next.value) {
-						ForEach(viewModel.selectedSources, id: \.id) { source in
-							SourceCell(source: source, icon: icon(for: source, inDrawer: true))
+						ForEach(viewModel.topDrawerSources, id: \.id) { source in
+							sourceCell(for: source, inDrawer: true)
 						}
 					}
 					SeparatorView()
@@ -62,11 +62,36 @@ struct SourceListView: View {
 
 				LazyVStack(spacing: spacingLevel.next.value) {
 					ForEach(viewModel.sources, id: \.id) { source in
-						SourceCell(source: source, icon: icon(for: source, inDrawer: false))
+						sourceCell(for: source, inDrawer: false)
 					}
 				}
 			}
 		}
+	}
+
+	private func bottomButtons() -> some View {
+		HStack {
+			Spacer()
+			Image("add")
+				.onTapGesture {
+					self.openRoute = .newSource
+				}
+		}
+		.padding(
+			EdgeInsets(
+				top: spacingLevel.next.value,
+				leading: spacingLevel.value,
+				bottom: 0,
+				trailing: 0
+			)
+		)
+	}
+
+	private func sourceCell(for source: Source, inDrawer: Bool) -> some View {
+		SourceCell(source: source, icon: icon(for: source, inDrawer: inDrawer))
+			.onTapGesture {
+				viewModel.didSelectSource(source)
+			}
 	}
 
 	private func icon(for source: Source, inDrawer: Bool) -> UIImage? {
@@ -87,24 +112,6 @@ struct SourceListView: View {
 				? UIImage(named: "add")
 				: UIImage(named: "remove")
 		}
-	}
-
-	private func bottomButtons() -> some View {
-		HStack {
-			Spacer()
-			Image("add")
-				.onTapGesture {
-					self.openRoute = .newSource
-				}
-		}
-		.padding(
-			EdgeInsets(
-				top: spacingLevel.next.value,
-				leading: spacingLevel.value,
-				bottom: 0,
-				trailing: 0
-			)
-		)
 	}
 }
 

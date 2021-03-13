@@ -29,6 +29,10 @@ struct SourceListEditBehaviour: SourceListBehaviour {
 	}
 
 	mutating func didSelectSource(_ source: Source) {
-		selectedSources.append(source)
+		if selectedSources.contains(where: { $0.id == source.id }) {
+			selectedSources = selectedSources.filter { $0.id != source.id }
+		} else {
+			selectedSources.append(source)
+		}
 	}
 }

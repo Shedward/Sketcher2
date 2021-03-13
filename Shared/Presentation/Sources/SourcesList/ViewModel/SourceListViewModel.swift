@@ -18,15 +18,20 @@ extension SourceListView {
 		private let dependencies: Dependencies
 
 		var sources: [Source] { behaviour.sources }
-		var selectedSources: [Source] { behaviour.topDrawerSources }
+		var topDrawerSources: [Source] { [] }
+		var selectedSources: [Source] { behaviour.selectedSources }
 		var navigationBarAction: ActionItem? { behaviour.navigationBarAction }
 		var cellSelectionMode: SourceListSelectionMode { behaviour.cellSelectionMode }
 
 		init(dependencies: Dependencies) {
 			self.dependencies = dependencies
 
-			switchToEdit()
+			switchToList()
         }
+
+		func didSelectSource(_ source: Source) {
+			behaviour.didSelectSource(source)
+		}
 
 		private func switchToList() {
 			behaviour = SourceListDisplayBehaviour(
