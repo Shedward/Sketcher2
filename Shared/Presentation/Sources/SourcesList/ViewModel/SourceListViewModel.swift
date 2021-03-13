@@ -18,7 +18,7 @@ extension SourceListView {
 		private let dependencies: Dependencies
 
 		var sources: [Source] { behaviour.sources }
-		var topDrawerSources: [Source] { [] }
+		var topDrawerSources: [Source] { behaviour.topDrawerSources }
 		var selectedSources: [Source] { behaviour.selectedSources }
 		var navigationBarAction: ActionItem? { behaviour.navigationBarAction }
 		var cellSelectionMode: SourceListSelectionMode { behaviour.cellSelectionMode }
@@ -26,7 +26,7 @@ extension SourceListView {
 		init(dependencies: Dependencies) {
 			self.dependencies = dependencies
 
-			switchToList()
+			switchToMultiselect(selected: [])
         }
 
 		func didSelectSource(_ source: Source) {
@@ -58,6 +58,10 @@ extension SourceListView {
 		}
 
 		private func switchToMultiselect(selected: [Source]) {
+			behaviour = SourceListMultiselectBehaviour(
+				sources: dependencies.sourcesRepository.sources(),
+				onSelect: { }
+			)
 		}
 
 		private func openSource(_ source: Source) {

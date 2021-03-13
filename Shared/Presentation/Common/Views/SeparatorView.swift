@@ -12,8 +12,8 @@ struct SeparatorView: View {
 
     var body: some View {
         Rectangle()
-			.background(color)
-			.frame(maxWidth: .infinity, maxHeight: 1.0)
+			.foregroundColor(color)
+			.frame(maxWidth: .infinity, maxHeight: 0.5)
     }
 }
 

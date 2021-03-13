@@ -109,8 +109,8 @@ struct SourceListView: View {
 			}
 		case .ordered:
 			return inDrawer
-				? UIImage(named: "add")
-				: UIImage(named: "remove")
+				? UIImage(named: "remove")
+				: UIImage(named: "add")
 		}
 	}
 }
