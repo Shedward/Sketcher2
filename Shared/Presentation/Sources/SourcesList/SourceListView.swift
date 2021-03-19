@@ -7,21 +7,13 @@
 
 import SwiftUI
 
-struct SourceListView: View {
-
-	private enum Route: Equatable, Identifiable {
-		var id: Route {
-			self
-		}
-
-		case newSource
-	}
+struct SourceListView<ViewModel: SourceListViewModel>: View {
 
 	@Environment(\.viewFactory)
 	private var viewFactory: ViewFactory
 
 	@State
-	private var openRoute: Route?
+	private var openRoute: SourceListViewRoutes?
 
     @ObservedObject
     var viewModel: ViewModel
@@ -40,10 +32,12 @@ struct SourceListView: View {
 		}
 		.padding(spacingLevel.value)
 		.navigationBarRemoved()
-		.sheet(item: $openRoute) { route -> AnyView in
+		.sheet(item: viewModel.openRoute) { route -> AnyView in
 			switch route {
 			case .newSource:
-				viewFactory.sourceTypeSelector()
+				return AnyView(viewFactory.sourceTypeSelector())
+			case .openSource(let source):
+				return AnyView(Text("Open source \(source.title)"))
 			}
 		}
 	}
@@ -117,6 +111,6 @@ struct SourceListView: View {
 
 struct SourcesList_Previews: PreviewProvider {
 	static var previews: some View {
-		SourceListView(viewModel: .init(dependencies: MockDependencies()))
+		SourceListView(viewModel: SourceListViewModelDisplayViewModel(dependencies: MockDependencies()))
 	}
 }

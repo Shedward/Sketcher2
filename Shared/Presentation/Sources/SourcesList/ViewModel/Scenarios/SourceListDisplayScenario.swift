@@ -5,7 +5,7 @@
 //  Created by Vlad Maltsev on 31.01.2021.
 //
 
-struct SourceListDisplayBehaviour: SourceListBehaviour {
+struct SourceListDisplayScenario: SourceListScenario {
 	let cellSelectionMode: SourceListSelectionMode = .none
 
 	private(set) var sources: [Source]

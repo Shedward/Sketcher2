@@ -8,8 +8,8 @@
 import SwiftUI
 
 extension ViewFactory {
-	func session(_ session: Session) -> AnyView {
+	func session(_ session: Session) -> some View {
 		let view = SessionView(session: session)
-		return AnyView(view)
+		return view
 	}
 }

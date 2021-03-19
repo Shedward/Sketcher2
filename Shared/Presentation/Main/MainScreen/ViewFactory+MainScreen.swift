@@ -8,8 +8,8 @@
 import SwiftUI
 
 extension ViewFactory {
-	func mainScreen() -> AnyView {
+	func mainScreen() -> some View {
 		let view = MainScreenView()
-		return AnyView(view)
+		return view
 	}
 }

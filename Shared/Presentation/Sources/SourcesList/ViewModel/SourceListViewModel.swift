@@ -2,69 +2,44 @@
 //  SourceListViewModel.swift
 //  iOS
 //
-//  Created by Vlad Maltsev on 18.01.2021.
+//  Created by Vlad Maltsev on 14.03.2021.
 //
 
-import Combine
 import SwiftUI
+import Combine
+import Foundation
 
-extension SourceListView {
-    final class ViewModel: ObservableObject {
-        typealias Dependencies = SourcesRepositoryDependency
+enum SourceListViewRoutes: Identifiable {
+	enum ObjectIdentifier: Hashable {
+		case newSource
+		case openSource(UUID)
 
-		@Published
-		private var behaviour: SourceListBehaviour!
-
-		private let dependencies: Dependencies
-
-		var sources: [Source] { behaviour.sources }
-		var topDrawerSources: [Source] { behaviour.topDrawerSources }
-		var selectedSources: [Source] { behaviour.selectedSources }
-		var navigationBarAction: ActionItem? { behaviour.navigationBarAction }
-		var cellSelectionMode: SourceListSelectionMode { behaviour.cellSelectionMode }
-
-		init(dependencies: Dependencies) {
-			self.dependencies = dependencies
-
-			switchToMultiselect(selected: [])
-        }
-
-		func didSelectSource(_ source: Source) {
-			behaviour.didSelectSource(source)
+		init(route: SourceListViewRoutes) {
+			switch route {
+			case .newSource:
+				self = .newSource
+			case .openSource(let source):
+				self = .openSource(source.id)
+			}
 		}
+	}
 
-		private func switchToList() {
-			behaviour = SourceListDisplayBehaviour(
-				sources: dependencies.sourcesRepository.sources(),
-				onEdit: { [weak self] in
-					self?.switchToEdit()
-				},
-				onOpenSource: { [weak self] source in
-					self?.openSource(source)
-				}
-			)
-		}
+	var id: ObjectIdentifier {
+		.init(route: self)
+	}
 
-		private func switchToEdit() {
-			behaviour = SourceListEditBehaviour(
-				sources: dependencies.sourcesRepository.sources(),
-				onCancel: { [weak self] in
-					self?.switchToList()
-				},
-				onDelete: { [weak self] sources in
-					self?.dependencies.sourcesRepository.remove(sources: sources)
-				}
-			)
-		}
+	case newSource
+	case openSource(Source)
+}
 
-		private func switchToMultiselect(selected: [Source]) {
-			behaviour = SourceListMultiselectBehaviour(
-				sources: dependencies.sourcesRepository.sources(),
-				onSelect: { }
-			)
-		}
+protocol SourceListViewModel: ObservableObject {
+	var sources: [Source] { get }
+	var topDrawerSources: [Source] { get }
+	var selectedSources: [Source] { get }
+	var navigationBarAction: ActionItem? { get }
+	var cellSelectionMode: SourceListSelectionMode { get }
 
-		private func openSource(_ source: Source) {
-		}
-    }
+	var openRoute: Binding<SourceListViewRoutes?> { get }
+
+	func didSelectSource(_ source: Source)
 }

@@ -8,8 +8,8 @@
 import SwiftUI
 
 extension ViewFactory {
-	func newSession() -> AnyView {
+	func newSession() -> some View {
 		let view = NewSessionView(newSession: Mocks.newSession)
-		return AnyView(view)
+		return view
 	}
 }

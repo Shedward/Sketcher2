@@ -8,9 +8,9 @@
 import SwiftUI
 
 extension ViewFactory {
-	func mainScreenContent(spacingLevel: Design.SpacingLevel) -> AnyView {
+	func mainScreenContent(spacingLevel: Design.SpacingLevel) -> some View {
 		let viewModel = MainScreenContentView.ViewModel(dependencies: dependencies)
 		let view = MainScreenContentView(viewModel: viewModel, spacingLevel: spacingLevel)
-		return AnyView(view)
+		return view
 	}
 }

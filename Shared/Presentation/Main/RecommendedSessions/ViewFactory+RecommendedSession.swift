@@ -8,9 +8,9 @@
 import SwiftUI
 
 extension ViewFactory {
-	func recommendedSessions(spacingLevel: Design.SpacingLevel) -> AnyView {
+	func recommendedSessions(spacingLevel: Design.SpacingLevel) -> some View {
 		let viewModel = RecommendedSessionsView.ViewModel(dependencies: dependencies)
 		let view = RecommendedSessionsView(viewModel: viewModel, spacingLevel: spacingLevel)
-		return AnyView(view)
+		return view
 	}
 }

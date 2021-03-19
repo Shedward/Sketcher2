@@ -8,9 +8,9 @@
 import SwiftUI
 
 extension ViewFactory {
-	func progressHeader(spacingLevel: Design.SpacingLevel) -> AnyView {
+	func progressHeader(spacingLevel: Design.SpacingLevel) -> some View {
 		let viewModel = ProgressHeaderView.ViewModel(dependencies: dependencies)
 		let view = ProgressHeaderView(viewModel: viewModel, spacingLevel: spacingLevel)
-		return AnyView(view)
+		return view
 	}
 }

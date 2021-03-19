@@ -8,8 +8,8 @@
 import SwiftUI
 
 extension ViewFactory {
-	func settings() -> AnyView {
+	func settings() -> some View {
 		let view = SettingsView()
-		return AnyView(view)
+		return view
 	}
 }

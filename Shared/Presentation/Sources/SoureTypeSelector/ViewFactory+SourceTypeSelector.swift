@@ -8,9 +8,9 @@
 import SwiftUI
 
 extension ViewFactory {
-	func sourceTypeSelector() -> AnyView {
+	func sourceTypeSelector() -> some View {
 		let viewModel = SourceTypeSelectorView.ViewModel()
 		let view = SourceTypeSelectorView(viewModel: viewModel)
-		return AnyView(view)
+		return view
 	}
 }

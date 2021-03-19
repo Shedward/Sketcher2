@@ -8,8 +8,8 @@
 import SwiftUI
 
 extension ViewFactory {
-	func newSourceFast(_ newSource: NewSource) -> AnyView {
+	func newSourceFast(_ newSource: NewSource) -> some View {
 		let view = NewSourceFastView(newSource: newSource)
-		return AnyView(view)
+		return view
 	}
 }
