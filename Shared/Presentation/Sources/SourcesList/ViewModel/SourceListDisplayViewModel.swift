@@ -22,9 +22,11 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 	var navigationBarAction: ActionItem? { behaviour.navigationBarAction }
 	var cellSelectionMode: SourceListSelectionMode { behaviour.cellSelectionMode }
 
-	@State
-	var openRouteState: SourceListViewRoutes?
-	var openRoute: Binding<SourceListViewRoutes?> { $openRouteState }
+	@Published
+	private var openRouteStatePublisher: SourceListViewRoutes?
+	var openRoute: AnyPublisher<SourceListViewRoutes?, Never> {
+		$openRouteStatePublisher.eraseToAnyPublisher()
+	}
 
 	init(dependencies: Dependencies) {
 		self.dependencies = dependencies
@@ -61,6 +63,6 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 	}
 
 	private func openSource(_ source: Source) {
-		openRouteState = .openSource(source)
+		openRouteStatePublisher = .openSource(source)
 	}
 }

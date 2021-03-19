@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SourceListView<ViewModel: SourceListViewModel>: View {
 
@@ -14,11 +15,17 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 
 	@State
 	private var openRoute: SourceListViewRoutes?
+	private var cancellable = Set<AnyCancellable>()
 
     @ObservedObject
     var viewModel: ViewModel
 
 	let spacingLevel = Design.SpacingLevel.level0
+
+	init(viewModel: ViewModel) {
+		self.viewModel = viewModel
+		viewModel.openRoute.assign(to: \.openRoute, on: self).store(in: &cancellable)
+	}
 
 	var body: some View {
 		VStack(alignment: .leading) {
@@ -32,7 +39,7 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 		}
 		.padding(spacingLevel.value)
 		.navigationBarRemoved()
-		.sheet(item: viewModel.openRoute) { route -> AnyView in
+		.sheet(item: $openRoute) { route -> AnyView in
 			switch route {
 			case .newSource:
 				return AnyView(viewFactory.sourceTypeSelector())
