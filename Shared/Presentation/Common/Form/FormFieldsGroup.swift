@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@_functionBuilder
+@resultBuilder
 struct FormFieldBuilder {
 
 	static func buildBlock() -> EmptyView {
