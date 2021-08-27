@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SourceTypeSelectorView: View {
-	let spacingLevel = Design.SpacingLevel.level0
+	let spacingLevel = Design.SpacingLevel.level1
 
 	@ObservedObject
 	var viewModel: ViewModel

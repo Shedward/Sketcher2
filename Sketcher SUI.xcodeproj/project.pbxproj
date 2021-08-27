@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		6304A3B524C103660093DF70 /* MainScreenContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304A3B424C103660093DF70 /* MainScreenContentView.swift */; };
 		6304A3B624C103660093DF70 /* MainScreenContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304A3B424C103660093DF70 /* MainScreenContentView.swift */; };
-		6306A4C625C6D9AF00573C49 /* SourceListScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4C525C6D9AF00573C49 /* SourceListScenario.swift */; };
-		6306A4D825C6DD6F00573C49 /* SourceListDisplayScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4D725C6DD6F00573C49 /* SourceListDisplayScenario.swift */; };
+		6306A4C625C6D9AF00573C49 /* SourceListScenarioBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4C525C6D9AF00573C49 /* SourceListScenarioBehaviour.swift */; };
+		6306A4D825C6DD6F00573C49 /* SourceListDisplayScenarioBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4D725C6DD6F00573C49 /* SourceListDisplayScenarioBehaviour.swift */; };
 		6306A4DF25C6E16A00573C49 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4DE25C6E16A00573C49 /* Action.swift */; };
-		6306A4F025C7299700573C49 /* SourceListEditScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4EF25C7299700573C49 /* SourceListEditScenario.swift */; };
+		6306A4F025C7299700573C49 /* SourceListEditScenarioBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4EF25C7299700573C49 /* SourceListEditScenarioBehaviour.swift */; };
 		6308516D253791E30059E5EF /* SourceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6308516C253791E30059E5EF /* SourceListView.swift */; };
 		630B559725A5FB9300E62364 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B559625A5FB9300E62364 /* ViewFactory.swift */; };
 		630B559D25A5FC5300E62364 /* ViewFactory+MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630B559C25A5FC5300E62364 /* ViewFactory+MainScreen.swift */; };
@@ -67,8 +67,8 @@
 		635C1FCA24D0D2AC00DA1CD0 /* SessionProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C1FC924D0D2AC00DA1CD0 /* SessionProgressView.swift */; };
 		635C38F825F532F600787B86 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C38F725F532F600787B86 /* SeparatorView.swift */; };
 		635C38F925F532F600787B86 /* SeparatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C38F725F532F600787B86 /* SeparatorView.swift */; };
-		635C390125F5467D00787B86 /* SourceListMultiselectScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C390025F5467D00787B86 /* SourceListMultiselectScenario.swift */; };
-		635C390225F5467D00787B86 /* SourceListMultiselectScenario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C390025F5467D00787B86 /* SourceListMultiselectScenario.swift */; };
+		635C390125F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C390025F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift */; };
+		635C390225F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C390025F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift */; };
 		637CE7322529EB700002B061 /* SourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637CE7312529EB700002B061 /* SourceType.swift */; };
 		637CE7362529F1220002B061 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637CE7352529F1220002B061 /* SettingsView.swift */; };
 		637E771824D74F420033467E /* NewSourceFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E771724D74F420033467E /* NewSourceFastView.swift */; };
@@ -160,10 +160,10 @@
 
 /* Begin PBXFileReference section */
 		6304A3B424C103660093DF70 /* MainScreenContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenContentView.swift; sourceTree = "<group>"; };
-		6306A4C525C6D9AF00573C49 /* SourceListScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListScenario.swift; sourceTree = "<group>"; };
-		6306A4D725C6DD6F00573C49 /* SourceListDisplayScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListDisplayScenario.swift; sourceTree = "<group>"; };
+		6306A4C525C6D9AF00573C49 /* SourceListScenarioBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListScenarioBehaviour.swift; sourceTree = "<group>"; };
+		6306A4D725C6DD6F00573C49 /* SourceListDisplayScenarioBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListDisplayScenarioBehaviour.swift; sourceTree = "<group>"; };
 		6306A4DE25C6E16A00573C49 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		6306A4EF25C7299700573C49 /* SourceListEditScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListEditScenario.swift; sourceTree = "<group>"; };
+		6306A4EF25C7299700573C49 /* SourceListEditScenarioBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListEditScenarioBehaviour.swift; sourceTree = "<group>"; };
 		6308516C253791E30059E5EF /* SourceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListView.swift; sourceTree = "<group>"; };
 		630B559625A5FB9300E62364 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		630B559C25A5FC5300E62364 /* ViewFactory+MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewFactory+MainScreen.swift"; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 		635C1FC624D0D28C00DA1CD0 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		635C1FC924D0D2AC00DA1CD0 /* SessionProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProgressView.swift; sourceTree = "<group>"; };
 		635C38F725F532F600787B86 /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
-		635C390025F5467D00787B86 /* SourceListMultiselectScenario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListMultiselectScenario.swift; sourceTree = "<group>"; };
+		635C390025F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListMultiselectScenarioBehaviour.swift; sourceTree = "<group>"; };
 		637CE7312529EB700002B061 /* SourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceType.swift; sourceTree = "<group>"; };
 		637CE7352529F1220002B061 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		637E771724D74F420033467E /* NewSourceFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSourceFastView.swift; sourceTree = "<group>"; };
@@ -303,12 +303,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		6306A4DD25C6E15B00573C49 /* Helpers */ = {
+		6306A4DD25C6E15B00573C49 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				6306A4DE25C6E16A00573C49 /* Action.swift */,
 			);
-			path = Helpers;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		630B559225A5F5DF00E62364 /* Navigation */ = {
@@ -501,10 +501,10 @@
 		633040BE25FE90EB008622C1 /* Scenarios */ = {
 			isa = PBXGroup;
 			children = (
-				6306A4C525C6D9AF00573C49 /* SourceListScenario.swift */,
-				6306A4D725C6DD6F00573C49 /* SourceListDisplayScenario.swift */,
-				6306A4EF25C7299700573C49 /* SourceListEditScenario.swift */,
-				635C390025F5467D00787B86 /* SourceListMultiselectScenario.swift */,
+				6306A4C525C6D9AF00573C49 /* SourceListScenarioBehaviour.swift */,
+				6306A4D725C6DD6F00573C49 /* SourceListDisplayScenarioBehaviour.swift */,
+				6306A4EF25C7299700573C49 /* SourceListEditScenarioBehaviour.swift */,
+				635C390025F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift */,
 			);
 			path = Scenarios;
 			sourceTree = "<group>";
@@ -778,7 +778,7 @@
 		63DBFF9D24BA54C0000E1FD5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				6306A4DD25C6E15B00573C49 /* Helpers */,
+				6306A4DD25C6E15B00573C49 /* Models */,
 				630B55E225A6281300E62364 /* Enviroment */,
 				630B559325A5F5FC00E62364 /* Views */,
 				630B559225A5F5DF00E62364 /* Navigation */,
@@ -969,10 +969,10 @@
 				631AC324254DFBEF003EEA4F /* AuthorView.swift in Sources */,
 				63BC981324B90C4900AE1B28 /* MainScreenView.swift in Sources */,
 				630B55E425A6282900E62364 /* ViewFactoryEnvironment.swift in Sources */,
-				6306A4F025C7299700573C49 /* SourceListEditScenario.swift in Sources */,
+				6306A4F025C7299700573C49 /* SourceListEditScenarioBehaviour.swift in Sources */,
 				63AE15F625FE298900048407 /* Logger+Subsystems.swift in Sources */,
 				6329EC5C24C1F53500DA831E /* ProgressItem.swift in Sources */,
-				6306A4C625C6D9AF00573C49 /* SourceListScenario.swift in Sources */,
+				6306A4C625C6D9AF00573C49 /* SourceListScenarioBehaviour.swift in Sources */,
 				63963E5224C61CB100AE93D5 /* CornerRadiusStyle.swift in Sources */,
 				633EADFD24CE0445007D63AE /* Localised.swift in Sources */,
 				63BC983524B9244000AE1B28 /* Colors.swift in Sources */,
@@ -998,13 +998,13 @@
 				630B55C925A61C0800E62364 /* ViewFactory+NewSession.swift in Sources */,
 				634C2529257D8CBC00E0A63E /* NavigationBar.swift in Sources */,
 				63CA615724CCA2D8008D5A00 /* FixedSizeGeometryReader.swift in Sources */,
-				635C390125F5467D00787B86 /* SourceListMultiselectScenario.swift in Sources */,
+				635C390125F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift in Sources */,
 				6322208A25A67391005C8C8E /* AllDependencies.swift in Sources */,
 				63BC983224B9227800AE1B28 /* SetupProgressHeaderView.swift in Sources */,
 				637E771D24D75E4A0033467E /* NewSources.swift in Sources */,
 				63D9686B24C65FA700DA4B7A /* FormValueFieldView.swift in Sources */,
 				633EADFA24CE0157007D63AE /* SessionProperites.swift in Sources */,
-				6306A4D825C6DD6F00573C49 /* SourceListDisplayScenario.swift in Sources */,
+				6306A4D825C6DD6F00573C49 /* SourceListDisplayScenarioBehaviour.swift in Sources */,
 				6355514124F9A4DD00157FD5 /* AsyncImage.swift in Sources */,
 				63F127AE25A90ACA00B37E00 /* UserSessionsViewModel.swift in Sources */,
 				63DBFF9124BA4EBE000E1FD5 /* UserSessionsView.swift in Sources */,
@@ -1078,7 +1078,7 @@
 				635C38F925F532F600787B86 /* SeparatorView.swift in Sources */,
 				63DBFF8F24BA3201000E1FD5 /* RecommendedSession.swift in Sources */,
 				63BC983324B9227800AE1B28 /* SetupProgressHeaderView.swift in Sources */,
-				635C390225F5467D00787B86 /* SourceListMultiselectScenario.swift in Sources */,
+				635C390225F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift in Sources */,
 				638DD09B24C9923900630DAB /* FixedSpacer.swift in Sources */,
 				63DBFF9224BA4EBE000E1FD5 /* UserSessionsView.swift in Sources */,
 				63BC984324B9F3CF00AE1B28 /* SessionCell.swift in Sources */,

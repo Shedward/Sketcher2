@@ -24,7 +24,9 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 
 	init(viewModel: ViewModel) {
 		self.viewModel = viewModel
-		viewModel.openRoute.assign(to: \.openRoute, on: self).store(in: &cancellable)
+		viewModel.openRoute
+			.assign(to: \.openRoute, on: self)
+			.store(in: &cancellable)
 	}
 
 	var body: some View {
@@ -73,10 +75,10 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 	private func bottomButtons() -> some View {
 		HStack {
 			Spacer()
-			Image("add")
-				.onTapGesture {
-					self.openRoute = .newSource
-				}
+			ForEach(viewModel.bottomBarActions) { action in
+				Image(uiImage: action.icon ?? UIImage())
+					.onTapGesture(perform: action.action)
+			}
 		}
 		.padding(
 			EdgeInsets(

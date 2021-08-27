@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct SourceListEditScenario: SourceListScenario {
+struct SourceListEditScenarioBehaviour: SourceListScenarioBehaviour {
 	let cellSelectionMode: SourceListSelectionMode = .normal
 
 	private(set) var sources: [Source]
@@ -22,7 +22,7 @@ struct SourceListEditScenario: SourceListScenario {
 		self.sources = sources
 		navigationBarAction = .init(title: Localised.string("Отмена"), action: onCancel)
 		bottomBarActions = [
-			.init(icon: UIImage(named: "delete")) { [self] in
+			.init(id: "delete", icon: UIImage(named: "delete")) { [self] in
 				onDelete(selectedSources)
 			}
 		]

@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct SourceListMultiselectScenario: SourceListScenario {
+struct SourceListMultiselectScenarioBehaviour: SourceListScenarioBehaviour {
 	let cellSelectionMode: SourceListSelectionMode = .ordered
 
 	private let allSources: [Source]
