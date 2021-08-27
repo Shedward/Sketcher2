@@ -20,6 +20,7 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 	var topDrawerSources: [Source] { behaviour.topDrawerSources }
 	var selectedSources: [Source] { behaviour.selectedSources }
 	var navigationBarAction: ActionItem? { behaviour.navigationBarAction }
+	var bottomBarActions: [ActionItem] { behaviour.bottomBarActions }
 	var cellSelectionMode: SourceListSelectionMode { behaviour.cellSelectionMode }
 
 	@Published

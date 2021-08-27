@@ -7,12 +7,19 @@
 
 import UIKit
 
-struct ActionItem {
+struct ActionItem: Identifiable {
+	let id: String
 	let title: String?
 	let icon: UIImage?
 	let action: () -> Void
 
-	init(title: String? = nil, icon: UIImage? = nil, action: @escaping () -> Void) {
+	init(
+		id: String = UUID().uuidString,
+		title: String? = nil,
+		icon: UIImage? = nil,
+		action: @escaping () -> Void
+	) {
+		self.id = id
 		self.title = title
 		self.icon = icon
 		self.action = action

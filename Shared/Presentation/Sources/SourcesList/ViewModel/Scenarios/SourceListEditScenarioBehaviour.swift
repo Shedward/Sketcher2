@@ -22,7 +22,7 @@ struct SourceListEditScenarioBehaviour: SourceListScenarioBehaviour {
 		self.sources = sources
 		navigationBarAction = .init(title: Localised.string("Отмена"), action: onCancel)
 		bottomBarActions = [
-			.init(icon: UIImage(named: "delete")) { [self] in
+			.init(id: "delete", icon: UIImage(named: "delete")) { [self] in
 				onDelete(selectedSources)
 			}
 		]

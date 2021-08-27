@@ -37,6 +37,7 @@ protocol SourceListViewModel: ObservableObject {
 	var topDrawerSources: [Source] { get }
 	var selectedSources: [Source] { get }
 	var navigationBarAction: ActionItem? { get }
+	var bottomBarActions: [ActionItem] { get }
 	var cellSelectionMode: SourceListSelectionMode { get }
 
 	var openRoute: AnyPublisher<SourceListViewRoutes?, Never> { get }
