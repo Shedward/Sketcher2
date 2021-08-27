@@ -9,28 +9,28 @@ import Combine
 import SwiftUI
 
 final class SourceListViewModelDisplayViewModel: SourceListViewModel {
-	typealias Dependencies = SourcesRepositoryDependency
+	private let sourcesEditUseCase: SourcesListEditUseCase
+	private var behaviour: AbstractSourceListScenarioBehaviour! {
+		didSet {
+			bindBehaviour()
+		}
+	}
+	private var subscriptions = Subscriptions()
 
-	@Published
-	private var behaviour: SourceListScenarioBehaviour!
+	@Published var sources: [Source] = []
+	@Published var topDrawerSources: [Source] = []
+	@Published var selectedSources: [Source] = []
+	@Published var navigationBarAction: ActionItem?
+	@Published var bottomBarActions: [ActionItem] = []
+	@Published var cellSelectionMode: SourceListSelectionMode = .none
 
-	private let dependencies: Dependencies
-
-	var sources: [Source] { behaviour.sources }
-	var topDrawerSources: [Source] { behaviour.topDrawerSources }
-	var selectedSources: [Source] { behaviour.selectedSources }
-	var navigationBarAction: ActionItem? { behaviour.navigationBarAction }
-	var bottomBarActions: [ActionItem] { behaviour.bottomBarActions }
-	var cellSelectionMode: SourceListSelectionMode { behaviour.cellSelectionMode }
-
-	@Published
-	private var openRouteStatePublisher: SourceListViewRoutes?
+	@Published private var openRouteStatePublisher: SourceListViewRoutes?
 	var openRoute: AnyPublisher<SourceListViewRoutes?, Never> {
 		$openRouteStatePublisher.eraseToAnyPublisher()
 	}
 
-	init(dependencies: Dependencies) {
-		self.dependencies = dependencies
+	init(sourcesEditUseCase: SourcesListEditUseCase) {
+		self.sourcesEditUseCase = sourcesEditUseCase
 
 		switchToList()
 	}
@@ -41,7 +41,7 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 
 	private func switchToList() {
 		behaviour = SourceListDisplayScenarioBehaviour(
-			sources: dependencies.sourcesRepository.sources(),
+			sourcesEditUseCase: sourcesEditUseCase,
 			onEdit: { [weak self] in
 				self?.switchToEdit()
 			},
@@ -53,17 +53,40 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 
 	private func switchToEdit() {
 		behaviour = SourceListEditScenarioBehaviour(
-			sources: dependencies.sourcesRepository.sources(),
+			sourcesEditUseCase: sourcesEditUseCase,
 			onCancel: { [weak self] in
 				self?.switchToList()
-			},
-			onDelete: { [weak self] sources in
-				self?.dependencies.sourcesRepository.remove(sources: sources)
 			}
 		)
 	}
 
 	private func openSource(_ source: Source) {
 		openRouteStatePublisher = .openSource(source)
+	}
+
+	private func bindBehaviour() {
+		behaviour.$sources
+			.assign(to: \.sources, on: self)
+			.store(in: &subscriptions)
+
+		behaviour.$topDrawerSources
+			.assign(to: \.topDrawerSources, on: self)
+			.store(in: &subscriptions)
+
+		behaviour.$selectedSources
+			.assign(to: \.selectedSources, on: self)
+			.store(in: &subscriptions)
+
+		behaviour.$navigationBarAction
+			.assign(to: \.navigationBarAction, on: self)
+			.store(in: &subscriptions)
+
+		behaviour.$bottomBarActions
+			.assign(to: \.bottomBarActions, on: self)
+			.store(in: &subscriptions)
+
+		behaviour.$cellSelectionMode
+			.assign(to: \.cellSelectionMode, on: self)
+			.store(in: &subscriptions)
 	}
 }

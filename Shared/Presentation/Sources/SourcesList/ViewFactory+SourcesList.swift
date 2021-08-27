@@ -9,7 +9,8 @@ import SwiftUI
 
 extension ViewFactory {
 	func sourcesList() -> some View {
-		let viewModel = SourceListViewModelDisplayViewModel(dependencies: dependencies)
+		let useCase = DefaultSourcesListEditUseCase(dependencies: dependencies)
+		let viewModel = SourceListViewModelDisplayViewModel(sourcesEditUseCase: useCase)
 		let view = SourceListView(viewModel: viewModel)
 		return view
 	}

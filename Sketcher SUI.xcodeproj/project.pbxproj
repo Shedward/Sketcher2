@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6304A3B524C103660093DF70 /* MainScreenContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304A3B424C103660093DF70 /* MainScreenContentView.swift */; };
 		6304A3B624C103660093DF70 /* MainScreenContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304A3B424C103660093DF70 /* MainScreenContentView.swift */; };
-		6306A4C625C6D9AF00573C49 /* SourceListScenarioBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4C525C6D9AF00573C49 /* SourceListScenarioBehaviour.swift */; };
+		6306A4C625C6D9AF00573C49 /* AbstractSourceListScenarioBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4C525C6D9AF00573C49 /* AbstractSourceListScenarioBehaviour.swift */; };
 		6306A4D825C6DD6F00573C49 /* SourceListDisplayScenarioBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4D725C6DD6F00573C49 /* SourceListDisplayScenarioBehaviour.swift */; };
 		6306A4DF25C6E16A00573C49 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4DE25C6E16A00573C49 /* Action.swift */; };
 		6306A4F025C7299700573C49 /* SourceListEditScenarioBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6306A4EF25C7299700573C49 /* SourceListEditScenarioBehaviour.swift */; };
@@ -74,6 +74,9 @@
 		637E771824D74F420033467E /* NewSourceFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E771724D74F420033467E /* NewSourceFastView.swift */; };
 		637E771A24D750BE0033467E /* NewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E771924D750BE0033467E /* NewSource.swift */; };
 		637E771D24D75E4A0033467E /* NewSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E771C24D75E4A0033467E /* NewSources.swift */; };
+		63877B3A26D9321800C56E81 /* SourcesListEditUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63877B3926D9321800C56E81 /* SourcesListEditUseCase.swift */; };
+		63877B3C26D932CD00C56E81 /* DefaultSourcesListEditUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63877B3B26D932CD00C56E81 /* DefaultSourcesListEditUseCase.swift */; };
+		63877B3E26D938EF00C56E81 /* Subscriptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63877B3D26D938EF00C56E81 /* Subscriptions.swift */; };
 		638D77FF25A7A96E0065D19A /* RecommendedSessionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D77FE25A7A96E0065D19A /* RecommendedSessionsViewModel.swift */; };
 		638D780025A7A96E0065D19A /* RecommendedSessionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D77FE25A7A96E0065D19A /* RecommendedSessionsViewModel.swift */; };
 		638D780625A7AB530065D19A /* ViewFactory+RecommendedSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638D780525A7AB530065D19A /* ViewFactory+RecommendedSession.swift */; };
@@ -160,7 +163,7 @@
 
 /* Begin PBXFileReference section */
 		6304A3B424C103660093DF70 /* MainScreenContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenContentView.swift; sourceTree = "<group>"; };
-		6306A4C525C6D9AF00573C49 /* SourceListScenarioBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListScenarioBehaviour.swift; sourceTree = "<group>"; };
+		6306A4C525C6D9AF00573C49 /* AbstractSourceListScenarioBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractSourceListScenarioBehaviour.swift; sourceTree = "<group>"; };
 		6306A4D725C6DD6F00573C49 /* SourceListDisplayScenarioBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListDisplayScenarioBehaviour.swift; sourceTree = "<group>"; };
 		6306A4DE25C6E16A00573C49 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		6306A4EF25C7299700573C49 /* SourceListEditScenarioBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListEditScenarioBehaviour.swift; sourceTree = "<group>"; };
@@ -215,6 +218,9 @@
 		637E771724D74F420033467E /* NewSourceFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSourceFastView.swift; sourceTree = "<group>"; };
 		637E771924D750BE0033467E /* NewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSource.swift; sourceTree = "<group>"; };
 		637E771C24D75E4A0033467E /* NewSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSources.swift; sourceTree = "<group>"; };
+		63877B3926D9321800C56E81 /* SourcesListEditUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesListEditUseCase.swift; sourceTree = "<group>"; };
+		63877B3B26D932CD00C56E81 /* DefaultSourcesListEditUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSourcesListEditUseCase.swift; sourceTree = "<group>"; };
+		63877B3D26D938EF00C56E81 /* Subscriptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
 		638D77FE25A7A96E0065D19A /* RecommendedSessionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedSessionsViewModel.swift; sourceTree = "<group>"; };
 		638D780525A7AB530065D19A /* ViewFactory+RecommendedSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewFactory+RecommendedSession.swift"; sourceTree = "<group>"; };
 		638DD09924C9923900630DAB /* FixedSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedSpacer.swift; sourceTree = "<group>"; };
@@ -296,7 +302,7 @@
 		6306A4C425C6D98B00573C49 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				633040BE25FE90EB008622C1 /* Scenarios */,
+				633040BE25FE90EB008622C1 /* ScenarioBehaviours */,
 				63B31FBF25B4E865004451AB /* SourceListDisplayViewModel.swift */,
 				633040BF25FE9119008622C1 /* SourceListViewModel.swift */,
 			);
@@ -498,15 +504,15 @@
 			path = ProgressHeader;
 			sourceTree = "<group>";
 		};
-		633040BE25FE90EB008622C1 /* Scenarios */ = {
+		633040BE25FE90EB008622C1 /* ScenarioBehaviours */ = {
 			isa = PBXGroup;
 			children = (
-				6306A4C525C6D9AF00573C49 /* SourceListScenarioBehaviour.swift */,
+				6306A4C525C6D9AF00573C49 /* AbstractSourceListScenarioBehaviour.swift */,
 				6306A4D725C6DD6F00573C49 /* SourceListDisplayScenarioBehaviour.swift */,
 				6306A4EF25C7299700573C49 /* SourceListEditScenarioBehaviour.swift */,
 				635C390025F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift */,
 			);
-			path = Scenarios;
+			path = ScenarioBehaviours;
 			sourceTree = "<group>";
 		};
 		633EADFB24CE0439007D63AE /* Localization */ = {
@@ -555,6 +561,7 @@
 			isa = PBXGroup;
 			children = (
 				6308516C253791E30059E5EF /* SourceListView.swift */,
+				63877B3826D92FE100C56E81 /* UseCases */,
 				6306A4C425C6D98B00573C49 /* ViewModel */,
 				630B55CE25A61C7A00E62364 /* Views */,
 				630B55CF25A61CA800E62364 /* ViewFactory+SourcesList.swift */,
@@ -569,6 +576,15 @@
 				630B55A725A615EF00E62364 /* ViewFactory+Settings.swift */,
 			);
 			path = Settings;
+			sourceTree = "<group>";
+		};
+		63877B3826D92FE100C56E81 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				63877B3926D9321800C56E81 /* SourcesListEditUseCase.swift */,
+				63877B3B26D932CD00C56E81 /* DefaultSourcesListEditUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		638D77FC25A7A6360065D19A /* RecommendedSessions */ = {
@@ -616,6 +632,7 @@
 			isa = PBXGroup;
 			children = (
 				63F29D0E24FC5E6400A299B3 /* DebugPublisher.swift */,
+				63877B3D26D938EF00C56E81 /* Subscriptions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -949,9 +966,11 @@
 			files = (
 				6322206725A66DF8005C8C8E /* InMemorySessionsRepository.swift in Sources */,
 				631AC31A254DFA78003EEA4F /* Sources.swift in Sources */,
+				63877B3C26D932CD00C56E81 /* DefaultSourcesListEditUseCase.swift in Sources */,
 				635C1FCA24D0D2AC00DA1CD0 /* SessionProgressView.swift in Sources */,
 				635C1FC424D0CDAB00DA1CD0 /* BlurredMaterial.swift in Sources */,
 				63DBFF9F24BA60E7000E1FD5 /* VisualEffectView.swift in Sources */,
+				63877B3A26D9321800C56E81 /* SourcesListEditUseCase.swift in Sources */,
 				631AC312254DF98C003EEA4F /* SourceCell.swift in Sources */,
 				63963E4A24C521BD00AE93D5 /* SessionView.swift in Sources */,
 				63963E4C24C52B1A00AE93D5 /* SessionGalleryView.swift in Sources */,
@@ -972,7 +991,7 @@
 				6306A4F025C7299700573C49 /* SourceListEditScenarioBehaviour.swift in Sources */,
 				63AE15F625FE298900048407 /* Logger+Subsystems.swift in Sources */,
 				6329EC5C24C1F53500DA831E /* ProgressItem.swift in Sources */,
-				6306A4C625C6D9AF00573C49 /* SourceListScenarioBehaviour.swift in Sources */,
+				6306A4C625C6D9AF00573C49 /* AbstractSourceListScenarioBehaviour.swift in Sources */,
 				63963E5224C61CB100AE93D5 /* CornerRadiusStyle.swift in Sources */,
 				633EADFD24CE0445007D63AE /* Localised.swift in Sources */,
 				63BC983524B9244000AE1B28 /* Colors.swift in Sources */,
@@ -1043,6 +1062,7 @@
 				632220C625A68C5E005C8C8E /* ViewFactory+ProgressHeader.swift in Sources */,
 				634C252F257D947700E0A63E /* SourceTypeSectionView.swift in Sources */,
 				633EADF824CE0024007D63AE /* SessionPropertyView.swift in Sources */,
+				63877B3E26D938EF00C56E81 /* Subscriptions.swift in Sources */,
 				63BC981124B90C4900AE1B28 /* Sketcher.swift in Sources */,
 				6306A4DF25C6E16A00573C49 /* Action.swift in Sources */,
 				63BC983824B939A500AE1B28 /* MainScreenSectionView.swift in Sources */,
@@ -1223,6 +1243,7 @@
 				DEVELOPMENT_TEAM = SKRU67QKG5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1245,6 +1266,7 @@
 				DEVELOPMENT_TEAM = SKRU67QKG5;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -15,7 +15,7 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 
 	@State
 	private var openRoute: SourceListViewRoutes?
-	private var cancellable = Set<AnyCancellable>()
+	private var subscriptions = Subscriptions()
 
     @ObservedObject
     var viewModel: ViewModel
@@ -26,7 +26,7 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 		self.viewModel = viewModel
 		viewModel.openRoute
 			.assign(to: \.openRoute, on: self)
-			.store(in: &cancellable)
+			.store(in: &subscriptions)
 	}
 
 	var body: some View {
@@ -101,7 +101,7 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 		switch viewModel.cellSelectionMode {
 		case .none:
 			return nil
-		case .normal:
+		case .selection:
 			if !inDrawer {
 				let isSelected = viewModel.selectedSources.contains { $0.id == source.id }
 				return isSelected
@@ -110,7 +110,7 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 			} else {
 				return nil
 			}
-		case .ordered:
+		case .orderedSelection:
 			return inDrawer
 				? UIImage(named: "remove")
 				: UIImage(named: "add")
@@ -120,6 +120,7 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 
 struct SourcesList_Previews: PreviewProvider {
 	static var previews: some View {
-		SourceListView(viewModel: SourceListViewModelDisplayViewModel(dependencies: MockDependencies()))
+		let useCase = DefaultSourcesListEditUseCase(dependencies: MockDependencies())
+		return SourceListView(viewModel: SourceListViewModelDisplayViewModel(sourcesEditUseCase: useCase))
 	}
 }

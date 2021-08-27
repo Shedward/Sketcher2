@@ -8,6 +8,5 @@
 protocol SourcesRepository {
 	func add(source: Source)
 	func remove(sources: [Source])
-	func remove(source: Source)
 	func sources() -> [Source]
 }

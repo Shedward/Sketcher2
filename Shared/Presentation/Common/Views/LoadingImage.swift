@@ -24,7 +24,7 @@ struct LoadingImage: View {
 					.resizable()
 			}
 		}
-		.animation(.default)
+		.animation(.default, value: viewModel.image)
 		.onAppear {
 			viewModel.load()
 		}
@@ -32,13 +32,13 @@ struct LoadingImage: View {
 }
 
 extension LoadingImage {
-	class ViewModel: ObservableObject {
+	final class ViewModel: ObservableObject {
 
 		@Published private(set) var image: UIImage?
 
 		let id = UUID()
 		private let asyncImage: AsyncImage
-		private var disposeBag: [AnyCancellable] = []
+		private var subscriptions = Subscriptions()
 
 		init(asyncImage: AsyncImage, placeholder: UIImage?) {
 			image = placeholder
@@ -50,7 +50,7 @@ extension LoadingImage {
 				.map { $0 as UIImage? }
 				.replaceError(with: nil)
 				.assign(to: \.image, on: self)
-				.store(in: &disposeBag)
+				.store(in: &subscriptions)
 		}
 	}
 }

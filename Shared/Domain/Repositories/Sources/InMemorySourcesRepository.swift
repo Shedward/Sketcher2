@@ -16,12 +16,8 @@ final class InMemorySourcesRepository: SourcesRepository {
 		sourcesStorage.append(source)
 	}
 
-	func remove(source: Source) {
-		sourcesStorage = sourcesStorage.filter { $0.id != source.id }
-	}
-
 	func remove(sources: [Source]) {
-		sourcesStorage = sourcesStorage.filter { source in sources.contains { $0.id == source.id } }
+		sourcesStorage = sourcesStorage.filter { source in !sources.contains { $0.id == source.id } }
 	}
 
 	func sources() -> [Source] {
