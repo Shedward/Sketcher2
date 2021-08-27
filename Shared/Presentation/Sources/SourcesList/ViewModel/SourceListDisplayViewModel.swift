@@ -12,7 +12,7 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 	typealias Dependencies = SourcesRepositoryDependency
 
 	@Published
-	private var behaviour: SourceListScenario!
+	private var behaviour: SourceListScenarioBehaviour!
 
 	private let dependencies: Dependencies
 
@@ -39,7 +39,7 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 	}
 
 	private func switchToList() {
-		behaviour = SourceListDisplayScenario(
+		behaviour = SourceListDisplayScenarioBehaviour(
 			sources: dependencies.sourcesRepository.sources(),
 			onEdit: { [weak self] in
 				self?.switchToEdit()
@@ -51,7 +51,7 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 	}
 
 	private func switchToEdit() {
-		behaviour = SourceListEditScenario(
+		behaviour = SourceListEditScenarioBehaviour(
 			sources: dependencies.sourcesRepository.sources(),
 			onCancel: { [weak self] in
 				self?.switchToList()

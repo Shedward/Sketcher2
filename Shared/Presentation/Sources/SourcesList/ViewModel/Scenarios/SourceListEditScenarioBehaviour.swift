@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-struct SourceListEditScenario: SourceListScenario {
+struct SourceListEditScenarioBehaviour: SourceListScenarioBehaviour {
 	let cellSelectionMode: SourceListSelectionMode = .normal
 
 	private(set) var sources: [Source]

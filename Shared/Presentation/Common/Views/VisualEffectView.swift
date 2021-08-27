@@ -1,5 +1,5 @@
 //
-//  Translusent.swift
+//  VisualEffectView.swift
 //  Sketcher SUI
 //
 //  Created by Vlad Maltsev on 12.07.2020.

@@ -13,7 +13,7 @@ enum SourceListSelectionMode {
 	case ordered
 }
 
-protocol SourceListScenario {
+protocol SourceListScenarioBehaviour {
 	var sources: [Source] { get }
 	var topDrawerSources: [Source] { get }
 	var selectedSources: [Source] { get }

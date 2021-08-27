@@ -31,6 +31,7 @@ struct NavigationBar: View {
 					}
 			}
 			Text(title)
+				.lineLimit(1)
 				.font(Design.Font.h1)
 			Spacer()
 			if let rightAction = customAction, let title = rightAction.title {
