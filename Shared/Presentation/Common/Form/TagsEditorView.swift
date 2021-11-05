@@ -65,10 +65,7 @@ struct TagsEditorView: View {
 					}
 				}
 			}
-			.preference(
-				key: ContentSizePreferenceKey.self,
-				value: .init(height: finalSize.height)
-			)
+			.promotePreferredSize(height: finalSize.height)
 		}
     }
 

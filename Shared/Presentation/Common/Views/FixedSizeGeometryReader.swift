@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentSizePreferenceKey: PreferenceKey {
+private struct ContentSizePreferenceKey: PreferenceKey {
 	struct Size: Equatable {
 		let width: CGFloat?
 		let height: CGFloat?
@@ -24,12 +24,7 @@ struct ContentSizePreferenceKey: PreferenceKey {
 	}
 }
 
-protocol SelfSizingView: View {
-	func size() -> CGSize
-}
-
 struct FixedSizeGeometryReader<Content: View>: View {
-
 	let content: (GeometryProxy) -> Content
 	@State private var contentSize: ContentSizePreferenceKey.Value = .init()
 
@@ -51,6 +46,19 @@ struct FixedSizeGeometryReader<Content: View>: View {
     }
 }
 
+extension View {
+	func promotePreferredSize(width: CGFloat? = nil, height: CGFloat? = nil) -> some View {
+		preference(
+			key: ContentSizePreferenceKey.self,
+			value: .init(width: width, height: height)
+		)
+	}
+
+	func promotePreferredSize(_ size: CGSize) -> some View {
+		promotePreferredSize(width: size.width, height: size.height)
+	}
+}
+
 struct FixedSizeGeometryReader_Previews: PreviewProvider {
     static var previews: some View {
 		FixedSizeGeometryReader { geometry in
@@ -62,10 +70,7 @@ struct FixedSizeGeometryReader_Previews: PreviewProvider {
 			Rectangle()
 				.size(contentSize)
 				.background(Color.blue)
-				.preference(
-					key: ContentSizePreferenceKey.self,
-					value: .init(width: contentSize.width, height: contentSize.height)
-				)
+				.promotePreferredSize(size)
 		}
 		.previewLayout(.sizeThatFits)
     }
