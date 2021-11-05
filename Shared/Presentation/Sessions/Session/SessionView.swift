@@ -11,28 +11,32 @@ struct SessionView: View {
 	let session: Session
 
     var body: some View {
-		ZStack {
-			Image(uiImage: session.preview)
-				.resizable()
-				.aspectRatio(contentMode: .fit)
-			VStack {
-				HStack {
-					if let imageCount = session.imageCount {
-						BadgeView(text: Localised.number(imageCount))
+		PreferensableController {
+			ZStack {
+				Image(uiImage: session.preview)
+					.resizable()
+					.aspectRatio(contentMode: .fit)
+				VStack {
+					HStack {
+						if let imageCount = session.imageCount {
+							BadgeView(text: Localised.number(imageCount))
+						}
+						Spacer()
+						if let author = session.author {
+							BadgeView(text: author)
+						}
 					}
 					Spacer()
-					if let author = session.author {
-						BadgeView(text: author)
-					}
+					SessionProgressView(progress: 0.6)
 				}
-				Spacer()
-				SessionProgressView(progress: 0.6)
+				.padding(Design.SpacingLevel.level0.value)
 			}
-			.padding(Design.SpacingLevel.level0.value)
+			.background(Design.Color.background)
+			.edgesIgnoringSafeArea(.all)
+			.preferFullscreenAppearance(true)
 		}
 		.edgesIgnoringSafeArea(.all)
-		.background(Design.Color.background)
-    }
+	}
 }
 
 struct SessionView_Previews: PreviewProvider {

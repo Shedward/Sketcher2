@@ -39,9 +39,9 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 		.sheet(item: viewModel.openRouteBinding) { route -> AnyView in
 			switch route {
 			case .newSource:
-				return AnyView(viewFactory.sourceTypeSelector())
+				return viewFactory.sourceTypeSelector().asAnyView()
 			case .openSource(let source):
-				return AnyView(Text("Open source \(source.title)"))
+				return Text("Open source \(source.title)").asAnyView()
 			}
 		}
 	}

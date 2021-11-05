@@ -9,7 +9,10 @@ import SwiftUI
 
 @main
 struct Sketcher: App {
-	let viewFactory = ViewFactory.mock
+	@UIApplicationDelegateAdaptor(SketcherAppDelegate.self) var appDelegate
+
+	@Environment(\.viewFactory)
+	var viewFactory: ViewFactory
 
     var body: some Scene {
         WindowGroup {

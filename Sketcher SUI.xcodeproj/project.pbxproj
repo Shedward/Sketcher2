@@ -70,6 +70,13 @@
 		635C390125F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C390025F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift */; };
 		635C390225F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635C390025F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift */; };
 		637222B627356EEB00C80D66 /* Binding+Keypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222B527356EEB00C80D66 /* Binding+Keypath.swift */; };
+		637222B9273590F000C80D66 /* SketcherAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222B8273590F000C80D66 /* SketcherAppDelegate.swift */; };
+		637222BD2735936800C80D66 /* PreferensableHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222BC2735936800C80D66 /* PreferensableHostingController.swift */; };
+		637222BF273594C300C80D66 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222BE273594C300C80D66 /* Box.swift */; };
+		637222C2273595FD00C80D66 /* HomeIndicatorAutoHiddenPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222C1273595FD00C80D66 /* HomeIndicatorAutoHiddenPreferenceKey.swift */; };
+		637222C72735974D00C80D66 /* View+SyntaxSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222C62735974D00C80D66 /* View+SyntaxSugar.swift */; };
+		637222D22735CBD900C80D66 /* UIViewController+topMost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222D12735CBD900C80D66 /* UIViewController+topMost.swift */; };
+		637222D42735CF2900C80D66 /* PreferensableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222D32735CF2900C80D66 /* PreferensableController.swift */; };
 		637CE7322529EB700002B061 /* SourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637CE7312529EB700002B061 /* SourceType.swift */; };
 		637CE7362529F1220002B061 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637CE7352529F1220002B061 /* SettingsView.swift */; };
 		637E771824D74F420033467E /* NewSourceFastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637E771724D74F420033467E /* NewSourceFastView.swift */; };
@@ -215,6 +222,13 @@
 		635C38F725F532F600787B86 /* SeparatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorView.swift; sourceTree = "<group>"; };
 		635C390025F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceListMultiselectScenarioBehaviour.swift; sourceTree = "<group>"; };
 		637222B527356EEB00C80D66 /* Binding+Keypath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Keypath.swift"; sourceTree = "<group>"; };
+		637222B8273590F000C80D66 /* SketcherAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketcherAppDelegate.swift; sourceTree = "<group>"; };
+		637222BC2735936800C80D66 /* PreferensableHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferensableHostingController.swift; sourceTree = "<group>"; };
+		637222BE273594C300C80D66 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		637222C1273595FD00C80D66 /* HomeIndicatorAutoHiddenPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIndicatorAutoHiddenPreferenceKey.swift; sourceTree = "<group>"; };
+		637222C62735974D00C80D66 /* View+SyntaxSugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SyntaxSugar.swift"; sourceTree = "<group>"; };
+		637222D12735CBD900C80D66 /* UIViewController+topMost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+topMost.swift"; sourceTree = "<group>"; };
+		637222D32735CF2900C80D66 /* PreferensableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferensableController.swift; sourceTree = "<group>"; };
 		637CE7312529EB700002B061 /* SourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceType.swift; sourceTree = "<group>"; };
 		637CE7352529F1220002B061 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		637E771724D74F420033467E /* NewSourceFastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSourceFastView.swift; sourceTree = "<group>"; };
@@ -322,6 +336,7 @@
 		630B559225A5F5DF00E62364 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				637222C0273595D700C80D66 /* ConfigurableHostingController */,
 				630B559625A5FB9300E62364 /* ViewFactory.swift */,
 			);
 			path = Navigation;
@@ -546,6 +561,58 @@
 			path = AsyncImage;
 			sourceTree = "<group>";
 		};
+		637222B7273590DD00C80D66 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				637222B8273590F000C80D66 /* SketcherAppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		637222C0273595D700C80D66 /* ConfigurableHostingController */ = {
+			isa = PBXGroup;
+			children = (
+				637222BC2735936800C80D66 /* PreferensableHostingController.swift */,
+				637222C1273595FD00C80D66 /* HomeIndicatorAutoHiddenPreferenceKey.swift */,
+				637222D32735CF2900C80D66 /* PreferensableController.swift */,
+			);
+			path = ConfigurableHostingController;
+			sourceTree = "<group>";
+		};
+		637222C32735970100C80D66 /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+				63F29D0E24FC5E6400A299B3 /* DebugPublisher.swift */,
+				63877B3D26D938EF00C56E81 /* Subscriptions.swift */,
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		637222C42735971100C80D66 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				637222B527356EEB00C80D66 /* Binding+Keypath.swift */,
+				637222C62735974D00C80D66 /* View+SyntaxSugar.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		637222C52735971F00C80D66 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				637222BE273594C300C80D66 /* Box.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		637222D02735CBCA00C80D66 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				637222D12735CBD900C80D66 /* UIViewController+topMost.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		637CE7392529F24B0002B061 /* Form */ = {
 			isa = PBXGroup;
 			children = (
@@ -633,9 +700,10 @@
 		639AF34824FBE5200020A26F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				63F29D0E24FC5E6400A299B3 /* DebugPublisher.swift */,
-				63877B3D26D938EF00C56E81 /* Subscriptions.swift */,
-				637222B527356EEB00C80D66 /* Binding+Keypath.swift */,
+				637222D02735CBCA00C80D66 /* UIKit */,
+				637222C52735971F00C80D66 /* Misc */,
+				637222C42735971100C80D66 /* SwiftUI */,
+				637222C32735970100C80D66 /* Combine */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -682,6 +750,7 @@
 		63BC97FD24B90C4800AE1B28 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				637222B7273590DD00C80D66 /* Application */,
 				63AE15C625FD698100048407 /* Infrastructure */,
 				63DBFF8924BA3027000E1FD5 /* Domain */,
 				63DBFF8824BA301B000E1FD5 /* Presentation */,
@@ -975,6 +1044,7 @@
 				63DBFF9F24BA60E7000E1FD5 /* VisualEffectView.swift in Sources */,
 				63877B3A26D9321800C56E81 /* SourcesListEditUseCase.swift in Sources */,
 				631AC312254DF98C003EEA4F /* SourceCell.swift in Sources */,
+				637222D22735CBD900C80D66 /* UIViewController+topMost.swift in Sources */,
 				63963E4A24C521BD00AE93D5 /* SessionView.swift in Sources */,
 				63963E4C24C52B1A00AE93D5 /* SessionGalleryView.swift in Sources */,
 				63BC983B24B9DE0E00AE1B28 /* SpacingLevel.swift in Sources */,
@@ -990,11 +1060,13 @@
 				637222B627356EEB00C80D66 /* Binding+Keypath.swift in Sources */,
 				63D9687524C8444400DA4B7A /* TagsEditorView.swift in Sources */,
 				631AC324254DFBEF003EEA4F /* AuthorView.swift in Sources */,
+				637222BD2735936800C80D66 /* PreferensableHostingController.swift in Sources */,
 				63BC981324B90C4900AE1B28 /* MainScreenView.swift in Sources */,
 				630B55E425A6282900E62364 /* ViewFactoryEnvironment.swift in Sources */,
 				6306A4F025C7299700573C49 /* SourceListEditScenarioBehaviour.swift in Sources */,
 				63AE15F625FE298900048407 /* Logger+Subsystems.swift in Sources */,
 				6329EC5C24C1F53500DA831E /* ProgressItem.swift in Sources */,
+				637222BF273594C300C80D66 /* Box.swift in Sources */,
 				6306A4C625C6D9AF00573C49 /* AbstractSourceListScenarioBehaviour.swift in Sources */,
 				63963E5224C61CB100AE93D5 /* CornerRadiusStyle.swift in Sources */,
 				633EADFD24CE0445007D63AE /* Localised.swift in Sources */,
@@ -1015,6 +1087,7 @@
 				63B0EE1425AA3909006FB7AB /* SourceTypeSelectorViewModel.swift in Sources */,
 				638DD09A24C9923900630DAB /* FixedSpacer.swift in Sources */,
 				63EA76FA2533A8E3001EF38D /* NavigationBarStyle.swift in Sources */,
+				637222D42735CF2900C80D66 /* PreferensableController.swift in Sources */,
 				6322206D25A66EE4005C8C8E /* SourcesRepository.swift in Sources */,
 				630B55B025A618C500E62364 /* ViewFactory+Session.swift in Sources */,
 				63963E4E24C5BA1400AE93D5 /* FormSection.swift in Sources */,
@@ -1038,12 +1111,15 @@
 				630B55DF25A61F3700E62364 /* ViewFactory+SourceTypeSelector.swift in Sources */,
 				637E771824D74F420033467E /* NewSourceFastView.swift in Sources */,
 				637E771A24D750BE0033467E /* NewSource.swift in Sources */,
+				637222B9273590F000C80D66 /* SketcherAppDelegate.swift in Sources */,
 				63B0EE0825A9DB00006FB7AB /* Mock+String.swift in Sources */,
 				630B559D25A5FC5300E62364 /* ViewFactory+MainScreen.swift in Sources */,
 				63B31FC025B4E865004451AB /* SourceListDisplayViewModel.swift in Sources */,
 				631AC30E254DF4A3003EEA4F /* SourceGalleryView.swift in Sources */,
 				639D80B8252925740062CB83 /* SourceTypeSelectorView.swift in Sources */,
 				635C38F825F532F600787B86 /* SeparatorView.swift in Sources */,
+				637222C2273595FD00C80D66 /* HomeIndicatorAutoHiddenPreferenceKey.swift in Sources */,
+				637222C72735974D00C80D66 /* View+SyntaxSugar.swift in Sources */,
 				638D77FF25A7A96E0065D19A /* RecommendedSessionsViewModel.swift in Sources */,
 				6304A3B524C103660093DF70 /* MainScreenContentView.swift in Sources */,
 				63B9FD2B258502ED00CCC7BA /* SourceTypeCell.swift in Sources */,
