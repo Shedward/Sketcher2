@@ -6,6 +6,7 @@
 //
 
 import Combine
+import UIKit
 
 final class SourceListDisplayScenarioBehaviour: AbstractSourceListScenarioBehaviour {
 	private var sourcesEditUseCase: SourcesListEditUseCase
@@ -14,6 +15,7 @@ final class SourceListDisplayScenarioBehaviour: AbstractSourceListScenarioBehavi
 
 	init(
 		sourcesEditUseCase: SourcesListEditUseCase,
+		onAdd: @escaping () -> Void,
 		onEdit: @escaping () -> Void,
 		onOpenSource: @escaping (Source) -> Void
 	) {
@@ -22,6 +24,10 @@ final class SourceListDisplayScenarioBehaviour: AbstractSourceListScenarioBehavi
 		super.init()
 
 		navigationBarAction = .init(title: Localised.string("Изменить"), action: onEdit)
+		bottomBarActions = [
+			.init(id: "add", icon: UIImage(named: "add"), action: onAdd)
+		]
+
 		sourcesEditUseCase.sources
 			.assign(to: \.sources, on: self)
 			.store(in: &subscriptions)

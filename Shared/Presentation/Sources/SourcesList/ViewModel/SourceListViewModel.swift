@@ -40,7 +40,7 @@ protocol SourceListViewModel: ObservableObject {
 	var bottomBarActions: [ActionItem] { get }
 	var cellSelectionMode: SourceListSelectionMode { get }
 
-	var openRoute: AnyPublisher<SourceListViewRoutes?, Never> { get }
+	var openRouteBinding: Binding<SourceListViewRoutes?> { get }
 
 	func didSelectSource(_ source: Source)
 }

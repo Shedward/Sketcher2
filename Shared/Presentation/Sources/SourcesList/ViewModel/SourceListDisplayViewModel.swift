@@ -15,7 +15,8 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 			bindBehaviour()
 		}
 	}
-	private var subscriptions = Subscriptions()
+
+	private var behaviourSubscriptions = Subscriptions()
 
 	@Published var sources: [Source] = []
 	@Published var topDrawerSources: [Source] = []
@@ -23,10 +24,10 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 	@Published var navigationBarAction: ActionItem?
 	@Published var bottomBarActions: [ActionItem] = []
 	@Published var cellSelectionMode: SourceListSelectionMode = .none
+	@Published var openRoute: SourceListViewRoutes?
 
-	@Published private var openRouteStatePublisher: SourceListViewRoutes?
-	var openRoute: AnyPublisher<SourceListViewRoutes?, Never> {
-		$openRouteStatePublisher.eraseToAnyPublisher()
+	var openRouteBinding: Binding<SourceListViewRoutes?> {
+		Binding(to: \.openRoute, on: self)
 	}
 
 	init(sourcesEditUseCase: SourcesListEditUseCase) {
@@ -42,6 +43,9 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 	private func switchToList() {
 		behaviour = SourceListDisplayScenarioBehaviour(
 			sourcesEditUseCase: sourcesEditUseCase,
+			onAdd: { [weak self] in
+				self?.createSource()
+			},
 			onEdit: { [weak self] in
 				self?.switchToEdit()
 			},
@@ -60,33 +64,39 @@ final class SourceListViewModelDisplayViewModel: SourceListViewModel {
 		)
 	}
 
+	private func createSource() {
+		openRoute = .newSource
+	}
+
 	private func openSource(_ source: Source) {
-		openRouteStatePublisher = .openSource(source)
+		openRoute = .openSource(source)
 	}
 
 	private func bindBehaviour() {
+		behaviourSubscriptions = Subscriptions()
+
 		behaviour.$sources
 			.assign(to: \.sources, on: self)
-			.store(in: &subscriptions)
+			.store(in: &behaviourSubscriptions)
 
 		behaviour.$topDrawerSources
 			.assign(to: \.topDrawerSources, on: self)
-			.store(in: &subscriptions)
+			.store(in: &behaviourSubscriptions)
 
 		behaviour.$selectedSources
 			.assign(to: \.selectedSources, on: self)
-			.store(in: &subscriptions)
+			.store(in: &behaviourSubscriptions)
 
 		behaviour.$navigationBarAction
 			.assign(to: \.navigationBarAction, on: self)
-			.store(in: &subscriptions)
+			.store(in: &behaviourSubscriptions)
 
 		behaviour.$bottomBarActions
 			.assign(to: \.bottomBarActions, on: self)
-			.store(in: &subscriptions)
+			.store(in: &behaviourSubscriptions)
 
 		behaviour.$cellSelectionMode
 			.assign(to: \.cellSelectionMode, on: self)
-			.store(in: &subscriptions)
+			.store(in: &behaviourSubscriptions)
 	}
 }

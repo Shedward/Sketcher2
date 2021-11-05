@@ -16,7 +16,6 @@ struct SourceCell: View {
 		HStack(spacing: spacingLevel.value) {
 			if let icon = icon {
 				Image(uiImage: icon)
-					.transition(.opacity)
 			}
 			VStack(alignment: .leading, spacing: 0) {
 				Text(source.title)

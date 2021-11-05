@@ -13,8 +13,6 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 	@Environment(\.viewFactory)
 	private var viewFactory: ViewFactory
 
-	@State
-	private var openRoute: SourceListViewRoutes?
 	private var subscriptions = Subscriptions()
 
     @ObservedObject
@@ -24,9 +22,6 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 
 	init(viewModel: ViewModel) {
 		self.viewModel = viewModel
-		viewModel.openRoute
-			.assign(to: \.openRoute, on: self)
-			.store(in: &subscriptions)
 	}
 
 	var body: some View {
@@ -41,7 +36,7 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 		}
 		.padding(spacingLevel.value)
 		.navigationBarRemoved()
-		.sheet(item: $openRoute) { route -> AnyView in
+		.sheet(item: viewModel.openRouteBinding) { route -> AnyView in
 			switch route {
 			case .newSource:
 				return AnyView(viewFactory.sourceTypeSelector())
