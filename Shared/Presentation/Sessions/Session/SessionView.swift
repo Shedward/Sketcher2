@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct SessionView: View {
-	let session: Session
+	@ObservedObject
+	var viewModel: ViewModel
 
     var body: some View {
 		PreferensableController {
 			ZStack {
-				Image(uiImage: session.preview)
+				Image(uiImage: $viewModel.currentImage)
 					.resizable()
 					.aspectRatio(contentMode: .fit)
 				VStack {
@@ -41,6 +42,6 @@ struct SessionView: View {
 
 struct SessionView_Previews: PreviewProvider {
     static var previews: some View {
-		SessionView(session: Mocks.session)
+		SessionView(viewModel: .init(session: Mocks.session))
     }
 }
