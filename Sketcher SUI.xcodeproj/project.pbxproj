@@ -45,6 +45,18 @@
 		632220C025A68B81005C8C8E /* ProgressElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632220BF25A68B81005C8C8E /* ProgressElementView.swift */; };
 		632220C625A68C5E005C8C8E /* ViewFactory+ProgressHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632220C525A68C5E005C8C8E /* ViewFactory+ProgressHeader.swift */; };
 		632220C925A68C62005C8C8E /* ViewFactory+ProgressHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632220C525A68C5E005C8C8E /* ViewFactory+ProgressHeader.swift */; };
+		6327057B2735E24E008E73AA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327057A2735E24E008E73AA /* Image.swift */; };
+		6327057C2735E24E008E73AA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327057A2735E24E008E73AA /* Image.swift */; };
+		6327057E2735E367008E73AA /* UIImage+Required.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327057D2735E367008E73AA /* UIImage+Required.swift */; };
+		6327057F2735E367008E73AA /* UIImage+Required.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327057D2735E367008E73AA /* UIImage+Required.swift */; };
+		632705822735E699008E73AA /* Image+Accessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632705812735E699008E73AA /* Image+Accessory.swift */; };
+		632705832735E699008E73AA /* Image+Accessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632705812735E699008E73AA /* Image+Accessory.swift */; };
+		632705852735E6D0008E73AA /* Image+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632705842735E6D0008E73AA /* Image+Action.swift */; };
+		632705862735E6D0008E73AA /* Image+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632705842735E6D0008E73AA /* Image+Action.swift */; };
+		632705882735E709008E73AA /* Image+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632705872735E709008E73AA /* Image+Icon.swift */; };
+		632705892735E709008E73AA /* Image+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632705872735E709008E73AA /* Image+Icon.swift */; };
+		6327058C2735EDDE008E73AA /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327058B2735EDDE008E73AA /* SessionViewModel.swift */; };
+		6327058D2735EDDE008E73AA /* SessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327058B2735EDDE008E73AA /* SessionViewModel.swift */; };
 		6329EC5924C1F38D00DA831E /* ProgressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329EC5824C1F38D00DA831E /* ProgressHeaderView.swift */; };
 		6329EC5A24C1F38D00DA831E /* ProgressHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329EC5824C1F38D00DA831E /* ProgressHeaderView.swift */; };
 		6329EC5C24C1F53500DA831E /* ProgressItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329EC5B24C1F53500DA831E /* ProgressItem.swift */; };
@@ -75,7 +87,7 @@
 		637222BF273594C300C80D66 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222BE273594C300C80D66 /* Box.swift */; };
 		637222C2273595FD00C80D66 /* HomeIndicatorAutoHiddenPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222C1273595FD00C80D66 /* HomeIndicatorAutoHiddenPreferenceKey.swift */; };
 		637222C72735974D00C80D66 /* View+SyntaxSugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222C62735974D00C80D66 /* View+SyntaxSugar.swift */; };
-		637222D22735CBD900C80D66 /* UIViewController+topMost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222D12735CBD900C80D66 /* UIViewController+topMost.swift */; };
+		637222D22735CBD900C80D66 /* UIViewController+TopMost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222D12735CBD900C80D66 /* UIViewController+TopMost.swift */; };
 		637222D42735CF2900C80D66 /* PreferensableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637222D32735CF2900C80D66 /* PreferensableController.swift */; };
 		637CE7322529EB700002B061 /* SourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637CE7312529EB700002B061 /* SourceType.swift */; };
 		637CE7362529F1220002B061 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637CE7352529F1220002B061 /* SettingsView.swift */; };
@@ -205,6 +217,12 @@
 		632220B625A686BD005C8C8E /* ProgressHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderViewModel.swift; sourceTree = "<group>"; };
 		632220BF25A68B81005C8C8E /* ProgressElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressElementView.swift; sourceTree = "<group>"; };
 		632220C525A68C5E005C8C8E /* ViewFactory+ProgressHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewFactory+ProgressHeader.swift"; sourceTree = "<group>"; };
+		6327057A2735E24E008E73AA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		6327057D2735E367008E73AA /* UIImage+Required.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Required.swift"; sourceTree = "<group>"; };
+		632705812735E699008E73AA /* Image+Accessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Accessory.swift"; sourceTree = "<group>"; };
+		632705842735E6D0008E73AA /* Image+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Action.swift"; sourceTree = "<group>"; };
+		632705872735E709008E73AA /* Image+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Icon.swift"; sourceTree = "<group>"; };
+		6327058B2735EDDE008E73AA /* SessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionViewModel.swift; sourceTree = "<group>"; };
 		6329EC5824C1F38D00DA831E /* ProgressHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeaderView.swift; sourceTree = "<group>"; };
 		6329EC5B24C1F53500DA831E /* ProgressItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressItem.swift; sourceTree = "<group>"; };
 		6329EC5E24C1F5F700DA831E /* ProgressItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressItems.swift; sourceTree = "<group>"; };
@@ -227,7 +245,7 @@
 		637222BE273594C300C80D66 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		637222C1273595FD00C80D66 /* HomeIndicatorAutoHiddenPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeIndicatorAutoHiddenPreferenceKey.swift; sourceTree = "<group>"; };
 		637222C62735974D00C80D66 /* View+SyntaxSugar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+SyntaxSugar.swift"; sourceTree = "<group>"; };
-		637222D12735CBD900C80D66 /* UIViewController+topMost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+topMost.swift"; sourceTree = "<group>"; };
+		637222D12735CBD900C80D66 /* UIViewController+TopMost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TopMost.swift"; sourceTree = "<group>"; };
 		637222D32735CF2900C80D66 /* PreferensableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferensableController.swift; sourceTree = "<group>"; };
 		637CE7312529EB700002B061 /* SourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceType.swift; sourceTree = "<group>"; };
 		637CE7352529F1220002B061 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -521,6 +539,25 @@
 			path = ProgressHeader;
 			sourceTree = "<group>";
 		};
+		632705802735E686008E73AA /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				6327057A2735E24E008E73AA /* Image.swift */,
+				632705812735E699008E73AA /* Image+Accessory.swift */,
+				632705842735E6D0008E73AA /* Image+Action.swift */,
+				632705872735E709008E73AA /* Image+Icon.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		6327058A2735EDBE008E73AA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6327058B2735EDDE008E73AA /* SessionViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		633040BE25FE90EB008622C1 /* ScenarioBehaviours */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,7 +645,8 @@
 		637222D02735CBCA00C80D66 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				637222D12735CBD900C80D66 /* UIViewController+topMost.swift */,
+				637222D12735CBD900C80D66 /* UIViewController+TopMost.swift */,
+				6327057D2735E367008E73AA /* UIImage+Required.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -692,6 +730,7 @@
 			children = (
 				63963E4924C521BD00AE93D5 /* SessionView.swift */,
 				630B55AC25A6187E00E62364 /* Views */,
+				6327058A2735EDBE008E73AA /* ViewModel */,
 				630B55AF25A618C500E62364 /* ViewFactory+Session.swift */,
 			);
 			path = Session;
@@ -808,6 +847,7 @@
 		63BC982B24B90E0000AE1B28 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				632705802735E686008E73AA /* Image */,
 				63BC983D24B9DEEC00AE1B28 /* Design.swift */,
 				63BC982C24B91ED000AE1B28 /* Fonts.swift */,
 				63BC983424B9244000AE1B28 /* Colors.swift */,
@@ -1044,7 +1084,7 @@
 				63DBFF9F24BA60E7000E1FD5 /* VisualEffectView.swift in Sources */,
 				63877B3A26D9321800C56E81 /* SourcesListEditUseCase.swift in Sources */,
 				631AC312254DF98C003EEA4F /* SourceCell.swift in Sources */,
-				637222D22735CBD900C80D66 /* UIViewController+topMost.swift in Sources */,
+				637222D22735CBD900C80D66 /* UIViewController+TopMost.swift in Sources */,
 				63963E4A24C521BD00AE93D5 /* SessionView.swift in Sources */,
 				63963E4C24C52B1A00AE93D5 /* SessionGalleryView.swift in Sources */,
 				63BC983B24B9DE0E00AE1B28 /* SpacingLevel.swift in Sources */,
@@ -1058,10 +1098,12 @@
 				63D9687A24C8BC7400DA4B7A /* ActionButton.swift in Sources */,
 				637CE7362529F1220002B061 /* SettingsView.swift in Sources */,
 				637222B627356EEB00C80D66 /* Binding+Keypath.swift in Sources */,
+				6327058C2735EDDE008E73AA /* SessionViewModel.swift in Sources */,
 				63D9687524C8444400DA4B7A /* TagsEditorView.swift in Sources */,
 				631AC324254DFBEF003EEA4F /* AuthorView.swift in Sources */,
 				637222BD2735936800C80D66 /* PreferensableHostingController.swift in Sources */,
 				63BC981324B90C4900AE1B28 /* MainScreenView.swift in Sources */,
+				6327057E2735E367008E73AA /* UIImage+Required.swift in Sources */,
 				630B55E425A6282900E62364 /* ViewFactoryEnvironment.swift in Sources */,
 				6306A4F025C7299700573C49 /* SourceListEditScenarioBehaviour.swift in Sources */,
 				63AE15F625FE298900048407 /* Logger+Subsystems.swift in Sources */,
@@ -1113,6 +1155,7 @@
 				637E771A24D750BE0033467E /* NewSource.swift in Sources */,
 				637222B9273590F000C80D66 /* SketcherAppDelegate.swift in Sources */,
 				63B0EE0825A9DB00006FB7AB /* Mock+String.swift in Sources */,
+				632705882735E709008E73AA /* Image+Icon.swift in Sources */,
 				630B559D25A5FC5300E62364 /* ViewFactory+MainScreen.swift in Sources */,
 				63B31FC025B4E865004451AB /* SourceListDisplayViewModel.swift in Sources */,
 				631AC30E254DF4A3003EEA4F /* SourceGalleryView.swift in Sources */,
@@ -1121,6 +1164,7 @@
 				637222C2273595FD00C80D66 /* HomeIndicatorAutoHiddenPreferenceKey.swift in Sources */,
 				637222C72735974D00C80D66 /* View+SyntaxSugar.swift in Sources */,
 				638D77FF25A7A96E0065D19A /* RecommendedSessionsViewModel.swift in Sources */,
+				632705852735E6D0008E73AA /* Image+Action.swift in Sources */,
 				6304A3B524C103660093DF70 /* MainScreenContentView.swift in Sources */,
 				63B9FD2B258502ED00CCC7BA /* SourceTypeCell.swift in Sources */,
 				633040C025FE9119008622C1 /* SourceListViewModel.swift in Sources */,
@@ -1134,12 +1178,14 @@
 				6329EC5F24C1F5F700DA831E /* ProgressItems.swift in Sources */,
 				63DBFF8B24BA3039000E1FD5 /* Session.swift in Sources */,
 				63BC982D24B91ED000AE1B28 /* Fonts.swift in Sources */,
+				6327057B2735E24E008E73AA /* Image.swift in Sources */,
 				6322208225A67298005C8C8E /* RepositoriesDependencies.swift in Sources */,
 				630B55DA25A61E7800E62364 /* ViewFactory+NewSourceFast.swift in Sources */,
 				639AF34624FBDE940020A26F /* LoadingImage.swift in Sources */,
 				6322209C25A675ED005C8C8E /* MockProgressRepository.swift in Sources */,
 				630B55B825A61A1D00E62364 /* ViewFactory+SessionStart.swift in Sources */,
 				632220C625A68C5E005C8C8E /* ViewFactory+ProgressHeader.swift in Sources */,
+				632705822735E699008E73AA /* Image+Accessory.swift in Sources */,
 				634C252F257D947700E0A63E /* SourceTypeSectionView.swift in Sources */,
 				633EADF824CE0024007D63AE /* SessionPropertyView.swift in Sources */,
 				63877B3E26D938EF00C56E81 /* Subscriptions.swift in Sources */,
@@ -1181,18 +1227,24 @@
 				635C390225F5467D00787B86 /* SourceListMultiselectScenarioBehaviour.swift in Sources */,
 				638DD09B24C9923900630DAB /* FixedSpacer.swift in Sources */,
 				63DBFF9224BA4EBE000E1FD5 /* UserSessionsView.swift in Sources */,
+				632705892735E709008E73AA /* Image+Icon.swift in Sources */,
 				63BC984324B9F3CF00AE1B28 /* SessionCell.swift in Sources */,
+				6327058D2735EDDE008E73AA /* SessionViewModel.swift in Sources */,
 				634C2530257D947700E0A63E /* SourceTypeSectionView.swift in Sources */,
 				6304A3B624C103660093DF70 /* MainScreenContentView.swift in Sources */,
 				639AF34E24FBE9C40020A26F /* MockAsyncImage.swift in Sources */,
 				63DBFF8724BA300C000E1FD5 /* RecommendedSessionsView.swift in Sources */,
 				63DBFF9C24BA50C6000E1FD5 /* Recommendations.swift in Sources */,
 				6329EC6024C1F5F700DA831E /* ProgressItems.swift in Sources */,
+				632705832735E699008E73AA /* Image+Accessory.swift in Sources */,
 				63CA615824CCA2D8008D5A00 /* FixedSizeGeometryReader.swift in Sources */,
+				6327057C2735E24E008E73AA /* Image.swift in Sources */,
+				6327057F2735E367008E73AA /* UIImage+Required.swift in Sources */,
 				638D780025A7A96E0065D19A /* RecommendedSessionsViewModel.swift in Sources */,
 				63DBFF8C24BA3039000E1FD5 /* Session.swift in Sources */,
 				63BC982E24B91ED000AE1B28 /* Fonts.swift in Sources */,
 				63BC981224B90C4900AE1B28 /* Sketcher.swift in Sources */,
+				632705862735E6D0008E73AA /* Image+Action.swift in Sources */,
 				63DBFF9924BA509C000E1FD5 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

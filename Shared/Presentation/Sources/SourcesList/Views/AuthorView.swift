@@ -14,9 +14,7 @@ struct AuthorView: View {
 		HStack(spacing: 4) {
 			Text(Localised.string("от"))
 				.font(Design.Font.body3)
-			if let icon = author.type.smallIcon {
-				Image(uiImage: icon)
-			}
+			Image(uiImage: Design.Image.Icon.sourceType(kind: author.type, size: .small))
 			if let authorName = author.name {
 				Text(authorName)
 					.font(Design.Font.body3)

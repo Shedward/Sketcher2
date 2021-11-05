@@ -16,18 +16,4 @@ enum SourceType {
 			return "Debug"
 		}
 	}
-
-	var smallIcon: UIImage? {
-		switch self {
-		case .debug:
-			return UIImage(named: "sourceType.debug.small")
-		}
-	}
-
-	var bigIcon: UIImage? {
-		switch self {
-		case .debug:
-			return UIImage(named: "sourceType.debug.big")
-		}
-	}
 }

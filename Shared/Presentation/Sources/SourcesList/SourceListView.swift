@@ -99,16 +99,14 @@ struct SourceListView<ViewModel: SourceListViewModel>: View {
 		case .selection:
 			if !inDrawer {
 				let isSelected = viewModel.selectedSources.contains { $0.id == source.id }
-				return isSelected
-					? UIImage(named: "checked")
-					: UIImage(named: "unchecked")
+				return Design.Image.Accessory.checkmark(checked: isSelected)
 			} else {
 				return nil
 			}
 		case .orderedSelection:
 			return inDrawer
-				? UIImage(named: "remove")
-				: UIImage(named: "add")
+				? Design.Image.Action.remove
+				: Design.Image.Action.add
 		}
 	}
 }

@@ -25,7 +25,7 @@ final class SourceListDisplayScenarioBehaviour: AbstractSourceListScenarioBehavi
 
 		navigationBarAction = .init(title: Localised.string("Изменить"), action: onEdit)
 		bottomBarActions = [
-			.init(id: "add", icon: UIImage(named: "add"), action: onAdd)
+			.init(id: "add", icon: Design.Image.Action.add, action: onAdd)
 		]
 
 		sourcesEditUseCase.sources

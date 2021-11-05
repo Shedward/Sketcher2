@@ -19,9 +19,7 @@ struct SourceTypeCell: View {
 					.frame(width: 96, height: 56)
 					.cornerRadius(spacing.next.value)
 					.shadow(color: Design.Color.shadow, radius: 1)
-				if let icon = sourceType.bigIcon {
-					Image(uiImage: icon)
-				}
+				Image(uiImage: Design.Image.Icon.sourceType(kind: sourceType, size: .big))
 			}
 			Text(sourceType.title)
 				.font(Design.Font.h3)

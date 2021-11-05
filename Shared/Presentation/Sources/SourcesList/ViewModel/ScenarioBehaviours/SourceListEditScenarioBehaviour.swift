@@ -18,7 +18,7 @@ final class SourceListEditScenarioBehaviour: AbstractSourceListScenarioBehaviour
 		cellSelectionMode = .selection
 		navigationBarAction = .init(title: Localised.string("Отмена"), action: onCancel)
 		bottomBarActions = [
-			.init(id: "delete", icon: UIImage(named: "delete")) { [weak self] in
+			.init(id: "delete", icon: Design.Image.Action.delete) { [weak self] in
 				guard let self = self else { return }
 				self.sourcesEditUseCase.remove(sources: self.selectedSources)
 			}
