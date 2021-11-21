@@ -9,7 +9,8 @@ import SwiftUI
 
 extension ViewFactory {
 	func session(_ session: Session) -> some View {
-		let view = SessionView(session: session)
+		let viewModel = SessionView.ViewModel(session: session)
+		let view = SessionView(viewModel: viewModel)
 		return view
 	}
 }

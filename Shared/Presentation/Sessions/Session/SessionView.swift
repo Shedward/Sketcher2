@@ -14,16 +14,16 @@ struct SessionView: View {
     var body: some View {
 		PreferensableController {
 			ZStack {
-				Image(uiImage: $viewModel.currentImage)
+				Image(uiImage: viewModel.currentImage)
 					.resizable()
 					.aspectRatio(contentMode: .fit)
 				VStack {
 					HStack {
-						if let imageCount = session.imageCount {
-							BadgeView(text: Localised.number(imageCount))
+						if let imageProgressDescription = imageProgressDescription(viewModel.imagesProgress) {
+							BadgeView(text: imageProgressDescription)
 						}
 						Spacer()
-						if let author = session.author {
+						if let author = viewModel.author {
 							BadgeView(text: author)
 						}
 					}
@@ -37,6 +37,23 @@ struct SessionView: View {
 			.preferFullscreenAppearance(true)
 		}
 		.edgesIgnoringSafeArea(.all)
+	}
+
+	private func imageProgressDescription(_ imagesProgress: ViewModel.ImagesProgress?) -> String? {
+		guard let imagesProgress = imagesProgress else {
+			return nil
+		}
+
+		if let totalCount = imagesProgress.allImagesCount {
+			return Localised.string(
+				"%@/%@",
+				arguments:
+					Localised.number(imagesProgress.currentImageIndex),
+					Localised.number(totalCount)
+			)
+		} else {
+			return Localised.number(imagesProgress.currentImageIndex)
+		}
 	}
 }
 
