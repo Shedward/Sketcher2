@@ -27,7 +27,7 @@ extension SessionView {
 			currentImage = session.preview
 			progress = 0
 			author = session.author
-			imagesProgress = nil
+			imagesProgress = .init(currentImageIndex: 1, allImagesCount: session.imageCount)
 		}
 	}
 }
